@@ -9,63 +9,36 @@ public class DragAndDrop : MonoBehaviour
     public Camera eastCam;
     public Camera southCam;
 
-    [SerializeField] private int activeCam;
+    // [SerializeField] private int activeCam;
 
     private float distance = 3f;
 
     void OnMouseDrag()
     {
-        if (CameraController.whichCam == 0)
+        switch (CameraController.activeCamIndex)
         {
-            northCamMovement();
-        }
-        else if (CameraController.whichCam == 1)
-        {
-            westCamMovement();
-        }
-        else if (CameraController.whichCam == 2)
-        {
-            eastCamMovement();
-        }
-        else if (CameraController.whichCam == 3)
-        {
-            southCamMovement();
+            case 0:
+                MoveFromCam(northCam);
+                break;
+            case 1:
+                MoveFromCam(westCam);
+                break;
+            case 2:
+                MoveFromCam(eastCam);
+                break;
+            case 3:
+                MoveFromCam(southCam);
+                break;
         }
     }
-
-    private void northCamMovement()
+    // TODO:
+    // bound the box to the room
+    // 
+    private void MoveFromCam(Camera activeCam)
     {
+        distance += Input.mouseScrollDelta.y;
         Vector3 mousePosition = new Vector3(Input.mousePosition.x, Input.mousePosition.y, distance);
-        Vector3 objPosition = northCam.ScreenToWorldPoint(mousePosition);
-
+        Vector3 objPosition = activeCam.ScreenToWorldPoint(mousePosition);
         transform.position = objPosition;
     }
-
-    private void westCamMovement()
-    {
-        Vector3 mousePosition = new Vector3(Input.mousePosition.x, Input.mousePosition.y, distance);
-        Vector3 objPosition = westCam.ScreenToWorldPoint(mousePosition);
-
-        transform.position = objPosition;
-    }
-
-    private void eastCamMovement()
-    {
-        Vector3 mousePosition = new Vector3(Input.mousePosition.x, Input.mousePosition.y, distance);
-        Vector3 objPosition = eastCam.ScreenToWorldPoint(mousePosition);
-
-        transform.position = objPosition;
-    }
-
-    private void southCamMovement()
-    {
-        Vector3 mousePosition = new Vector3(Input.mousePosition.x, Input.mousePosition.y, distance);
-        Vector3 objPosition = southCam.ScreenToWorldPoint(mousePosition);
-
-        transform.position = objPosition;
-    }
-
-
-
-
 }

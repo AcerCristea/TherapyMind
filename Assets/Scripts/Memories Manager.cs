@@ -34,7 +34,7 @@ public class MemoriesManager : MonoBehaviour
     void Awake()
     {
         instance = this;
-        memories.Capacity = GetComponent<Transform>().childCount-2; // subtracting one to account for the pointer obj
+        memories.Capacity = GetComponent<Transform>().childCount-3; // subtracting one to account for the pointer obj
         selected = null;
         to_swap = null;
     }
@@ -67,6 +67,11 @@ public class MemoriesManager : MonoBehaviour
         {
             ToggleSelect();
         }
+        // exit puzzle
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            RoomManager.instance.ReturnToWall();
+        }
         // swap objs automatically
         if (to_swap != null)
         {
@@ -76,7 +81,7 @@ public class MemoriesManager : MonoBehaviour
             selected = null;
         }
         // check if puzzle is complete
-        if (memories.Equals(correctOrder))
+        if (compareList(memories, correctOrder))
         {
             Debug.Log("You did it! Yippee!");
         }
@@ -158,9 +163,18 @@ public class MemoriesManager : MonoBehaviour
     }
     #endregion
 
-    /**/
-    public void compareList()
+    /*
+    cuz .Equals() wasn't working
+    */
+    public bool compareList(List<GameObject> input1, List<GameObject> input2)
     {
-        
+        for (int i=0;i<input1.Capacity;i++)
+        {
+            if (input1[i] != input2[i])
+            {
+                return false;
+            }
+        }
+        return true;
     }
 }
