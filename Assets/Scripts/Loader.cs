@@ -25,6 +25,11 @@ public class Loader : MonoBehaviour
         LoadNextLevel();
     }
 
+    public void LoadScene()
+    {
+        SceneManager.LoadScene("SampleScene");
+    }
+
     public void LoadNextLevel()
     {
         StartCoroutine(LoadGame(SceneManager.GetActiveScene().buildIndex + 1));

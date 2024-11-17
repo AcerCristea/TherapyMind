@@ -1,13 +1,14 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 using TMPro;
+using UnityEngine.UI;
+using Unity.VisualScripting.FullSerializer;
 
 public class ButtonTextChangeHandler : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     public TextMeshProUGUI buttonText;
     public string hoverText = "Hovering!";
     private string originalText;
-    [SerializeField] private Animator canvas = null;
 
     void Start()
     {
@@ -17,15 +18,15 @@ public class ButtonTextChangeHandler : MonoBehaviour, IPointerEnterHandler, IPoi
     public void OnPointerEnter(PointerEventData eventData)
     {
         buttonText.text = hoverText;
-        canvas.Play("Transition", 0, 0f);
-        buttonText.fontSize = 36;
+        buttonText.fontSize += 6;
+        buttonText.color = Color.red;
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
         buttonText.text = originalText;
-        canvas.Play("EndTransition", 0, 0f);
-        buttonText.fontSize = 30;
+        buttonText.fontSize -= 6;
+        buttonText.color = Color.black;
     }
 
 }
