@@ -16,22 +16,28 @@ public class CameraController : MonoBehaviour
 
     void Start()
     {
-        updateCamera(activeCamIndex);
+        UpdateCamera(activeCamIndex);
     }
 
     void Update()
     {
+        // traverse wall cameras on A/D
         if (Input.GetKeyDown(KeyCode.A))
         {
-            leftButton();
+            SnapCamLeft();
         }
         else if (Input.GetKeyDown(KeyCode.D))
         {
-            rightButton();
+            SnapCamRight();
+        }
+        // move to puzzle on LMB click
+        if (Input.GetMouseButtonDown(0))
+        {
+            SnapCamToPuzzle(cameraArray[activeCamIndex].GetComponent<Camera>());
         }
     }
     // UpdateCamera keeps only one camera on
-    private void updateCamera(int index){
+    private void UpdateCamera(int index){
         for(int i = 0; i < cameraArray.Length; i++){
             // only use the active camera 
             if (i == index)
@@ -51,26 +57,25 @@ public class CameraController : MonoBehaviour
         }
     }
     // Activate the camera to the left
-    public void leftButton(){
+    public void SnapCamLeft(){
         activeCamIndex--;
         if (activeCamIndex < 0)
         {
             activeCamIndex = cameraArray.Length - 1;
         }
-        updateCamera(activeCamIndex);
+        UpdateCamera(activeCamIndex);
     }
     // Activate the camera to the right
-    public void rightButton(){
+    public void SnapCamRight(){
         activeCamIndex++;
         if (activeCamIndex > cameraArray.Length - 1)
         {
             activeCamIndex = 0;
         }
-        updateCamera(activeCamIndex);
+        UpdateCamera(activeCamIndex);
 
     }
-    public void SnapCamToPuzzle()
-    {
+    // Activate the camera in front of the puzzle clicked
     /*
     When the player clicks on anything within a puzzle, they're transported to
     the camera closest to that puzzle
@@ -79,5 +84,17 @@ public class CameraController : MonoBehaviour
         raytrace?
     make call to RoomManager.instance.MoveToPuzzle
     */
+    public void SnapCamToPuzzle(Camera activeCam)
+    {
+        Ray ray = activeCam.ScreenPointToRay(Input.mousePosition);
+        RaycastHit hit;
+        Debug.DrawRay(ray.origin, ray.direction * 20, Color.white);
+        if (Physics.Raycast(ray, out hit))
+        {
+            if (hit.collider.gameObject.tag == "Puzzle")
+            {
+                Debug.Log("puzzle hit");
+            }
+        }
     }
 }
