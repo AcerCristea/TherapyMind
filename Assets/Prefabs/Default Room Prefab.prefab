@@ -1078,7 +1078,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4084422725772838959}
-  - component: {fileID: 3044664809138368026}
   - component: {fileID: 8535915296034631469}
   m_Layer: 0
   m_Name: CameraController
@@ -1102,22 +1101,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 5898395283154860724}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3044664809138368026
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4614796907045466281}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7b1adfefdc283674e85415add0849227, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  activeCamera: {fileID: 0}
-  prevCamera: {fileID: 0}
-  activePuzzle: {fileID: 0}
-  puzzleList: []
 --- !u!114 &8535915296034631469
 MonoBehaviour:
   m_ObjectHideFlags: 0

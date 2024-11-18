@@ -12,19 +12,31 @@ public class RoomManager : MonoBehaviour
     public GameObject activePuzzle;
     public List<GameObject> puzzleList;
 
-    public void MoveToPuzzle(GameObject puzzle)
+    void Awake()
     {
-        // search puzzle for the attached camera
-        // disable stuff from other puzzles
-        // enable stuff within puzzle
-        // set prevCamera to the activeCamera
-        // swtich activeCamera to the cam in front of puzzle
+        instance = this;
+    }
+
+    public void ActivatePuzzle(GameObject puzzle)
+    {
+        // search puzzle for the attached camera then switch to it
+        foreach (Transform child in puzzle.transform)
+        {
+            if (child.GetComponent<Camera>() != null)
+            {
+                child.gameObject.SetActive(true);
+                activeCamera = child.GetComponent<Camera>();
+            }
+        }
         // set activePuzzle to puzzle
-        return;
+        activePuzzle = puzzle;
     }
     public void ReturnToWall()
     {
+        activeCamera.gameObject.SetActive(false);
+        prevCamera.gameObject.SetActive(true);
         activeCamera = prevCamera;
         prevCamera = null;
+        activePuzzle = null;
     }
 }

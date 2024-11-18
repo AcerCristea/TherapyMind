@@ -232,7 +232,7 @@ GameObject:
   - component: {fileID: 583092181}
   m_Layer: 0
   m_Name: Yellow Item
-  m_TagString: Memory
+  m_TagString: Puzzle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -359,7 +359,7 @@ GameObject:
   - component: {fileID: 1004858251}
   m_Layer: 0
   m_Name: Purple Item
-  m_TagString: Memory
+  m_TagString: Puzzle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -478,9 +478,21 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4916796455709739595, guid: 998d10be193b14448b1cdec2e5a00eeb, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5046680288935145911, guid: 998d10be193b14448b1cdec2e5a00eeb, type: 3}
       propertyPath: m_Name
       value: Room
+      objectReference: {fileID: 0}
+    - target: {fileID: 5790611861426075374, guid: 998d10be193b14448b1cdec2e5a00eeb, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5823394686076976293, guid: 998d10be193b14448b1cdec2e5a00eeb, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5898395283154860724, guid: 998d10be193b14448b1cdec2e5a00eeb, type: 3}
       propertyPath: m_LocalPosition.x
@@ -534,6 +546,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7984186484354670811, guid: 998d10be193b14448b1cdec2e5a00eeb, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8489175227419463187, guid: 998d10be193b14448b1cdec2e5a00eeb, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0
@@ -542,12 +558,21 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -2
       objectReference: {fileID: 0}
+    - target: {fileID: 8611022837613787295, guid: 998d10be193b14448b1cdec2e5a00eeb, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8829728588642592615, guid: 998d10be193b14448b1cdec2e5a00eeb, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 2218014803570987970, guid: 998d10be193b14448b1cdec2e5a00eeb, type: 3}
     - {fileID: 2685522353454861244, guid: 998d10be193b14448b1cdec2e5a00eeb, type: 3}
     - {fileID: 4126299526855328829, guid: 998d10be193b14448b1cdec2e5a00eeb, type: 3}
     - {fileID: 8100451980664759766, guid: 998d10be193b14448b1cdec2e5a00eeb, type: 3}
+    - {fileID: 5752253655286187919, guid: 998d10be193b14448b1cdec2e5a00eeb, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 998d10be193b14448b1cdec2e5a00eeb, type: 3}
@@ -660,6 +685,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: West Desk
       objectReference: {fileID: 0}
+    - target: {fileID: 5280161116813360760, guid: 4d6fad4b6da174e4d84d9734b2419b8b, type: 3}
+      propertyPath: m_TagString
+      value: Puzzle
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -692,6 +721,10 @@ PrefabInstance:
     - target: {fileID: 1762575233716020881, guid: f025f4ce23b2a4440a3752a9fa03afe6, type: 3}
       propertyPath: m_LocalPosition.y
       value: -0.256
+      objectReference: {fileID: 0}
+    - target: {fileID: 2672121081190794756, guid: f025f4ce23b2a4440a3752a9fa03afe6, type: 3}
+      propertyPath: m_TagString
+      value: Puzzle
       objectReference: {fileID: 0}
     - target: {fileID: 2846544372595968219, guid: f025f4ce23b2a4440a3752a9fa03afe6, type: 3}
       propertyPath: m_LocalScale.x
@@ -745,6 +778,10 @@ PrefabInstance:
       propertyPath: 'correctOrder.Array.data[4]'
       value: 
       objectReference: {fileID: 583092180}
+    - target: {fileID: 5849487215624481632, guid: f025f4ce23b2a4440a3752a9fa03afe6, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6588109237658628096, guid: f025f4ce23b2a4440a3752a9fa03afe6, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.03
@@ -791,7 +828,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7735509408267328684, guid: f025f4ce23b2a4440a3752a9fa03afe6, type: 3}
       propertyPath: m_TagString
-      value: Memory
+      value: Puzzle
       objectReference: {fileID: 0}
     - target: {fileID: 8425659315195896663, guid: f025f4ce23b2a4440a3752a9fa03afe6, type: 3}
       propertyPath: m_SpotAngle
@@ -800,6 +837,14 @@ PrefabInstance:
     - target: {fileID: 8425659315195896663, guid: f025f4ce23b2a4440a3752a9fa03afe6, type: 3}
       propertyPath: m_InnerSpotAngle
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8602884031799311365, guid: f025f4ce23b2a4440a3752a9fa03afe6, type: 3}
+      propertyPath: m_TagString
+      value: Puzzle
+      objectReference: {fileID: 0}
+    - target: {fileID: 8727908344848881047, guid: f025f4ce23b2a4440a3752a9fa03afe6, type: 3}
+      propertyPath: m_TagString
+      value: Puzzle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -812,6 +857,54 @@ PrefabInstance:
       addedObject: {fileID: 583092185}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f025f4ce23b2a4440a3752a9fa03afe6, type: 3}
+--- !u!1 &1674649552
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1674649554}
+  - component: {fileID: 1674649553}
+  m_Layer: 0
+  m_Name: Room Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1674649553
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1674649552}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b1adfefdc283674e85415add0849227, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activeCamera: {fileID: 0}
+  prevCamera: {fileID: 0}
+  activePuzzle: {fileID: 0}
+  puzzleList: []
+--- !u!4 &1674649554
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1674649552}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 20.616293, y: -2.3821998, z: 0.9236994}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2091268336 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8833813845329596013, guid: f025f4ce23b2a4440a3752a9fa03afe6, type: 3}
@@ -826,3 +919,4 @@ SceneRoots:
   - {fileID: 1326528442}
   - {fileID: 1294010831}
   - {fileID: 1328619612}
+  - {fileID: 1674649554}

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 public class CameraController : MonoBehaviour
@@ -21,41 +22,51 @@ public class CameraController : MonoBehaviour
 
     void Update()
     {
-        // traverse wall cameras on A/D
-        if (Input.GetKeyDown(KeyCode.A))
+        // mvoe along walls as long as player isn't in a puzzle
+        if (!RoomManager.instance.activePuzzle)
         {
-            SnapCamLeft();
+            // traverse wall cameras on A/D
+            if (Input.GetKeyDown(KeyCode.A))
+            {
+                SnapCamLeft();
+            }
+            else if (Input.GetKeyDown(KeyCode.D))
+            {
+                SnapCamRight();
+            }
+            // move to puzzle on LMB click
+            if (Input.GetMouseButtonDown(0))
+            {
+                SnapCamToPuzzle(cameraArray[activeCamIndex].GetComponent<Camera>());
+            }
         }
-        else if (Input.GetKeyDown(KeyCode.D))
-        {
-            SnapCamRight();
-        }
-        // move to puzzle on LMB click
-        if (Input.GetMouseButtonDown(0))
-        {
-            SnapCamToPuzzle(cameraArray[activeCamIndex].GetComponent<Camera>());
-        }
+        
     }
     // UpdateCamera keeps only one camera on
     private void UpdateCamera(int index){
         for(int i = 0; i < cameraArray.Length; i++){
-            // only use the active camera 
+            // only use the active camera
+            // active cam is determined by traversal
             if (i == index)
             {
                 cameraArray[i].SetActive(true);
+                // cameraArray[i].gameObject.GetComponent<Camera>().enabled = true;
                 activeCamIndex = i;
-                // CameraManager.instance.activeCamera = cameraArray[i].GetComponent<Camera>();
-            } 
+                RoomManager.instance.activeCamera = cameraArray[i].GetComponent<Camera>();
+                RoomManager.instance.prevCamera = cameraArray[i].GetComponent<Camera>();
+            }
+            // turn off every other camera in scene
             else
             {
-                // turn off every other camera in scene
                 if (cameraArray[i] != null)
                 {
                     cameraArray[i].SetActive(false);
+                    // cameraArray[i].gameObject.GetComponent<Camera>().enabled = false;
                 }
             }
         }
     }
+
     // Activate the camera to the left
     public void SnapCamLeft(){
         activeCamIndex--;
@@ -75,15 +86,8 @@ public class CameraController : MonoBehaviour
         UpdateCamera(activeCamIndex);
 
     }
-    // Activate the camera in front of the puzzle clicked
-    /*
-    When the player clicks on anything within a puzzle, they're transported to
-    the camera closest to that puzzle
-    
-    handle player clicking on puzzle area/objects
-        raytrace?
-    make call to RoomManager.instance.MoveToPuzzle
-    */
+
+    // Activate the puzzle clicked
     public void SnapCamToPuzzle(Camera activeCam)
     {
         Ray ray = activeCam.ScreenPointToRay(Input.mousePosition);
@@ -93,7 +97,9 @@ public class CameraController : MonoBehaviour
         {
             if (hit.collider.gameObject.tag == "Puzzle")
             {
-                Debug.Log("puzzle hit");
+                // turns off all wall cams
+                UpdateCamera(-1);
+                RoomManager.instance.ActivatePuzzle(hit.collider.transform.parent.gameObject);
             }
         }
     }
