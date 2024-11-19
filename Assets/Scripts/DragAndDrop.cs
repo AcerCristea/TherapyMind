@@ -15,20 +15,22 @@ public class DragAndDrop : MonoBehaviour
 
     void OnMouseDrag()
     {
-        switch (CameraController.activeCamIndex)
+        // Get the active camera from the CameraController
+        GameObject activeCamObj = null;
+
+        // Check if the active camera index is valid
+        if (CameraController.activeCamIndex >= 0 && CameraController.activeCamIndex < CameraController.instance.cameraArray.Length)
         {
-            case 0:
-                MoveFromCam(northCam);
-                break;
-            case 1:
-                MoveFromCam(westCam);
-                break;
-            case 2:
-                MoveFromCam(eastCam);
-                break;
-            case 3:
-                MoveFromCam(southCam);
-                break;
+            activeCamObj = CameraController.instance.cameraArray[CameraController.activeCamIndex];
+        }
+
+        if (activeCamObj != null)
+        {
+            Camera activeCam = activeCamObj.GetComponent<Camera>();
+            if (activeCam != null)
+            {
+                MoveFromCam(activeCam);
+            }
         }
     }
     // TODO:
