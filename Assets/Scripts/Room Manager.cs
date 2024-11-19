@@ -16,7 +16,7 @@ public class RoomManager : MonoBehaviour
     {
         instance = this;
     }
-
+    // place the camera in front of the puzzle clicked
     public void ActivatePuzzle(GameObject puzzle)
     {
         // search puzzle for the attached camera then switch to it
@@ -31,6 +31,7 @@ public class RoomManager : MonoBehaviour
         // set activePuzzle to puzzle
         activePuzzle = puzzle;
     }
+    // place the camera back on the wall
     public void ReturnToWall()
     {
         activeCamera.gameObject.SetActive(false);

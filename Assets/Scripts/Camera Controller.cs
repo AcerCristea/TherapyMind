@@ -50,7 +50,6 @@ public class CameraController : MonoBehaviour
             if (i == index)
             {
                 cameraArray[i].SetActive(true);
-                // cameraArray[i].gameObject.GetComponent<Camera>().enabled = true;
                 activeCamIndex = i;
                 RoomManager.instance.activeCamera = cameraArray[i].GetComponent<Camera>();
                 RoomManager.instance.prevCamera = cameraArray[i].GetComponent<Camera>();
@@ -61,7 +60,6 @@ public class CameraController : MonoBehaviour
                 if (cameraArray[i] != null)
                 {
                     cameraArray[i].SetActive(false);
-                    // cameraArray[i].gameObject.GetComponent<Camera>().enabled = false;
                 }
             }
         }
@@ -99,6 +97,7 @@ public class CameraController : MonoBehaviour
             {
                 // turns off all wall cams
                 UpdateCamera(-1);
+                RoomManager.instance.prevCamera = cameraArray[activeCamIndex].GetComponent<Camera>();
                 RoomManager.instance.ActivatePuzzle(hit.collider.transform.parent.gameObject);
             }
         }
