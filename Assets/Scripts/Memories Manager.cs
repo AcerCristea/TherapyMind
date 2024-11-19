@@ -34,14 +34,14 @@ public class MemoriesManager : MonoBehaviour
     void Awake()
     {
         instance = this;
-        memories.Capacity = GetComponent<Transform>().childCount-3; // subtracting one to account for the pointer obj
+        memories.Capacity = GetComponent<Transform>().childCount - 3; // subtracting one to account for the pointer obj
         selected = null;
         to_swap = null;
     }
 
     void Start()
     {
-        for (int i=0; i<memories.Capacity; i++)
+        for (int i = 0; i < memories.Capacity; i++)
         {
             memories.Add(GetComponent<Transform>().GetChild(i).gameObject);
         }
@@ -88,7 +88,7 @@ public class MemoriesManager : MonoBehaviour
             {
                 Debug.Log("You did it! Yippee!");
             }
-        } 
+        }
     }
     #endregion
 
@@ -102,13 +102,13 @@ public class MemoriesManager : MonoBehaviour
     */
     public void MoveRight()
     {
-        if (memories.IndexOf(cursor_) == memories.Capacity-1)
+        if (memories.IndexOf(cursor_) == memories.Capacity - 1)
         {
             cursor_ = memories[0];
         }
         else
         {
-            cursor_ = memories[memories.IndexOf(cursor_)+1];
+            cursor_ = memories[memories.IndexOf(cursor_) + 1];
         }
         return;
     }
@@ -116,11 +116,11 @@ public class MemoriesManager : MonoBehaviour
     {
         if (memories.IndexOf(cursor_) == 0)
         {
-            cursor_ = memories[memories.Capacity-1];
+            cursor_ = memories[memories.Capacity - 1];
         }
         else
         {
-            cursor_ = memories[memories.IndexOf(cursor_)-1];
+            cursor_ = memories[memories.IndexOf(cursor_) - 1];
         }
     }
 
@@ -172,7 +172,7 @@ public class MemoriesManager : MonoBehaviour
     */
     public bool CompareList(List<GameObject> input1, List<GameObject> input2)
     {
-        for (int i=0;i<input1.Capacity;i++)
+        for (int i = 0; i < input1.Capacity; i++)
         {
             if (input1[i] != input2[i])
             {

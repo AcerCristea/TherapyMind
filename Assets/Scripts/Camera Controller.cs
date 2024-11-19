@@ -39,13 +39,22 @@ public class CameraController : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.A))
+
+        if (!RoomManager.instance.activePuzzle)
         {
-            LeftButton();
-        }
-        else if (Input.GetKeyDown(KeyCode.D))
-        {
-            RightButton();
+            if (Input.GetKeyDown(KeyCode.A))
+            {
+                LeftButton();
+            }
+            else if (Input.GetKeyDown(KeyCode.D))
+            {
+                RightButton();
+            }
+
+            if (Input.GetMouseButtonDown(0))
+            {
+                SnapCamToPuzzle(cameraArray[activeCamIndex].GetComponent<Camera>());
+            }
         }
     }
 
@@ -58,6 +67,10 @@ public class CameraController : MonoBehaviour
 
             if (i == index)
             {
+
+                RoomManager.instance.activeCamera = cameraArray[i].GetComponent<Camera>();
+                RoomManager.instance.prevCamera = cameraArray[i].GetComponent<Camera>();
+
                 // Ensure only one AudioListener is active
                 AudioListener listener = cameraArray[i].GetComponent<AudioListener>();
                 if (listener != null)
@@ -120,5 +133,23 @@ public class CameraController : MonoBehaviour
         }
 
         UpdateCamera(activeCamIndex);
+    }
+
+    // Activate the puzzle clicked
+    public void SnapCamToPuzzle(Camera activeCam)
+    {
+        Ray ray = activeCam.ScreenPointToRay(Input.mousePosition);
+        RaycastHit hit;
+        Debug.DrawRay(ray.origin, ray.direction * 20, Color.white);
+        if (Physics.Raycast(ray, out hit))
+        {
+            if (hit.collider.gameObject.tag == "Puzzle")
+            {
+                // turns off all wall cams
+                UpdateCamera(-1);
+                RoomManager.instance.prevCamera = cameraArray[activeCamIndex].GetComponent<Camera>();
+                RoomManager.instance.ActivatePuzzle(hit.collider.transform.parent.gameObject);
+            }
+        }
     }
 }
