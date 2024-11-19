@@ -52,39 +52,43 @@ public class MemoriesManager : MonoBehaviour
     #region Input Handling
     void Update()
     {
-        // highlight obj to the left on A
-        if (Input.GetKeyDown(KeyCode.A))
+        // only operate when the player clicks this puzzle
+        if (RoomManager.instance.activePuzzle == this.gameObject)
         {
-            MoveLeft();
-        }
-        // highlight obj to the right on D
-        if (Input.GetKeyDown(KeyCode.D))
-        {
-            MoveRight();
-        }
-        // toggle selection of highlighted obj on SPACE
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            ToggleSelect();
-        }
-        // exit puzzle
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            RoomManager.instance.ReturnToWall();
-        }
-        // swap objs automatically
-        if (to_swap != null)
-        {
-            SwapObjs();
-            cursor_ = to_swap;
-            to_swap = null;
-            selected = null;
-        }
-        // check if puzzle is complete
-        if (compareList(memories, correctOrder))
-        {
-            Debug.Log("You did it! Yippee!");
-        }
+            // highlight obj to the left on A
+            if (Input.GetKeyDown(KeyCode.A))
+            {
+                MoveLeft();
+            }
+            // highlight obj to the right on D
+            if (Input.GetKeyDown(KeyCode.D))
+            {
+                MoveRight();
+            }
+            // toggle selection of highlighted obj on SPACE
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                ToggleSelect();
+            }
+            // exit puzzle
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                RoomManager.instance.ReturnToWall();
+            }
+            // swap objs automatically
+            if (to_swap != null)
+            {
+                SwapObjs();
+                cursor_ = to_swap;
+                to_swap = null;
+                selected = null;
+            }
+            // check if puzzle is complete
+            if (CompareList(memories, correctOrder))
+            {
+                Debug.Log("You did it! Yippee!");
+            }
+        } 
     }
     #endregion
 
@@ -166,7 +170,7 @@ public class MemoriesManager : MonoBehaviour
     /*
     cuz .Equals() wasn't working
     */
-    public bool compareList(List<GameObject> input1, List<GameObject> input2)
+    public bool CompareList(List<GameObject> input1, List<GameObject> input2)
     {
         for (int i=0;i<input1.Capacity;i++)
         {
