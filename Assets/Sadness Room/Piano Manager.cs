@@ -22,7 +22,7 @@ public class PianoManager : MonoBehaviour
         if (RoomManager.instance.activePuzzle == this.gameObject)
         {
             // use mouse to press a key
-            if (Input.GetMouseButtonDown(0))
+            if (Input.GetMouseButton(0))
             {
                 PlayNote();
             }

@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class KeyController : MonoBehaviour
 {
     AudioSource noteOfKey;
+    
     void Start ()
     {
         noteOfKey = GetComponent<AudioSource>();
@@ -12,6 +14,6 @@ public class KeyController : MonoBehaviour
 
     public void PressKey()
     {
-        noteOfKey.Play();
+            noteOfKey.Play();
     }
 }
