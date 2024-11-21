@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 5407961802899027373}
   - component: {fileID: 8331897016632671629}
   - component: {fileID: 1234648814156334362}
-  - component: {fileID: 7147624648091469249}
   - component: {fileID: 1936803154179759308}
+  - component: {fileID: 2639823050043942938}
   m_Layer: 0
   m_Name: F Key (1)
   m_TagString: Puzzle
@@ -66,7 +66,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 8df7a6b6f5ef74a43859a5f975f0b6c4, type: 2}
+  - {fileID: 2100000, guid: b2b6b8c7912e7b64c9892e1f2d08b9d0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -109,19 +109,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &7147624648091469249
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 73327725398778461}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf96ccabbf101cf4ba5f303a9dcda802, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pianoMixer: {fileID: 24100000, guid: e5d62cda15fce38488d2dce187760a37, type: 2}
 --- !u!82 &1936803154179759308
 AudioSource:
   m_ObjectHideFlags: 0
@@ -219,6 +206,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &2639823050043942938
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 73327725398778461}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00b523e32619202489dbe67c576c838e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &138601042591499027
 GameObject:
   m_ObjectHideFlags: 0
@@ -231,8 +230,8 @@ GameObject:
   - component: {fileID: 3300542026945662221}
   - component: {fileID: 8454133236973520599}
   - component: {fileID: 6567799246997675154}
-  - component: {fileID: 7511406569915770462}
   - component: {fileID: 1865287703732976043}
+  - component: {fileID: 1496276961615261049}
   m_Layer: 0
   m_Name: G# Key
   m_TagString: Puzzle
@@ -285,7 +284,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 788072c52a81f034d836fde08fd25f01, type: 2}
+  - {fileID: 2100000, guid: 4beec141dbf8f6c469cc3dc013928710, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -328,19 +327,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &7511406569915770462
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 138601042591499027}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf96ccabbf101cf4ba5f303a9dcda802, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pianoMixer: {fileID: 24100000, guid: e5d62cda15fce38488d2dce187760a37, type: 2}
 --- !u!82 &1865287703732976043
 AudioSource:
   m_ObjectHideFlags: 0
@@ -438,6 +424,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1496276961615261049
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 138601042591499027}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00b523e32619202489dbe67c576c838e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &399126297828289473
 GameObject:
   m_ObjectHideFlags: 0
@@ -450,8 +448,8 @@ GameObject:
   - component: {fileID: 1121021581217432931}
   - component: {fileID: 5830861848216925842}
   - component: {fileID: 6337988689323045026}
-  - component: {fileID: 748756079271384599}
   - component: {fileID: 8100026396975437895}
+  - component: {fileID: 3302656814939953223}
   m_Layer: 0
   m_Name: G Key (1)
   m_TagString: Puzzle
@@ -504,7 +502,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 8df7a6b6f5ef74a43859a5f975f0b6c4, type: 2}
+  - {fileID: 2100000, guid: b2b6b8c7912e7b64c9892e1f2d08b9d0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -547,19 +545,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &748756079271384599
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 399126297828289473}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf96ccabbf101cf4ba5f303a9dcda802, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pianoMixer: {fileID: 24100000, guid: e5d62cda15fce38488d2dce187760a37, type: 2}
 --- !u!82 &8100026396975437895
 AudioSource:
   m_ObjectHideFlags: 0
@@ -657,6 +642,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &3302656814939953223
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 399126297828289473}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00b523e32619202489dbe67c576c838e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &477087557456416729
 GameObject:
   m_ObjectHideFlags: 0
@@ -669,8 +666,8 @@ GameObject:
   - component: {fileID: 515073094066074490}
   - component: {fileID: 8051431304376532065}
   - component: {fileID: 5052245016537412873}
-  - component: {fileID: 1455635221020537814}
   - component: {fileID: 6810549994601052078}
+  - component: {fileID: 679509483531323216}
   m_Layer: 0
   m_Name: C# Key (1)
   m_TagString: Puzzle
@@ -723,7 +720,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 788072c52a81f034d836fde08fd25f01, type: 2}
+  - {fileID: 2100000, guid: 4beec141dbf8f6c469cc3dc013928710, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -766,19 +763,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1455635221020537814
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 477087557456416729}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf96ccabbf101cf4ba5f303a9dcda802, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pianoMixer: {fileID: 24100000, guid: e5d62cda15fce38488d2dce187760a37, type: 2}
 --- !u!82 &6810549994601052078
 AudioSource:
   m_ObjectHideFlags: 0
@@ -876,6 +860,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &679509483531323216
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 477087557456416729}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00b523e32619202489dbe67c576c838e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &857359435156384507
 GameObject:
   m_ObjectHideFlags: 0
@@ -888,8 +884,8 @@ GameObject:
   - component: {fileID: 6620497032477808588}
   - component: {fileID: 7749331110799818410}
   - component: {fileID: 3815241998244509511}
-  - component: {fileID: 1659246569005470162}
   - component: {fileID: 2523096694344174486}
+  - component: {fileID: 676918507349732848}
   m_Layer: 0
   m_Name: D# Key (1)
   m_TagString: Puzzle
@@ -942,7 +938,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 788072c52a81f034d836fde08fd25f01, type: 2}
+  - {fileID: 2100000, guid: 4beec141dbf8f6c469cc3dc013928710, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -985,19 +981,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1659246569005470162
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 857359435156384507}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf96ccabbf101cf4ba5f303a9dcda802, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pianoMixer: {fileID: 24100000, guid: e5d62cda15fce38488d2dce187760a37, type: 2}
 --- !u!82 &2523096694344174486
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1095,6 +1078,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &676918507349732848
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 857359435156384507}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00b523e32619202489dbe67c576c838e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1193336557785912767
 GameObject:
   m_ObjectHideFlags: 0
@@ -1159,7 +1154,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: cee877ce8d8f7884cbb2d7645c6be76d, type: 2}
+  - {fileID: 2100000, guid: 76dfa5cefe8e0d6418f14a0790b15aac, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1214,8 +1209,8 @@ GameObject:
   - component: {fileID: 7519171297311019018}
   - component: {fileID: 4432599716690241574}
   - component: {fileID: 4294348949898037735}
-  - component: {fileID: 4004103575047528624}
   - component: {fileID: 7632032461490037718}
+  - component: {fileID: 8174411852202540845}
   m_Layer: 0
   m_Name: E Key (1)
   m_TagString: Puzzle
@@ -1268,7 +1263,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 8df7a6b6f5ef74a43859a5f975f0b6c4, type: 2}
+  - {fileID: 2100000, guid: b2b6b8c7912e7b64c9892e1f2d08b9d0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1311,19 +1306,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &4004103575047528624
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1767215356372151811}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf96ccabbf101cf4ba5f303a9dcda802, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pianoMixer: {fileID: 24100000, guid: e5d62cda15fce38488d2dce187760a37, type: 2}
 --- !u!82 &7632032461490037718
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1421,6 +1403,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &8174411852202540845
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1767215356372151811}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00b523e32619202489dbe67c576c838e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1843944884155107039
 GameObject:
   m_ObjectHideFlags: 0
@@ -1485,7 +1479,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: cee877ce8d8f7884cbb2d7645c6be76d, type: 2}
+  - {fileID: 2100000, guid: 76dfa5cefe8e0d6418f14a0790b15aac, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1540,8 +1534,8 @@ GameObject:
   - component: {fileID: 7253170720200843433}
   - component: {fileID: 652055482522884768}
   - component: {fileID: 1626553783771055327}
-  - component: {fileID: 2133302772627478009}
   - component: {fileID: 1731476275868942634}
+  - component: {fileID: 5141884171408229509}
   m_Layer: 0
   m_Name: G Key
   m_TagString: Puzzle
@@ -1594,7 +1588,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 8df7a6b6f5ef74a43859a5f975f0b6c4, type: 2}
+  - {fileID: 2100000, guid: b2b6b8c7912e7b64c9892e1f2d08b9d0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1637,19 +1631,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &2133302772627478009
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2277842258049115582}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf96ccabbf101cf4ba5f303a9dcda802, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pianoMixer: {fileID: 24100000, guid: e5d62cda15fce38488d2dce187760a37, type: 2}
 --- !u!82 &1731476275868942634
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1747,6 +1728,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &5141884171408229509
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2277842258049115582}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00b523e32619202489dbe67c576c838e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2365443274892779723
 GameObject:
   m_ObjectHideFlags: 0
@@ -1759,8 +1752,8 @@ GameObject:
   - component: {fileID: 860916000949779271}
   - component: {fileID: 2492247147458819788}
   - component: {fileID: 7141294041631601599}
-  - component: {fileID: 3420883088168389950}
   - component: {fileID: 8405030185455282632}
+  - component: {fileID: 2816165538977948596}
   m_Layer: 0
   m_Name: B Key (1)
   m_TagString: Puzzle
@@ -1813,7 +1806,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 8df7a6b6f5ef74a43859a5f975f0b6c4, type: 2}
+  - {fileID: 2100000, guid: b2b6b8c7912e7b64c9892e1f2d08b9d0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1856,19 +1849,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &3420883088168389950
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2365443274892779723}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf96ccabbf101cf4ba5f303a9dcda802, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pianoMixer: {fileID: 24100000, guid: e5d62cda15fce38488d2dce187760a37, type: 2}
 --- !u!82 &8405030185455282632
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1966,6 +1946,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &2816165538977948596
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2365443274892779723}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00b523e32619202489dbe67c576c838e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2536373666859170467
 GameObject:
   m_ObjectHideFlags: 0
@@ -1978,8 +1970,8 @@ GameObject:
   - component: {fileID: 6945882638028704632}
   - component: {fileID: 8835042185991148406}
   - component: {fileID: 1904289142647596572}
-  - component: {fileID: 3676525781112592376}
   - component: {fileID: 2559075978930474616}
+  - component: {fileID: 1499478952949845977}
   m_Layer: 0
   m_Name: A Key
   m_TagString: Puzzle
@@ -2032,7 +2024,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 8df7a6b6f5ef74a43859a5f975f0b6c4, type: 2}
+  - {fileID: 2100000, guid: b2b6b8c7912e7b64c9892e1f2d08b9d0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2075,19 +2067,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &3676525781112592376
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2536373666859170467}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf96ccabbf101cf4ba5f303a9dcda802, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pianoMixer: {fileID: 24100000, guid: e5d62cda15fce38488d2dce187760a37, type: 2}
 --- !u!82 &2559075978930474616
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2185,6 +2164,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1499478952949845977
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2536373666859170467}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00b523e32619202489dbe67c576c838e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2872697036262056911
 GameObject:
   m_ObjectHideFlags: 0
@@ -2197,8 +2188,8 @@ GameObject:
   - component: {fileID: 6739749014446874528}
   - component: {fileID: 8594910374587893213}
   - component: {fileID: 3965250845153359869}
-  - component: {fileID: 1440236734109550789}
   - component: {fileID: 2912456121143814226}
+  - component: {fileID: 6246800958004367754}
   m_Layer: 0
   m_Name: C Key
   m_TagString: Puzzle
@@ -2251,7 +2242,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 8df7a6b6f5ef74a43859a5f975f0b6c4, type: 2}
+  - {fileID: 2100000, guid: b2b6b8c7912e7b64c9892e1f2d08b9d0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2294,19 +2285,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1440236734109550789
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2872697036262056911}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf96ccabbf101cf4ba5f303a9dcda802, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pianoMixer: {fileID: 24100000, guid: e5d62cda15fce38488d2dce187760a37, type: 2}
 --- !u!82 &2912456121143814226
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2404,6 +2382,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &6246800958004367754
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2872697036262056911}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00b523e32619202489dbe67c576c838e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3215631027060559699
 GameObject:
   m_ObjectHideFlags: 0
@@ -2416,8 +2406,8 @@ GameObject:
   - component: {fileID: 2835127530243712792}
   - component: {fileID: 2716614376611529683}
   - component: {fileID: 4121346495817217364}
-  - component: {fileID: 3590765593942245221}
   - component: {fileID: 8041598232789004794}
+  - component: {fileID: 9147040600314351910}
   m_Layer: 0
   m_Name: F Key
   m_TagString: Puzzle
@@ -2470,7 +2460,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 8df7a6b6f5ef74a43859a5f975f0b6c4, type: 2}
+  - {fileID: 2100000, guid: b2b6b8c7912e7b64c9892e1f2d08b9d0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2513,19 +2503,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &3590765593942245221
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3215631027060559699}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf96ccabbf101cf4ba5f303a9dcda802, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pianoMixer: {fileID: 24100000, guid: e5d62cda15fce38488d2dce187760a37, type: 2}
 --- !u!82 &8041598232789004794
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2623,6 +2600,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &9147040600314351910
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3215631027060559699}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00b523e32619202489dbe67c576c838e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4384789049319128706
 GameObject:
   m_ObjectHideFlags: 0
@@ -2635,8 +2624,8 @@ GameObject:
   - component: {fileID: 1670060764398421859}
   - component: {fileID: 7285076079395693814}
   - component: {fileID: 6646127439908351818}
-  - component: {fileID: 5201680439091991169}
   - component: {fileID: 2715496801442176995}
+  - component: {fileID: 2675461867783365653}
   m_Layer: 0
   m_Name: F# Key
   m_TagString: Puzzle
@@ -2689,7 +2678,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 788072c52a81f034d836fde08fd25f01, type: 2}
+  - {fileID: 2100000, guid: 4beec141dbf8f6c469cc3dc013928710, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2732,19 +2721,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &5201680439091991169
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4384789049319128706}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf96ccabbf101cf4ba5f303a9dcda802, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pianoMixer: {fileID: 24100000, guid: e5d62cda15fce38488d2dce187760a37, type: 2}
 --- !u!82 &2715496801442176995
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2842,6 +2818,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &2675461867783365653
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4384789049319128706}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00b523e32619202489dbe67c576c838e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4474623153514091023
 GameObject:
   m_ObjectHideFlags: 0
@@ -2854,8 +2842,8 @@ GameObject:
   - component: {fileID: 1798623005119079788}
   - component: {fileID: 6526704090752578068}
   - component: {fileID: 6077393468794891850}
-  - component: {fileID: 6852160140568211658}
   - component: {fileID: 4097891166589532541}
+  - component: {fileID: 2452911720760874773}
   m_Layer: 0
   m_Name: C# Key
   m_TagString: Puzzle
@@ -2908,7 +2896,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 788072c52a81f034d836fde08fd25f01, type: 2}
+  - {fileID: 2100000, guid: 4beec141dbf8f6c469cc3dc013928710, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2951,19 +2939,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &6852160140568211658
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4474623153514091023}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf96ccabbf101cf4ba5f303a9dcda802, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pianoMixer: {fileID: 24100000, guid: e5d62cda15fce38488d2dce187760a37, type: 2}
 --- !u!82 &4097891166589532541
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3061,6 +3036,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &2452911720760874773
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4474623153514091023}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00b523e32619202489dbe67c576c838e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4479712028924262457
 GameObject:
   m_ObjectHideFlags: 0
@@ -3073,8 +3060,8 @@ GameObject:
   - component: {fileID: 5420926435917677681}
   - component: {fileID: 3712001473180444951}
   - component: {fileID: 2485262533356905321}
-  - component: {fileID: 198513122156965654}
   - component: {fileID: 316290780762318259}
+  - component: {fileID: 5075747403647995023}
   m_Layer: 0
   m_Name: B Key
   m_TagString: Puzzle
@@ -3127,7 +3114,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 8df7a6b6f5ef74a43859a5f975f0b6c4, type: 2}
+  - {fileID: 2100000, guid: b2b6b8c7912e7b64c9892e1f2d08b9d0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3170,19 +3157,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &198513122156965654
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4479712028924262457}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf96ccabbf101cf4ba5f303a9dcda802, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pianoMixer: {fileID: 24100000, guid: e5d62cda15fce38488d2dce187760a37, type: 2}
 --- !u!82 &316290780762318259
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3280,6 +3254,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &5075747403647995023
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4479712028924262457}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00b523e32619202489dbe67c576c838e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4513472514158467108
 GameObject:
   m_ObjectHideFlags: 0
@@ -3292,8 +3278,8 @@ GameObject:
   - component: {fileID: 3516036455732670466}
   - component: {fileID: 5151954103363932930}
   - component: {fileID: 2160533777867203931}
-  - component: {fileID: 7114348455174252792}
   - component: {fileID: 9086911510230920321}
+  - component: {fileID: 5239512031250597476}
   m_Layer: 0
   m_Name: A# Key
   m_TagString: Puzzle
@@ -3346,7 +3332,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 788072c52a81f034d836fde08fd25f01, type: 2}
+  - {fileID: 2100000, guid: 4beec141dbf8f6c469cc3dc013928710, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3389,19 +3375,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &7114348455174252792
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4513472514158467108}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf96ccabbf101cf4ba5f303a9dcda802, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pianoMixer: {fileID: 24100000, guid: e5d62cda15fce38488d2dce187760a37, type: 2}
 --- !u!82 &9086911510230920321
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3499,6 +3472,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &5239512031250597476
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4513472514158467108}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00b523e32619202489dbe67c576c838e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4537870817930978532
 GameObject:
   m_ObjectHideFlags: 0
@@ -3511,8 +3496,8 @@ GameObject:
   - component: {fileID: 2003654456860228229}
   - component: {fileID: 2499917850362968576}
   - component: {fileID: 5108472053776836111}
-  - component: {fileID: 8577249419213876476}
   - component: {fileID: 2758890765291280640}
+  - component: {fileID: 2596660362775333996}
   m_Layer: 0
   m_Name: F# Key (1)
   m_TagString: Puzzle
@@ -3565,7 +3550,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 788072c52a81f034d836fde08fd25f01, type: 2}
+  - {fileID: 2100000, guid: 4beec141dbf8f6c469cc3dc013928710, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3608,19 +3593,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &8577249419213876476
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4537870817930978532}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf96ccabbf101cf4ba5f303a9dcda802, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pianoMixer: {fileID: 24100000, guid: e5d62cda15fce38488d2dce187760a37, type: 2}
 --- !u!82 &2758890765291280640
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3718,6 +3690,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &2596660362775333996
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4537870817930978532}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00b523e32619202489dbe67c576c838e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5267991101891481024
 GameObject:
   m_ObjectHideFlags: 0
@@ -3730,8 +3714,8 @@ GameObject:
   - component: {fileID: 8365298296450504245}
   - component: {fileID: 1570123064767660695}
   - component: {fileID: 95575722011152125}
-  - component: {fileID: 1962128493924226034}
   - component: {fileID: 1357680368889005563}
+  - component: {fileID: 776428614849914040}
   m_Layer: 0
   m_Name: A# Key (1)
   m_TagString: Puzzle
@@ -3784,7 +3768,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 788072c52a81f034d836fde08fd25f01, type: 2}
+  - {fileID: 2100000, guid: 4beec141dbf8f6c469cc3dc013928710, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3827,19 +3811,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1962128493924226034
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5267991101891481024}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf96ccabbf101cf4ba5f303a9dcda802, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pianoMixer: {fileID: 24100000, guid: e5d62cda15fce38488d2dce187760a37, type: 2}
 --- !u!82 &1357680368889005563
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3937,6 +3908,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &776428614849914040
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5267991101891481024}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00b523e32619202489dbe67c576c838e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5654788346451223888
 GameObject:
   m_ObjectHideFlags: 0
@@ -3949,8 +3932,8 @@ GameObject:
   - component: {fileID: 4539170403229608196}
   - component: {fileID: 6190076665589980223}
   - component: {fileID: 2028304711513561450}
-  - component: {fileID: 7711781205800055902}
   - component: {fileID: 3421357779532652739}
+  - component: {fileID: 37918470702198195}
   m_Layer: 0
   m_Name: D Key (1)
   m_TagString: Puzzle
@@ -4003,7 +3986,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 8df7a6b6f5ef74a43859a5f975f0b6c4, type: 2}
+  - {fileID: 2100000, guid: b2b6b8c7912e7b64c9892e1f2d08b9d0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4046,19 +4029,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &7711781205800055902
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5654788346451223888}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf96ccabbf101cf4ba5f303a9dcda802, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pianoMixer: {fileID: 24100000, guid: e5d62cda15fce38488d2dce187760a37, type: 2}
 --- !u!82 &3421357779532652739
 AudioSource:
   m_ObjectHideFlags: 0
@@ -4156,6 +4126,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &37918470702198195
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5654788346451223888}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00b523e32619202489dbe67c576c838e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5811731135783943163
 GameObject:
   m_ObjectHideFlags: 0
@@ -4238,8 +4220,8 @@ GameObject:
   - component: {fileID: 2693798448716711991}
   - component: {fileID: 8418616327184032025}
   - component: {fileID: 1555297865972459038}
-  - component: {fileID: 8416951553568404972}
   - component: {fileID: 978838984958938449}
+  - component: {fileID: 6806569562605811569}
   m_Layer: 0
   m_Name: D# Key
   m_TagString: Puzzle
@@ -4292,7 +4274,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 788072c52a81f034d836fde08fd25f01, type: 2}
+  - {fileID: 2100000, guid: 4beec141dbf8f6c469cc3dc013928710, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4335,19 +4317,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &8416951553568404972
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6001191794075892371}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf96ccabbf101cf4ba5f303a9dcda802, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pianoMixer: {fileID: 24100000, guid: e5d62cda15fce38488d2dce187760a37, type: 2}
 --- !u!82 &978838984958938449
 AudioSource:
   m_ObjectHideFlags: 0
@@ -4445,6 +4414,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &6806569562605811569
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6001191794075892371}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00b523e32619202489dbe67c576c838e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7008022961287437238
 GameObject:
   m_ObjectHideFlags: 0
@@ -4509,7 +4490,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: cee877ce8d8f7884cbb2d7645c6be76d, type: 2}
+  - {fileID: 2100000, guid: 76dfa5cefe8e0d6418f14a0790b15aac, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4564,8 +4545,8 @@ GameObject:
   - component: {fileID: 3185139760725362064}
   - component: {fileID: 2104198322498771958}
   - component: {fileID: 9087753848612621103}
-  - component: {fileID: 454757726156778066}
   - component: {fileID: 1348771755168281642}
+  - component: {fileID: 5544717479183550908}
   m_Layer: 0
   m_Name: E Key
   m_TagString: Puzzle
@@ -4618,7 +4599,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 8df7a6b6f5ef74a43859a5f975f0b6c4, type: 2}
+  - {fileID: 2100000, guid: b2b6b8c7912e7b64c9892e1f2d08b9d0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4661,19 +4642,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &454757726156778066
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7384714948267815114}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf96ccabbf101cf4ba5f303a9dcda802, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pianoMixer: {fileID: 24100000, guid: e5d62cda15fce38488d2dce187760a37, type: 2}
 --- !u!82 &1348771755168281642
 AudioSource:
   m_ObjectHideFlags: 0
@@ -4771,6 +4739,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &5544717479183550908
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7384714948267815114}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00b523e32619202489dbe67c576c838e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7565253017705560411
 GameObject:
   m_ObjectHideFlags: 0
@@ -4783,8 +4763,8 @@ GameObject:
   - component: {fileID: 5117400035446051298}
   - component: {fileID: 5565725438143996953}
   - component: {fileID: 5425303132964654782}
-  - component: {fileID: 5897849205041456596}
   - component: {fileID: 890861628438432000}
+  - component: {fileID: 9161048884359158794}
   m_Layer: 0
   m_Name: C Key (1)
   m_TagString: Puzzle
@@ -4837,7 +4817,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 8df7a6b6f5ef74a43859a5f975f0b6c4, type: 2}
+  - {fileID: 2100000, guid: b2b6b8c7912e7b64c9892e1f2d08b9d0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4880,19 +4860,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &5897849205041456596
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7565253017705560411}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf96ccabbf101cf4ba5f303a9dcda802, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pianoMixer: {fileID: 24100000, guid: e5d62cda15fce38488d2dce187760a37, type: 2}
 --- !u!82 &890861628438432000
 AudioSource:
   m_ObjectHideFlags: 0
@@ -4990,6 +4957,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &9161048884359158794
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7565253017705560411}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00b523e32619202489dbe67c576c838e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7731336672823278027
 GameObject:
   m_ObjectHideFlags: 0
@@ -5094,8 +5073,8 @@ GameObject:
   - component: {fileID: 8544451412644521388}
   - component: {fileID: 4668578421689812889}
   - component: {fileID: 4030942267620144245}
-  - component: {fileID: 1247408097526556445}
   - component: {fileID: 8279129367669072019}
+  - component: {fileID: 4545447991264692544}
   m_Layer: 0
   m_Name: D Key
   m_TagString: Puzzle
@@ -5148,7 +5127,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 8df7a6b6f5ef74a43859a5f975f0b6c4, type: 2}
+  - {fileID: 2100000, guid: b2b6b8c7912e7b64c9892e1f2d08b9d0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5191,19 +5170,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1247408097526556445
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7860901494955180550}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf96ccabbf101cf4ba5f303a9dcda802, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pianoMixer: {fileID: 24100000, guid: e5d62cda15fce38488d2dce187760a37, type: 2}
 --- !u!82 &8279129367669072019
 AudioSource:
   m_ObjectHideFlags: 0
@@ -5301,6 +5267,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &4545447991264692544
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7860901494955180550}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00b523e32619202489dbe67c576c838e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7918683175319118305
 GameObject:
   m_ObjectHideFlags: 0
@@ -5313,8 +5291,8 @@ GameObject:
   - component: {fileID: 4267929015299299708}
   - component: {fileID: 6020379998412714633}
   - component: {fileID: 8954139231815363709}
-  - component: {fileID: 286423204710562671}
   - component: {fileID: 6962232290101308890}
+  - component: {fileID: 1217872581096096308}
   m_Layer: 0
   m_Name: G# Key (1)
   m_TagString: Puzzle
@@ -5367,7 +5345,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 788072c52a81f034d836fde08fd25f01, type: 2}
+  - {fileID: 2100000, guid: 4beec141dbf8f6c469cc3dc013928710, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5410,19 +5388,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &286423204710562671
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7918683175319118305}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf96ccabbf101cf4ba5f303a9dcda802, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pianoMixer: {fileID: 24100000, guid: e5d62cda15fce38488d2dce187760a37, type: 2}
 --- !u!82 &6962232290101308890
 AudioSource:
   m_ObjectHideFlags: 0
@@ -5520,6 +5485,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1217872581096096308
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7918683175319118305}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00b523e32619202489dbe67c576c838e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8011761315038167029
 GameObject:
   m_ObjectHideFlags: 0
@@ -5584,7 +5561,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: cee877ce8d8f7884cbb2d7645c6be76d, type: 2}
+  - {fileID: 2100000, guid: 76dfa5cefe8e0d6418f14a0790b15aac, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5674,8 +5651,8 @@ GameObject:
   - component: {fileID: 6842260441557394189}
   - component: {fileID: 5388383717540362262}
   - component: {fileID: 5751045324318664639}
-  - component: {fileID: 8793920669095932510}
   - component: {fileID: 374754791323601902}
+  - component: {fileID: 8619523870128544542}
   m_Layer: 0
   m_Name: A Key (1)
   m_TagString: Puzzle
@@ -5728,7 +5705,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 8df7a6b6f5ef74a43859a5f975f0b6c4, type: 2}
+  - {fileID: 2100000, guid: b2b6b8c7912e7b64c9892e1f2d08b9d0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5771,19 +5748,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &8793920669095932510
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8243966536478447107}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf96ccabbf101cf4ba5f303a9dcda802, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pianoMixer: {fileID: 24100000, guid: e5d62cda15fce38488d2dce187760a37, type: 2}
 --- !u!82 &374754791323601902
 AudioSource:
   m_ObjectHideFlags: 0
@@ -5881,3 +5845,15 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &8619523870128544542
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8243966536478447107}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00b523e32619202489dbe67c576c838e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
