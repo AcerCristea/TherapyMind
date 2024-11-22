@@ -1118,6 +1118,10 @@ MonoBehaviour:
   - {fileID: 1171302279809942943}
   - {fileID: 8611022837613787295}
   - {fileID: 5790611861426075374}
+  northCam: {fileID: 7126464158734410334}
+  westCam: {fileID: 1171302279809942943}
+  southCam: {fileID: 8611022837613787295}
+  eastCam: {fileID: 5790611861426075374}
 --- !u!1 &5046680288935145911
 GameObject:
   m_ObjectHideFlags: 0
