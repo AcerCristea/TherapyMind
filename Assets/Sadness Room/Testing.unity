@@ -917,7 +917,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5280161116813360760, guid: 4d6fad4b6da174e4d84d9734b2419b8b, type: 3}
       propertyPath: m_TagString
-      value: Puzzle
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
