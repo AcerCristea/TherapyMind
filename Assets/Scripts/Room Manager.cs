@@ -19,11 +19,16 @@ public class RoomManager : MonoBehaviour
     // place the camera in front of the puzzle clicked
     public void ActivatePuzzle(GameObject puzzle)
     {
+
+        Debug.Log("ActivatePuzzle called. Puzzle: " + puzzle.name);  // Debug statement
+
         // search puzzle for the attached camera then switch to it
         foreach (Transform child in puzzle.transform)
         {
             if (child.GetComponent<Camera>() != null)
             {
+                Debug.Log("Camera found for puzzle: " + child.name);  // Debug statement
+
                 child.gameObject.SetActive(true);
                 activeCamera = child.GetComponent<Camera>();
             }
