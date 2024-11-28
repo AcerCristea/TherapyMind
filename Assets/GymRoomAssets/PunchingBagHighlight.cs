@@ -7,16 +7,16 @@ public class PunchingBagHighlight : MonoBehaviour
 {
     // Start is called before the first frame update
     public GameObject Obj;
-    private Renderer renderer;
+    private Renderer renderer1;
     private Color initialColor;
 
-    public Camera camera;
+    public Camera camera1;
 
     [SerializeField] private float punchBagHealth = 100f;
 
     void Start()
     {
-        renderer = GetComponent<Renderer>();
+        renderer1 = GetComponent<Renderer>();
         initialColor = GetComponent<Renderer>().material.GetColor("_Color");
     }
 
@@ -24,7 +24,7 @@ public class PunchingBagHighlight : MonoBehaviour
     void Update()
     {
         if(Input.GetMouseButtonDown(0)){
-            Ray ray = camera.ScreenPointToRay(Input.mousePosition);
+            Ray ray = camera1.ScreenPointToRay(Input.mousePosition);
 
             if(Physics.Raycast(ray, out RaycastHit hitInfo)){
                 if(hitInfo.collider.gameObject.tag == "punchBag"){
@@ -40,7 +40,7 @@ public class PunchingBagHighlight : MonoBehaviour
 
         if(punchBagHealth > 100f){
             punchBagHealth = 100f;
-            Debug.Log("Punching Bag Fully Healed");
+            //Debug.Log("Punching Bag Fully Healed");
         }
         if(punchBagHealth <= 0){
             Obj.SetActive(false);
@@ -51,11 +51,11 @@ public class PunchingBagHighlight : MonoBehaviour
 
     private void OnMouseEnter()
     {
-        renderer.material.color = Color.red + initialColor;
+        renderer1.material.color = Color.red + initialColor;
     }
 
     private void OnMouseExit()
     {
-        renderer.material.color = initialColor;
+        renderer1.material.color = initialColor;
     }
 }
