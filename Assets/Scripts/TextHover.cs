@@ -26,7 +26,7 @@ public class ButtonTextChangeHandler : MonoBehaviour, IPointerEnterHandler, IPoi
     {
         buttonText.text = originalText;
         buttonText.fontSize -= 6;
-        buttonText.color = Color.black;
+        buttonText.color = Color.white;
     }
 
 }
