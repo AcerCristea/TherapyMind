@@ -34,14 +34,14 @@ public class MemoriesManager : MonoBehaviour
     void Awake()
     {
         instance = this;
-        memories.Capacity = GetComponent<Transform>().childCount-3; // subtracting one to account for the pointer obj
+        memories.Capacity = GetComponent<Transform>().childCount - 3; // subtracting one to account for the pointer obj
         selected = null;
         to_swap = null;
     }
 
     void Start()
     {
-        for (int i=0; i<memories.Capacity; i++)
+        for (int i = 0; i < memories.Capacity; i++)
         {
             memories.Add(GetComponent<Transform>().GetChild(i).gameObject);
         }
@@ -52,38 +52,42 @@ public class MemoriesManager : MonoBehaviour
     #region Input Handling
     void Update()
     {
-        // highlight obj to the left on A
-        if (Input.GetKeyDown(KeyCode.A))
+        // only operate when the player clicks this puzzle
+        if (RoomManager.instance.activePuzzle == this.gameObject)
         {
-            MoveLeft();
-        }
-        // highlight obj to the right on D
-        if (Input.GetKeyDown(KeyCode.D))
-        {
-            MoveRight();
-        }
-        // toggle selection of highlighted obj on SPACE
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            ToggleSelect();
-        }
-        // exit puzzle
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            RoomManager.instance.ReturnToWall();
-        }
-        // swap objs automatically
-        if (to_swap != null)
-        {
-            SwapObjs();
-            cursor_ = to_swap;
-            to_swap = null;
-            selected = null;
-        }
-        // check if puzzle is complete
-        if (compareList(memories, correctOrder))
-        {
-            Debug.Log("You did it! Yippee!");
+            // highlight obj to the left on A
+            if (Input.GetKeyDown(KeyCode.A))
+            {
+                MoveLeft();
+            }
+            // highlight obj to the right on D
+            if (Input.GetKeyDown(KeyCode.D))
+            {
+                MoveRight();
+            }
+            // toggle selection of highlighted obj on SPACE
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                ToggleSelect();
+            }
+            // exit puzzle
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                RoomManager.instance.ReturnToWall();
+            }
+            // swap objs automatically
+            if (to_swap != null)
+            {
+                SwapObjs();
+                cursor_ = to_swap;
+                to_swap = null;
+                selected = null;
+            }
+            // check if puzzle is complete
+            if (CompareList(memories, correctOrder))
+            {
+                Debug.Log("You did it! Yippee!");
+            }
         }
     }
     #endregion
@@ -98,13 +102,13 @@ public class MemoriesManager : MonoBehaviour
     */
     public void MoveRight()
     {
-        if (memories.IndexOf(cursor_) == memories.Capacity-1)
+        if (memories.IndexOf(cursor_) == memories.Capacity - 1)
         {
             cursor_ = memories[0];
         }
         else
         {
-            cursor_ = memories[memories.IndexOf(cursor_)+1];
+            cursor_ = memories[memories.IndexOf(cursor_) + 1];
         }
         return;
     }
@@ -112,11 +116,11 @@ public class MemoriesManager : MonoBehaviour
     {
         if (memories.IndexOf(cursor_) == 0)
         {
-            cursor_ = memories[memories.Capacity-1];
+            cursor_ = memories[memories.Capacity - 1];
         }
         else
         {
-            cursor_ = memories[memories.IndexOf(cursor_)-1];
+            cursor_ = memories[memories.IndexOf(cursor_) - 1];
         }
     }
 
@@ -166,9 +170,9 @@ public class MemoriesManager : MonoBehaviour
     /*
     cuz .Equals() wasn't working
     */
-    public bool compareList(List<GameObject> input1, List<GameObject> input2)
+    public bool CompareList(List<GameObject> input1, List<GameObject> input2)
     {
-        for (int i=0;i<input1.Capacity;i++)
+        for (int i = 0; i < input1.Capacity; i++)
         {
             if (input1[i] != input2[i])
             {

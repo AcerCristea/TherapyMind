@@ -8,7 +8,7 @@ TagManager:
   - book
   - Puzzle
   - punchBag
-  - shard
+  - Target
   layers:
   - Default
   - TransparentFX

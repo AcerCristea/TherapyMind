@@ -5,79 +5,160 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
-    public static GameObject northCam;
-    public static GameObject westCam;
-    public static GameObject eastCam;
-    public static GameObject southCam;
-
+    public GameObject[] cameraArray;
     public static int activeCamIndex = 0;
+    private GameObject currentRoom;  // Current active room
+    private AudioListener currentAudioListener;
 
-    public GameObject[] cameraArray = {northCam, westCam, southCam, eastCam};
+    public GameObject northCam;
+    public GameObject westCam;
+    public GameObject southCam;
+    public GameObject eastCam;
+
+    public static CameraController instance;
+
+    // For the Drag and Drop
+    void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
 
     void Start()
     {
-        updateCamera(activeCamIndex);
+        // Assuming the first room is set up as active in the scene
+        cameraArray = new GameObject[] { northCam, westCam, southCam, eastCam };
+        UpdateCamera(activeCamIndex);
     }
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.A))
+
+        if (!RoomManager.instance.activePuzzle)
         {
-            leftButton();
-        }
-        else if (Input.GetKeyDown(KeyCode.D))
-        {
-            rightButton();
-        }
-    }
-    // UpdateCamera keeps only one camera on
-    private void updateCamera(int index){
-        for(int i = 0; i < cameraArray.Length; i++){
-            // only use the active camera 
-            if (i == index)
+            if (Input.GetKeyDown(KeyCode.A))
             {
-                cameraArray[i].SetActive(true);
-                activeCamIndex = i;
-                // CameraManager.instance.activeCamera = cameraArray[i].GetComponent<Camera>();
-            } 
-            else
+                LeftButton();
+            }
+            else if (Input.GetKeyDown(KeyCode.D))
             {
-                // turn off every other camera in scene
-                if (cameraArray[i] != null)
-                {
-                    cameraArray[i].SetActive(false);
-                }
+                RightButton();
+            }
+
+            if (Input.GetMouseButtonDown(0))
+            {
+                SnapCamToPuzzle(cameraArray[activeCamIndex].GetComponent<Camera>());
             }
         }
     }
+
+    // UpdateCamera keeps only one camera on
+    public void UpdateCamera(int index)
+    {
+        for (int i = 0; i < cameraArray.Length; i++)
+        {
+            cameraArray[i].SetActive(i == index);
+
+            if (i == index)
+            {
+
+                RoomManager.instance.activeCamera = cameraArray[i].GetComponent<Camera>();
+                RoomManager.instance.prevCamera = cameraArray[i].GetComponent<Camera>();
+
+                // Ensure only one AudioListener is active
+                AudioListener listener = cameraArray[i].GetComponent<AudioListener>();
+                if (listener != null)
+                {
+                    if (currentAudioListener != null)
+                    {
+                        currentAudioListener.enabled = false;
+                    }
+                    listener.enabled = true;
+                    currentAudioListener = listener;
+                }
+
+                activeCamIndex = i;
+            }
+        }
+    }
+
     // Activate the camera to the left
-    public void leftButton(){
+    public void LeftButton()
+    {
         activeCamIndex--;
         if (activeCamIndex < 0)
         {
             activeCamIndex = cameraArray.Length - 1;
         }
-        updateCamera(activeCamIndex);
+        UpdateCamera(activeCamIndex);
     }
+
     // Activate the camera to the right
-    public void rightButton(){
+    public void RightButton()
+    {
         activeCamIndex++;
-        if (activeCamIndex > cameraArray.Length - 1)
+        if (activeCamIndex >= cameraArray.Length)
         {
             activeCamIndex = 0;
         }
-        updateCamera(activeCamIndex);
-
+        UpdateCamera(activeCamIndex);
     }
-    public void SnapCamToPuzzle()
+
+    public void SetCurrentRoom(GameObject room)
     {
-    /*
-    When the player clicks on anything within a puzzle, they're transported to
-    the camera closest to that puzzle
-    
-    handle player clicking on puzzle area/objects
-        raytrace?
-    make call to RoomManager.instance.MoveToPuzzle
-    */
+
+        if (currentRoom != null)
+        {
+            currentRoom.SetActive(false); // Deactivate the current room
+        }
+
+        currentRoom = room;
+        currentRoom.SetActive(true); // Activate the new room
+
+
+        // Get all Camera components from the room
+        Camera[] cameras = currentRoom.GetComponentsInChildren<Camera>(true);
+
+        // Convert the Camera components to GameObjects and store them in the cameraArray
+        cameraArray = new GameObject[cameras.Length];
+        for (int i = 0; i < cameras.Length; i++)
+        {
+            cameraArray[i] = cameras[i].gameObject;
+        }
+
+        UpdateCamera(activeCamIndex);
+    }
+
+    // Activate the puzzle clicked
+    public void SnapCamToPuzzle(Camera activeCam)
+    {
+        Ray ray = activeCam.ScreenPointToRay(Input.mousePosition);
+        RaycastHit hit;
+        Debug.DrawRay(ray.origin, ray.direction * 20, Color.white);
+        if (Physics.Raycast(ray, out hit))
+        {
+            Debug.Log("Ray hit: " + hit.collider.gameObject.name);  // Debug statement
+
+            GameObject hitObject = hit.collider.gameObject;
+
+
+            if (hitObject.CompareTag("Puzzle") || hitObject.transform.parent.CompareTag("Puzzle"))
+            {
+                Debug.Log("Puzzle clicked: " + hit.collider.gameObject.name);  // Debug statement
+
+                // turns off all wall cams
+                UpdateCamera(-1);
+                GameObject puzzle = hitObject.transform.root.gameObject;  // Access the root (parent) sink object
+
+                RoomManager.instance.prevCamera = cameraArray[activeCamIndex].GetComponent<Camera>();
+                RoomManager.instance.ActivatePuzzle(puzzle);
+            }
+        }
     }
 }
