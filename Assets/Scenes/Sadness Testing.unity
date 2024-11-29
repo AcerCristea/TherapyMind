@@ -889,8 +889,7 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Puzzle
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 8972641005929368816, guid: 3856f9957974b1447b4656fd018aa638, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
