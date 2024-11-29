@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Memory
   - book
+  - Puzzle
+  - Target
   layers:
   - Default
   - TransparentFX
