@@ -13,13 +13,19 @@ public class SpinObjectButton : MonoBehaviour
     public bool leftBool = false;
     public bool rightBool = false;
 
+
     void Start()
     {
 
     }
 
-    void FixedUpdate()
+    void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            RoomManager.instance.ReturnToWall();
+        }
+
         if (leftBool)
         {
             objToSpin.transform.Rotate(rotateSpeed * left * Time.deltaTime);

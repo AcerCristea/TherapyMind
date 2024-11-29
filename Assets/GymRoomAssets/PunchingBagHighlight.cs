@@ -23,30 +23,35 @@ public class PunchingBagHighlight : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetMouseButtonDown(0)){
+        if (Input.GetMouseButtonDown(0))
+        {
             Ray ray = camera1.ScreenPointToRay(Input.mousePosition);
 
-            if(Physics.Raycast(ray, out RaycastHit hitInfo)){
-                if(hitInfo.collider.gameObject.tag == "punchBag"){
-                    
+            if (Physics.Raycast(ray, out RaycastHit hitInfo))
+            {
+                if (hitInfo.collider.gameObject.tag == "punchBag")
+                {
+
                     punchBagHealth -= 10f;
                     Debug.Log("Health: " + punchBagHealth);
-                    
+
                 }
             }
         }
 
-        punchBagHealth += 0.2f;
+        punchBagHealth += 0.1f;
 
-        if(punchBagHealth > 100f){
+        if (punchBagHealth > 100f)
+        {
             punchBagHealth = 100f;
             //Debug.Log("Punching Bag Fully Healed");
         }
-        if(punchBagHealth <= 0){
+        if (punchBagHealth <= 0)
+        {
             Obj.SetActive(false);
         }
 
-        
+
     }
 
     private void OnMouseEnter()
