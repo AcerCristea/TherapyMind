@@ -7,6 +7,7 @@ TagManager:
   - Memory
   - book
   - Puzzle
+  - punchBag
   - Target
   layers:
   - Default
