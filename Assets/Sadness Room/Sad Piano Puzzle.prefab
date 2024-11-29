@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8331897016632671629}
   - component: {fileID: 1234648814156334362}
   - component: {fileID: 1936803154179759308}
-  - component: {fileID: 5039036887559501452}
+  - component: {fileID: 4784242784123303730}
   m_Layer: 0
   m_Name: F Key (1)
   m_TagString: Puzzle
@@ -206,7 +206,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &5039036887559501452
+--- !u!114 &4784242784123303730
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -215,7 +215,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 73327725398778461}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af5ffb43f738bf742bcdfc4a14807205, type: 3}
+  m_Script: {fileID: 11500000, guid: 863987620d0d4904591d9caaf5ec4d55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   played: 0
@@ -367,7 +367,7 @@ GameObject:
   - component: {fileID: 8454133236973520599}
   - component: {fileID: 6567799246997675154}
   - component: {fileID: 1865287703732976043}
-  - component: {fileID: 1998897259237735477}
+  - component: {fileID: 8516760070634912542}
   m_Layer: 0
   m_Name: G# Key
   m_TagString: Puzzle
@@ -560,7 +560,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &1998897259237735477
+--- !u!114 &8516760070634912542
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -569,7 +569,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 138601042591499027}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af5ffb43f738bf742bcdfc4a14807205, type: 3}
+  m_Script: {fileID: 11500000, guid: 863987620d0d4904591d9caaf5ec4d55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   played: 0
@@ -586,7 +586,7 @@ GameObject:
   - component: {fileID: 5830861848216925842}
   - component: {fileID: 6337988689323045026}
   - component: {fileID: 8100026396975437895}
-  - component: {fileID: 2575986500045085311}
+  - component: {fileID: 6798871906662322596}
   m_Layer: 0
   m_Name: G Key (1)
   m_TagString: Puzzle
@@ -779,7 +779,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &2575986500045085311
+--- !u!114 &6798871906662322596
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -788,7 +788,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 399126297828289473}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af5ffb43f738bf742bcdfc4a14807205, type: 3}
+  m_Script: {fileID: 11500000, guid: 863987620d0d4904591d9caaf5ec4d55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   played: 0
@@ -805,7 +805,7 @@ GameObject:
   - component: {fileID: 8051431304376532065}
   - component: {fileID: 5052245016537412873}
   - component: {fileID: 6810549994601052078}
-  - component: {fileID: 6396404795963689451}
+  - component: {fileID: 5851615234648516153}
   m_Layer: 0
   m_Name: C# Key (1)
   m_TagString: Puzzle
@@ -998,7 +998,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &6396404795963689451
+--- !u!114 &5851615234648516153
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1007,7 +1007,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 477087557456416729}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af5ffb43f738bf742bcdfc4a14807205, type: 3}
+  m_Script: {fileID: 11500000, guid: 863987620d0d4904591d9caaf5ec4d55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   played: 0
@@ -1159,7 +1159,7 @@ GameObject:
   - component: {fileID: 3981240821369169881}
   - component: {fileID: 5701344246995650161}
   - component: {fileID: 1060948828094480887}
-  - component: {fileID: 5019040584734591697}
+  - component: {fileID: 2493644180494585130}
   m_Layer: 0
   m_Name: A Key (2)
   m_TagString: Puzzle
@@ -1352,7 +1352,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &5019040584734591697
+--- !u!114 &2493644180494585130
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1361,7 +1361,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 523734473542149885}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af5ffb43f738bf742bcdfc4a14807205, type: 3}
+  m_Script: {fileID: 11500000, guid: 863987620d0d4904591d9caaf5ec4d55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   played: 0
@@ -1413,7 +1413,7 @@ GameObject:
   - component: {fileID: 7749331110799818410}
   - component: {fileID: 3815241998244509511}
   - component: {fileID: 2523096694344174486}
-  - component: {fileID: 8223474216663053187}
+  - component: {fileID: 3238074898114237628}
   m_Layer: 0
   m_Name: D# Key (1)
   m_TagString: Puzzle
@@ -1606,7 +1606,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &8223474216663053187
+--- !u!114 &3238074898114237628
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1615,7 +1615,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 857359435156384507}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af5ffb43f738bf742bcdfc4a14807205, type: 3}
+  m_Script: {fileID: 11500000, guid: 863987620d0d4904591d9caaf5ec4d55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   played: 0
@@ -2144,7 +2144,7 @@ GameObject:
   - component: {fileID: 1115959143047355526}
   - component: {fileID: 5466147791151531948}
   - component: {fileID: 8015943531792851105}
-  - component: {fileID: 2892923761928758338}
+  - component: {fileID: 1672595044585733957}
   m_Layer: 0
   m_Name: B Key (2)
   m_TagString: Puzzle
@@ -2337,7 +2337,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &2892923761928758338
+--- !u!114 &1672595044585733957
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2346,7 +2346,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1380402864781027959}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af5ffb43f738bf742bcdfc4a14807205, type: 3}
+  m_Script: {fileID: 11500000, guid: 863987620d0d4904591d9caaf5ec4d55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   played: 0
@@ -2359,7 +2359,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3498777958154357477}
-  - component: {fileID: 6623625907613802633}
+  - component: {fileID: 3526936388811204490}
   m_Layer: 0
   m_Name: Track
   m_TagString: Untagged
@@ -2395,7 +2395,7 @@ Transform:
   - {fileID: 4421072138315952879}
   m_Father: {fileID: 565465659794457083}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6623625907613802633
+--- !u!114 &3526936388811204490
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2404,7 +2404,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1385869471008790470}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 21cc7368aad0ae14b923bf39323e9eaa, type: 3}
+  m_Script: {fileID: 11500000, guid: 45c8b5bda7ff7f74f935d04cd11db3c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.75
@@ -2421,7 +2421,7 @@ GameObject:
   - component: {fileID: 4280198288076467631}
   - component: {fileID: 5372910613022202120}
   - component: {fileID: 6557163818784965157}
-  - component: {fileID: 4518460631754763280}
+  - component: {fileID: 4004496960870874461}
   m_Layer: 0
   m_Name: D# Key (2)
   m_TagString: Puzzle
@@ -2614,7 +2614,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &4518460631754763280
+--- !u!114 &4004496960870874461
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2623,7 +2623,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1587721080457701216}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af5ffb43f738bf742bcdfc4a14807205, type: 3}
+  m_Script: {fileID: 11500000, guid: 863987620d0d4904591d9caaf5ec4d55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   played: 0
@@ -2640,7 +2640,7 @@ GameObject:
   - component: {fileID: 4432599716690241574}
   - component: {fileID: 4294348949898037735}
   - component: {fileID: 7632032461490037718}
-  - component: {fileID: 7819649485215039580}
+  - component: {fileID: 2164844818780793579}
   m_Layer: 0
   m_Name: E Key (1)
   m_TagString: Puzzle
@@ -2833,7 +2833,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &7819649485215039580
+--- !u!114 &2164844818780793579
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2842,7 +2842,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1767215356372151811}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af5ffb43f738bf742bcdfc4a14807205, type: 3}
+  m_Script: {fileID: 11500000, guid: 863987620d0d4904591d9caaf5ec4d55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   played: 0
@@ -2994,7 +2994,7 @@ GameObject:
   - component: {fileID: 652055482522884768}
   - component: {fileID: 1626553783771055327}
   - component: {fileID: 1731476275868942634}
-  - component: {fileID: 5780542031577313757}
+  - component: {fileID: 705290715275110745}
   m_Layer: 0
   m_Name: G Key
   m_TagString: Puzzle
@@ -3187,7 +3187,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &5780542031577313757
+--- !u!114 &705290715275110745
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3196,7 +3196,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2277842258049115582}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af5ffb43f738bf742bcdfc4a14807205, type: 3}
+  m_Script: {fileID: 11500000, guid: 863987620d0d4904591d9caaf5ec4d55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   played: 0
@@ -3213,7 +3213,7 @@ GameObject:
   - component: {fileID: 2492247147458819788}
   - component: {fileID: 7141294041631601599}
   - component: {fileID: 8405030185455282632}
-  - component: {fileID: 6716803650311793181}
+  - component: {fileID: 8563122684343413763}
   m_Layer: 0
   m_Name: B Key (1)
   m_TagString: Puzzle
@@ -3406,7 +3406,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &6716803650311793181
+--- !u!114 &8563122684343413763
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3415,7 +3415,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2365443274892779723}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af5ffb43f738bf742bcdfc4a14807205, type: 3}
+  m_Script: {fileID: 11500000, guid: 863987620d0d4904591d9caaf5ec4d55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   played: 0
@@ -3432,7 +3432,7 @@ GameObject:
   - component: {fileID: 8835042185991148406}
   - component: {fileID: 1904289142647596572}
   - component: {fileID: 2559075978930474616}
-  - component: {fileID: 7139187080144754421}
+  - component: {fileID: 6048346609824456820}
   m_Layer: 0
   m_Name: A Key
   m_TagString: Puzzle
@@ -3625,7 +3625,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &7139187080144754421
+--- !u!114 &6048346609824456820
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3634,7 +3634,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2536373666859170467}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af5ffb43f738bf742bcdfc4a14807205, type: 3}
+  m_Script: {fileID: 11500000, guid: 863987620d0d4904591d9caaf5ec4d55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   played: 0
@@ -3651,7 +3651,7 @@ GameObject:
   - component: {fileID: 8594910374587893213}
   - component: {fileID: 3965250845153359869}
   - component: {fileID: 2912456121143814226}
-  - component: {fileID: 3383245430978925831}
+  - component: {fileID: 3365297285801580554}
   m_Layer: 0
   m_Name: C Key
   m_TagString: Puzzle
@@ -3844,7 +3844,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &3383245430978925831
+--- !u!114 &3365297285801580554
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3853,7 +3853,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2872697036262056911}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af5ffb43f738bf742bcdfc4a14807205, type: 3}
+  m_Script: {fileID: 11500000, guid: 863987620d0d4904591d9caaf5ec4d55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   played: 0
@@ -3870,7 +3870,7 @@ GameObject:
   - component: {fileID: 2716614376611529683}
   - component: {fileID: 4121346495817217364}
   - component: {fileID: 8041598232789004794}
-  - component: {fileID: 207458873602502540}
+  - component: {fileID: 9121446613866406760}
   m_Layer: 0
   m_Name: F Key
   m_TagString: Puzzle
@@ -4063,7 +4063,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &207458873602502540
+--- !u!114 &9121446613866406760
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4072,7 +4072,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3215631027060559699}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af5ffb43f738bf742bcdfc4a14807205, type: 3}
+  m_Script: {fileID: 11500000, guid: 863987620d0d4904591d9caaf5ec4d55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   played: 0
@@ -4089,7 +4089,7 @@ GameObject:
   - component: {fileID: 642958516949334262}
   - component: {fileID: 8878888074099575451}
   - component: {fileID: 5789250003478665920}
-  - component: {fileID: 1472524313099227554}
+  - component: {fileID: 1277134168999999161}
   m_Layer: 0
   m_Name: E Key (2)
   m_TagString: Puzzle
@@ -4282,7 +4282,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &1472524313099227554
+--- !u!114 &1277134168999999161
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4291,7 +4291,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3447164952060726391}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af5ffb43f738bf742bcdfc4a14807205, type: 3}
+  m_Script: {fileID: 11500000, guid: 863987620d0d4904591d9caaf5ec4d55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   played: 0
@@ -4308,7 +4308,7 @@ GameObject:
   - component: {fileID: 4102452896087288481}
   - component: {fileID: 6140275253897059072}
   - component: {fileID: 6754882601733802971}
-  - component: {fileID: 4261275454599401367}
+  - component: {fileID: 7364498892779259329}
   m_Layer: 0
   m_Name: D Key (2)
   m_TagString: Puzzle
@@ -4501,7 +4501,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &4261275454599401367
+--- !u!114 &7364498892779259329
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4510,7 +4510,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3667237992481694961}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af5ffb43f738bf742bcdfc4a14807205, type: 3}
+  m_Script: {fileID: 11500000, guid: 863987620d0d4904591d9caaf5ec4d55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   played: 0
@@ -4527,7 +4527,7 @@ GameObject:
   - component: {fileID: 8263655168509988620}
   - component: {fileID: 5652783747592909356}
   - component: {fileID: 7132358247043283701}
-  - component: {fileID: 372623165950200466}
+  - component: {fileID: 4059966139201276915}
   m_Layer: 0
   m_Name: F Key (2)
   m_TagString: Puzzle
@@ -4720,7 +4720,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &372623165950200466
+--- !u!114 &4059966139201276915
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4729,7 +4729,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4050086115481425473}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af5ffb43f738bf742bcdfc4a14807205, type: 3}
+  m_Script: {fileID: 11500000, guid: 863987620d0d4904591d9caaf5ec4d55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   played: 0
@@ -4746,7 +4746,7 @@ GameObject:
   - component: {fileID: 4535103648315795810}
   - component: {fileID: 3683922745851263586}
   - component: {fileID: 6321283756145278585}
-  - component: {fileID: 2715636943979830154}
+  - component: {fileID: 4900747600365742383}
   m_Layer: 0
   m_Name: C Key (2)
   m_TagString: Puzzle
@@ -4939,7 +4939,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &2715636943979830154
+--- !u!114 &4900747600365742383
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4948,7 +4948,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4275931014977712022}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af5ffb43f738bf742bcdfc4a14807205, type: 3}
+  m_Script: {fileID: 11500000, guid: 863987620d0d4904591d9caaf5ec4d55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   played: 0
@@ -5032,7 +5032,7 @@ GameObject:
   - component: {fileID: 7285076079395693814}
   - component: {fileID: 6646127439908351818}
   - component: {fileID: 2715496801442176995}
-  - component: {fileID: 4262711816092041556}
+  - component: {fileID: 5819404461039625588}
   m_Layer: 0
   m_Name: F# Key
   m_TagString: Puzzle
@@ -5225,7 +5225,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &4262711816092041556
+--- !u!114 &5819404461039625588
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5234,7 +5234,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4384789049319128706}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af5ffb43f738bf742bcdfc4a14807205, type: 3}
+  m_Script: {fileID: 11500000, guid: 863987620d0d4904591d9caaf5ec4d55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   played: 0
@@ -5251,7 +5251,7 @@ GameObject:
   - component: {fileID: 6526704090752578068}
   - component: {fileID: 6077393468794891850}
   - component: {fileID: 4097891166589532541}
-  - component: {fileID: 733809265328039441}
+  - component: {fileID: 2695182414407109583}
   m_Layer: 0
   m_Name: C# Key
   m_TagString: Puzzle
@@ -5444,7 +5444,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &733809265328039441
+--- !u!114 &2695182414407109583
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5453,7 +5453,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4474623153514091023}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af5ffb43f738bf742bcdfc4a14807205, type: 3}
+  m_Script: {fileID: 11500000, guid: 863987620d0d4904591d9caaf5ec4d55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   played: 0
@@ -5470,7 +5470,7 @@ GameObject:
   - component: {fileID: 3712001473180444951}
   - component: {fileID: 2485262533356905321}
   - component: {fileID: 316290780762318259}
-  - component: {fileID: 2190554577139295567}
+  - component: {fileID: 7967045369535359467}
   m_Layer: 0
   m_Name: B Key
   m_TagString: Puzzle
@@ -5663,7 +5663,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &2190554577139295567
+--- !u!114 &7967045369535359467
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5672,7 +5672,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4479712028924262457}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af5ffb43f738bf742bcdfc4a14807205, type: 3}
+  m_Script: {fileID: 11500000, guid: 863987620d0d4904591d9caaf5ec4d55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   played: 0
@@ -5689,7 +5689,7 @@ GameObject:
   - component: {fileID: 5151954103363932930}
   - component: {fileID: 2160533777867203931}
   - component: {fileID: 9086911510230920321}
-  - component: {fileID: 9137666870280414242}
+  - component: {fileID: 5741071554254115977}
   m_Layer: 0
   m_Name: A# Key
   m_TagString: Puzzle
@@ -5882,7 +5882,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &9137666870280414242
+--- !u!114 &5741071554254115977
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5891,7 +5891,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4513472514158467108}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af5ffb43f738bf742bcdfc4a14807205, type: 3}
+  m_Script: {fileID: 11500000, guid: 863987620d0d4904591d9caaf5ec4d55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   played: 0
@@ -5908,7 +5908,7 @@ GameObject:
   - component: {fileID: 2499917850362968576}
   - component: {fileID: 5108472053776836111}
   - component: {fileID: 2758890765291280640}
-  - component: {fileID: 2779679888451092815}
+  - component: {fileID: 1459029631470334630}
   m_Layer: 0
   m_Name: F# Key (1)
   m_TagString: Puzzle
@@ -6101,7 +6101,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &2779679888451092815
+--- !u!114 &1459029631470334630
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -6110,7 +6110,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4537870817930978532}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af5ffb43f738bf742bcdfc4a14807205, type: 3}
+  m_Script: {fileID: 11500000, guid: 863987620d0d4904591d9caaf5ec4d55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   played: 0
@@ -6532,7 +6532,7 @@ GameObject:
   - component: {fileID: 1570123064767660695}
   - component: {fileID: 95575722011152125}
   - component: {fileID: 1357680368889005563}
-  - component: {fileID: 607263056663624744}
+  - component: {fileID: 4065744970061254665}
   m_Layer: 0
   m_Name: A# Key (1)
   m_TagString: Puzzle
@@ -6725,7 +6725,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &607263056663624744
+--- !u!114 &4065744970061254665
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -6734,7 +6734,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5267991101891481024}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af5ffb43f738bf742bcdfc4a14807205, type: 3}
+  m_Script: {fileID: 11500000, guid: 863987620d0d4904591d9caaf5ec4d55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   played: 0
@@ -7021,7 +7021,7 @@ GameObject:
   - component: {fileID: 6190076665589980223}
   - component: {fileID: 2028304711513561450}
   - component: {fileID: 3421357779532652739}
-  - component: {fileID: 4650099536149418243}
+  - component: {fileID: 541667625257353527}
   m_Layer: 0
   m_Name: D Key (1)
   m_TagString: Puzzle
@@ -7214,7 +7214,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &4650099536149418243
+--- !u!114 &541667625257353527
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -7223,7 +7223,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5654788346451223888}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af5ffb43f738bf742bcdfc4a14807205, type: 3}
+  m_Script: {fileID: 11500000, guid: 863987620d0d4904591d9caaf5ec4d55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   played: 0
@@ -7236,8 +7236,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 565465659794457083}
+  - component: {fileID: 8972641005929368816}
   - component: {fileID: 4336969557789523221}
-  - component: {fileID: 8778881612333499682}
   m_Layer: 0
   m_Name: Sad Piano Puzzle
   m_TagString: Puzzle
@@ -7266,6 +7266,23 @@ Transform:
   - {fileID: 6578837354356240963}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8972641005929368816
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5811731135783943163}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fef525d3b2858d489f107edecb1e76f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  track: {fileID: 6071223515381110578}
+  trackStartPosition: {x: 0, y: 0, z: 0}
+  trackIsMoving: 0
+  metroIsPlaying: 0
+  correctNote: {fileID: 0}
 --- !u!82 &4336969557789523221
 AudioSource:
   m_ObjectHideFlags: 0
@@ -7363,23 +7380,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &8778881612333499682
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5811731135783943163}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a2f79e554ee96c488e18e3886d97597, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  track: {fileID: 6071223515381110578}
-  trackStartPosition: {x: 0, y: 0, z: 0}
-  trackIsMoving: 0
-  metroIsPlaying: 0
-  correctNote: {fileID: 0}
 --- !u!1 &6001191794075892371
 GameObject:
   m_ObjectHideFlags: 0
@@ -7393,7 +7393,7 @@ GameObject:
   - component: {fileID: 8418616327184032025}
   - component: {fileID: 1555297865972459038}
   - component: {fileID: 978838984958938449}
-  - component: {fileID: 3955202932321970431}
+  - component: {fileID: 1273539657603000219}
   m_Layer: 0
   m_Name: D# Key
   m_TagString: Puzzle
@@ -7586,7 +7586,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &3955202932321970431
+--- !u!114 &1273539657603000219
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -7595,7 +7595,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6001191794075892371}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af5ffb43f738bf742bcdfc4a14807205, type: 3}
+  m_Script: {fileID: 11500000, guid: 863987620d0d4904591d9caaf5ec4d55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   played: 0
@@ -7608,7 +7608,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9189488741991114904}
-  - component: {fileID: 5880465155736578944}
+  - component: {fileID: 1182173905828706557}
   m_Layer: 0
   m_Name: Practice Track
   m_TagString: Untagged
@@ -7636,7 +7636,7 @@ Transform:
   - {fileID: 6421066337789434183}
   m_Father: {fileID: 565465659794457083}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5880465155736578944
+--- !u!114 &1182173905828706557
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -7645,7 +7645,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6071223515381110578}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 21cc7368aad0ae14b923bf39323e9eaa, type: 3}
+  m_Script: {fileID: 11500000, guid: 45c8b5bda7ff7f74f935d04cd11db3c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.75
@@ -7661,8 +7661,8 @@ GameObject:
   - component: {fileID: 6131365752083558359}
   - component: {fileID: 1453162313176842928}
   - component: {fileID: 6302025760468227876}
+  - component: {fileID: 1203702318367899282}
   - component: {fileID: 1561103676996287374}
-  - component: {fileID: 7614684550908714079}
   m_Layer: 0
   m_Name: Metronome
   m_TagString: Puzzle
@@ -7758,6 +7758,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1203702318367899282
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6381239796857929010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46bb2f51296e85845a3261f81141f64e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thisPuzzle: {fileID: 5811731135783943163}
 --- !u!82 &1561103676996287374
 AudioSource:
   m_ObjectHideFlags: 0
@@ -7855,19 +7868,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &7614684550908714079
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6381239796857929010}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 905b2f4e0bbf5dc4ba173042443c41d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  thisPuzzle: {fileID: 5811731135783943163}
 --- !u!1 &6663097992336461057
 GameObject:
   m_ObjectHideFlags: 0
@@ -8528,7 +8528,7 @@ GameObject:
   - component: {fileID: 2104198322498771958}
   - component: {fileID: 9087753848612621103}
   - component: {fileID: 1348771755168281642}
-  - component: {fileID: 8204161972347406534}
+  - component: {fileID: 3862278729440978853}
   m_Layer: 0
   m_Name: E Key
   m_TagString: Puzzle
@@ -8721,7 +8721,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &8204161972347406534
+--- !u!114 &3862278729440978853
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8730,7 +8730,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7384714948267815114}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af5ffb43f738bf742bcdfc4a14807205, type: 3}
+  m_Script: {fileID: 11500000, guid: 863987620d0d4904591d9caaf5ec4d55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   played: 0
@@ -8747,7 +8747,7 @@ GameObject:
   - component: {fileID: 5565725438143996953}
   - component: {fileID: 5425303132964654782}
   - component: {fileID: 890861628438432000}
-  - component: {fileID: 5266904457340412468}
+  - component: {fileID: 2331469637908481853}
   m_Layer: 0
   m_Name: C Key (1)
   m_TagString: Puzzle
@@ -8940,7 +8940,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &5266904457340412468
+--- !u!114 &2331469637908481853
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8949,7 +8949,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7565253017705560411}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af5ffb43f738bf742bcdfc4a14807205, type: 3}
+  m_Script: {fileID: 11500000, guid: 863987620d0d4904591d9caaf5ec4d55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   played: 0
@@ -9073,7 +9073,7 @@ GameObject:
   - component: {fileID: 2471402837107418451}
   - component: {fileID: 5278522126222563}
   - component: {fileID: 8589639672912388301}
-  - component: {fileID: 1299985668034268979}
+  - component: {fileID: 4707827289062575005}
   m_Layer: 0
   m_Name: A# Key (2)
   m_TagString: Puzzle
@@ -9266,7 +9266,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &1299985668034268979
+--- !u!114 &4707827289062575005
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9275,7 +9275,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7702586286718029368}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af5ffb43f738bf742bcdfc4a14807205, type: 3}
+  m_Script: {fileID: 11500000, guid: 863987620d0d4904591d9caaf5ec4d55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   played: 0
@@ -9519,7 +9519,7 @@ GameObject:
   - component: {fileID: 4668578421689812889}
   - component: {fileID: 4030942267620144245}
   - component: {fileID: 8279129367669072019}
-  - component: {fileID: 2565418090567537968}
+  - component: {fileID: 9088028381255463976}
   m_Layer: 0
   m_Name: D Key
   m_TagString: Puzzle
@@ -9712,7 +9712,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &2565418090567537968
+--- !u!114 &9088028381255463976
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9721,7 +9721,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7860901494955180550}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af5ffb43f738bf742bcdfc4a14807205, type: 3}
+  m_Script: {fileID: 11500000, guid: 863987620d0d4904591d9caaf5ec4d55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   played: 0
@@ -9738,7 +9738,7 @@ GameObject:
   - component: {fileID: 1416782994432853346}
   - component: {fileID: 852421938582571209}
   - component: {fileID: 5179838840023003504}
-  - component: {fileID: 9125368862637487638}
+  - component: {fileID: 4323581593080818762}
   m_Layer: 0
   m_Name: F# Key (2)
   m_TagString: Puzzle
@@ -9931,7 +9931,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &9125368862637487638
+--- !u!114 &4323581593080818762
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9940,7 +9940,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7870600611172577998}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af5ffb43f738bf742bcdfc4a14807205, type: 3}
+  m_Script: {fileID: 11500000, guid: 863987620d0d4904591d9caaf5ec4d55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   played: 0
@@ -9957,7 +9957,7 @@ GameObject:
   - component: {fileID: 6020379998412714633}
   - component: {fileID: 8954139231815363709}
   - component: {fileID: 6962232290101308890}
-  - component: {fileID: 7209193258442350693}
+  - component: {fileID: 5600213904818906162}
   m_Layer: 0
   m_Name: G# Key (1)
   m_TagString: Puzzle
@@ -10150,7 +10150,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &7209193258442350693
+--- !u!114 &5600213904818906162
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -10159,7 +10159,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7918683175319118305}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af5ffb43f738bf742bcdfc4a14807205, type: 3}
+  m_Script: {fileID: 11500000, guid: 863987620d0d4904591d9caaf5ec4d55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   played: 0
@@ -10418,7 +10418,7 @@ GameObject:
   - component: {fileID: 9009763721572849926}
   - component: {fileID: 1753412627415639928}
   - component: {fileID: 1483149870751439438}
-  - component: {fileID: 435963963832438563}
+  - component: {fileID: 3675778462907945929}
   m_Layer: 0
   m_Name: G Key (2)
   m_TagString: Puzzle
@@ -10611,7 +10611,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &435963963832438563
+--- !u!114 &3675778462907945929
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -10620,7 +10620,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8111557206435363102}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af5ffb43f738bf742bcdfc4a14807205, type: 3}
+  m_Script: {fileID: 11500000, guid: 863987620d0d4904591d9caaf5ec4d55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   played: 0
@@ -10637,7 +10637,7 @@ GameObject:
   - component: {fileID: 5388383717540362262}
   - component: {fileID: 5751045324318664639}
   - component: {fileID: 374754791323601902}
-  - component: {fileID: 5226871063689582726}
+  - component: {fileID: 231743742767173831}
   m_Layer: 0
   m_Name: A Key (1)
   m_TagString: Puzzle
@@ -10830,7 +10830,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &5226871063689582726
+--- !u!114 &231743742767173831
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -10839,7 +10839,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8243966536478447107}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af5ffb43f738bf742bcdfc4a14807205, type: 3}
+  m_Script: {fileID: 11500000, guid: 863987620d0d4904591d9caaf5ec4d55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   played: 0
@@ -10991,7 +10991,7 @@ GameObject:
   - component: {fileID: 3582987580531192585}
   - component: {fileID: 2174502335300864848}
   - component: {fileID: 2431394760763988322}
-  - component: {fileID: 3845310406018795145}
+  - component: {fileID: 5103345696098831583}
   m_Layer: 0
   m_Name: C# Key (2)
   m_TagString: Puzzle
@@ -11184,7 +11184,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &3845310406018795145
+--- !u!114 &5103345696098831583
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -11193,7 +11193,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8681732702690247461}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af5ffb43f738bf742bcdfc4a14807205, type: 3}
+  m_Script: {fileID: 11500000, guid: 863987620d0d4904591d9caaf5ec4d55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   played: 0
@@ -11210,7 +11210,7 @@ GameObject:
   - component: {fileID: 3702226642510518533}
   - component: {fileID: 5932784419329578114}
   - component: {fileID: 3987017960688650216}
-  - component: {fileID: 3408216372182545154}
+  - component: {fileID: 5585399269693942605}
   m_Layer: 0
   m_Name: G# Key (2)
   m_TagString: Puzzle
@@ -11403,7 +11403,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &3408216372182545154
+--- !u!114 &5585399269693942605
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -11412,7 +11412,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 9067377755312747993}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af5ffb43f738bf742bcdfc4a14807205, type: 3}
+  m_Script: {fileID: 11500000, guid: 863987620d0d4904591d9caaf5ec4d55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   played: 0
