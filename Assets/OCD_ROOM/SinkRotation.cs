@@ -10,6 +10,9 @@ public class SinkRotation : MonoBehaviour
 
     public GameObject faucet;  // Reference to the child object
 
+    public GameObject water;
+    public GameObject waterSink;
+
     public float rotationSpeed = 50f;
 
     // Rotation limits
@@ -27,7 +30,6 @@ public class SinkRotation : MonoBehaviour
         // Find the RoomManager in the scene
         roomManager = FindFirstObjectByType<RoomManager>();
         gameManager = FindFirstObjectByType<GameManager>();
-
 
     }
 
@@ -79,12 +81,16 @@ public class SinkRotation : MonoBehaviour
     {
         if (!isTaskComplete && Mathf.Approximately(currentRotation, minRotation))
         {
+            water.SetActive(false);
+            waterSink.SetActive(false);
             isTaskComplete = true;
             gameManager.MarkTaskAsComplete("Faucet");
             Debug.Log("Faucet turned off and task marked as complete!");
         }
         else if (isTaskComplete && !Mathf.Approximately(currentRotation, minRotation))
         {
+            water.SetActive(true);
+            waterSink.SetActive(true);
             isTaskComplete = false;
             gameManager.MarkTaskAsIncomplete("Faucet");
             Debug.Log("Faucet moved away from off position. Task marked as incomplete.");
