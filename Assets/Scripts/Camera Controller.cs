@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
+    public GameObject[] rooms;
     public GameObject[] cameraArray;
     public static int activeCamIndex = 0;
     private GameObject currentRoom;  // Current active room
@@ -35,6 +36,12 @@ public class CameraController : MonoBehaviour
         // Assuming the first room is set up as active in the scene
         cameraArray = new GameObject[] { northCam, westCam, southCam, eastCam };
         UpdateCamera(activeCamIndex);
+
+        if (rooms.Length > 0)
+        {
+            SetCurrentRoom(rooms[0]);
+        }
+
     }
 
     void Update()
@@ -116,10 +123,13 @@ public class CameraController : MonoBehaviour
         if (currentRoom != null)
         {
             currentRoom.SetActive(false); // Deactivate the current room
+            SetRoomAudioState(currentRoom, false); // Disable audio for the previous room
+
         }
 
         currentRoom = room;
         currentRoom.SetActive(true); // Activate the new room
+        SetRoomAudioState(currentRoom, true); // Enable audio for the new room
 
 
         // Get all Camera components from the room
@@ -133,6 +143,30 @@ public class CameraController : MonoBehaviour
         }
 
         UpdateCamera(activeCamIndex);
+    }
+
+    // Enable or disable audio for all AudioSources in a room
+    private void SetRoomAudioState(GameObject room, bool state)
+    {
+        AudioSource[] audioSources = room.GetComponentsInChildren<AudioSource>();
+        foreach (AudioSource audioSource in audioSources)
+        {
+            audioSource.enabled = state;
+            if (state)
+            {
+                if (!audioSource.isPlaying)
+                {
+                    audioSource.Play();
+                }
+            }
+            else
+            {
+                if (audioSource.isPlaying)
+                {
+                    audioSource.Stop();
+                }
+            }
+        }
     }
 
     // Activate the puzzle clicked

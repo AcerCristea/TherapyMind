@@ -119,6 +119,16 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &145520998 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6394264279823410177, guid: a3ca1562382de1b4398e49a2188bd79d, type: 3}
+  m_PrefabInstance: {fileID: 1529547715637025847}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &181897721 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5964779743754869956, guid: 55f207b0aef1c4745b2ac52df990bfec, type: 3}
+  m_PrefabInstance: {fileID: 5988641813891462933}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &183755017 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4798775931413126871, guid: 60cc5d4aea42a884f8311396c1b87e65, type: 3}
@@ -154,15 +164,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d81bce42162fa40d7926f63024ce0586, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rooms:
+  - {fileID: 752185963}
+  - {fileID: 183755017}
   cameraArray:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  northCam: {fileID: 773569865}
-  westCam: {fileID: 1492448584}
-  southCam: {fileID: 694381187}
-  eastCam: {fileID: 1920231964}
+  northCam: {fileID: 2364295402218447761}
+  westCam: {fileID: 2364295402218447760}
+  southCam: {fileID: 2364295402218447759}
+  eastCam: {fileID: 2364295402218447758}
 --- !u!114 &263399526
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -251,20 +264,10 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 30a526d868d14244781b2b397a49f806, type: 3}
---- !u!1 &694381187 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4931758049384458607, guid: 60cc5d4aea42a884f8311396c1b87e65, type: 3}
-  m_PrefabInstance: {fileID: 1384193002}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &752185963 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2899223948314009014, guid: ec60a31b824af984c922a847f19bc28d, type: 3}
   m_PrefabInstance: {fileID: 2364295402218447757}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &773569865 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1093381768054595886, guid: 60cc5d4aea42a884f8311396c1b87e65, type: 3}
-  m_PrefabInstance: {fileID: 1384193002}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1384193002
 PrefabInstance:
@@ -400,15 +403,10 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 30b34eb6a97475d40a5e357fbaa264e8, type: 3}
---- !u!1 &1492448584 stripped
+--- !u!1 &1435281017 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 314225111661415962, guid: 60cc5d4aea42a884f8311396c1b87e65, type: 3}
-  m_PrefabInstance: {fileID: 1384193002}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1920231964 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1723960008393619569, guid: 60cc5d4aea42a884f8311396c1b87e65, type: 3}
-  m_PrefabInstance: {fileID: 1384193002}
+  m_CorrespondingSourceObject: {fileID: 4715454305579614221, guid: a3ca1562382de1b4398e49a2188bd79d, type: 3}
+  m_PrefabInstance: {fileID: 1529547715637025847}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &965276476831674057 stripped
 GameObject:
@@ -463,6 +461,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4170875547869113007, guid: a3ca1562382de1b4398e49a2188bd79d, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5138337632821592925, guid: a3ca1562382de1b4398e49a2188bd79d, type: 3}
       propertyPath: m_Name
       value: Sink
@@ -470,11 +472,11 @@ PrefabInstance:
     - target: {fileID: 8638325999147125424, guid: a3ca1562382de1b4398e49a2188bd79d, type: 3}
       propertyPath: water
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 145520998}
     - target: {fileID: 8638325999147125424, guid: a3ca1562382de1b4398e49a2188bd79d, type: 3}
       propertyPath: waterSink
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1435281017}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -557,6 +559,26 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ec60a31b824af984c922a847f19bc28d, type: 3}
+--- !u!1 &2364295402218447758 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6406028853482872120, guid: ec60a31b824af984c922a847f19bc28d, type: 3}
+  m_PrefabInstance: {fileID: 2364295402218447757}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2364295402218447759 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 885571974972178784, guid: ec60a31b824af984c922a847f19bc28d, type: 3}
+  m_PrefabInstance: {fileID: 2364295402218447757}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2364295402218447760 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 503926908678379557, guid: ec60a31b824af984c922a847f19bc28d, type: 3}
+  m_PrefabInstance: {fileID: 2364295402218447757}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2364295402218447761 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6000744552288516290, guid: ec60a31b824af984c922a847f19bc28d, type: 3}
+  m_PrefabInstance: {fileID: 2364295402218447757}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &3619390759944266089 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7054544171450752066, guid: 8d915f12d6ac3eb47914c8710be906b6, type: 3}
@@ -676,10 +698,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8251780561358488374, guid: 55f207b0aef1c4745b2ac52df990bfec, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8932534476866208846, guid: 55f207b0aef1c4745b2ac52df990bfec, type: 3}
       propertyPath: flameEffect
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 181897721}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
