@@ -18,6 +18,9 @@ public class StoveRotation : MonoBehaviour
 
     private float initialRotation;  // Stores the starting rotation
 
+    public AudioSource stoveAudio;
+
+
     void Start()
     {
         // Find the RoomManager and GameManager in the scene
@@ -92,6 +95,10 @@ public class StoveRotation : MonoBehaviour
                 flameEffect.SetActive(false);
             }
 
+            if (stoveAudio.isPlaying)
+            {
+                stoveAudio.Stop();
+            }
             isTaskComplete = true;
             gameManager.MarkTaskAsComplete("Burner");
             Debug.Log("Burner turned off and task marked as complete!");
@@ -103,7 +110,11 @@ public class StoveRotation : MonoBehaviour
             {
                 flameEffect.SetActive(true);
             }
+            if (!stoveAudio.isPlaying)
+            {
 
+                stoveAudio.Play();
+            }
             isTaskComplete = false;
             gameManager.MarkTaskAsIncomplete("Burner");
             Debug.Log("Burner moved away from off position. Task marked as incomplete.");

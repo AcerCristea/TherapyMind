@@ -54,10 +54,14 @@ public class Door : MonoBehaviour
     }
     private void OnMouseDown()
     {
+        Debug.Log("Door clicked");
+
         // Use FindAnyObjectByType to get the CameraController
         CameraController cameraController = FindAnyObjectByType<CameraController>();
         if (cameraController != null)
         {
+            Debug.Log("CameraController found, transitioning room");
+
             // Set the current room to the new room
             cameraController.SetCurrentRoom(targetRoom);
 
@@ -74,6 +78,8 @@ public class Door : MonoBehaviour
 
             if (targetCamera != null)
             {
+                Debug.Log($"Switching to target camera: {targetCameraName}");
+
                 // Get the index of the target camera and update the active camera
                 int targetCameraIndex = System.Array.IndexOf(cameraController.cameraArray, targetCamera);
                 cameraController.UpdateCamera(targetCameraIndex);

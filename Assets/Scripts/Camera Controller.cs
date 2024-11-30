@@ -143,14 +143,13 @@ public class CameraController : MonoBehaviour
         Debug.DrawRay(ray.origin, ray.direction * 20, Color.white);
         if (Physics.Raycast(ray, out hit))
         {
-            Debug.Log("Ray hit: " + hit.collider.gameObject.name);  // Debug statement
+            //Debug.Log("Ray hit: " + hit.collider.gameObject.name);  // Debug statement
 
             GameObject hitObject = hit.collider.gameObject;
 
-
-            if (hitObject.CompareTag("Puzzle") || hitObject.transform.parent.CompareTag("Puzzle"))
+            if (hitObject.CompareTag("Puzzle") || hitObject.transform.root.CompareTag("Puzzle"))
             {
-                Debug.Log("Puzzle clicked: " + hit.collider.gameObject.name);  // Debug statement
+                //Debug.Log("Puzzle clicked: " + hit.collider.gameObject.name);  // Debug statement
 
                 // turns off all wall cams
                 UpdateCamera(-1);

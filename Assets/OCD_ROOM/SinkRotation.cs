@@ -24,6 +24,8 @@ public class SinkRotation : MonoBehaviour
     [SerializeField] private RoomManager roomManager; // Reference to the RoomManager
     [SerializeField] private GameManager gameManager; // Reference to the GameManager
 
+    public AudioSource runningWaterAudio;
+    public AudioSource sinkOffAudio;
 
     void Start()
     {
@@ -85,6 +87,13 @@ public class SinkRotation : MonoBehaviour
             waterSink.SetActive(false);
             isTaskComplete = true;
             gameManager.MarkTaskAsComplete("Faucet");
+
+            if (runningWaterAudio.isPlaying)
+            {
+                runningWaterAudio.Stop();
+            }
+            sinkOffAudio.Play();
+
             Debug.Log("Faucet turned off and task marked as complete!");
         }
         else if (isTaskComplete && !Mathf.Approximately(currentRotation, minRotation))
@@ -93,6 +102,11 @@ public class SinkRotation : MonoBehaviour
             waterSink.SetActive(true);
             isTaskComplete = false;
             gameManager.MarkTaskAsIncomplete("Faucet");
+            if (!runningWaterAudio.isPlaying)
+            {
+                runningWaterAudio.Play();
+            }
+
             Debug.Log("Faucet moved away from off position. Task marked as incomplete.");
         }
     }
