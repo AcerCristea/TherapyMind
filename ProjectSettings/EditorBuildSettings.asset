@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Sadness Room/Umbrella Scene.unity
+    guid: b53c489a56343b2469546f730c44307e
+  - enabled: 1
     path: Assets/Scenes/Menu.unity
     guid: a01529a52043f2440859b39adb03f262
   - enabled: 1
