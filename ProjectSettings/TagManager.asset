@@ -7,6 +7,10 @@ TagManager:
   - Memory
   - book
   - Puzzle
+  - OcdRoom
+  - PlayOnEnter
+  - Sink
+  - Stove
   - punchBag
   - Target
   layers:

@@ -8,7 +8,9 @@ public class CabinetRotation : MonoBehaviour
     public float rotationSpeed = 50f; // Speed of rotation (degrees per second)
 
     // Target angle for task completion
-    public float targetRotation = 180f;
+    public float targetRotation = 0f;
+
+    public GameObject cabinet;
 
     private bool isTaskComplete = false; // Track if the door is rotated to the correct position
     private float initialRotation; // Store the starting rotation
@@ -35,12 +37,16 @@ public class CabinetRotation : MonoBehaviour
 
     void Update()
     {
-        HandleRotation();
-
-        // Exit puzzle and return to the main camera
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (roomManager.activePuzzle == cabinet)
         {
-            roomManager.ReturnToWall();
+
+            HandleRotation();
+
+            // Exit puzzle and return to the main camera
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                roomManager.ReturnToWall();
+            }
         }
 
     }
@@ -64,6 +70,9 @@ public class CabinetRotation : MonoBehaviour
         {
             float newRotationY = hingePoint.rotation.eulerAngles.y + (rotationInput * rotationSpeed * Time.deltaTime);
 
+            newRotationY = Mathf.Clamp(newRotationY, 0f, 90f);
+
+
             // Apply the rotation
             hingePoint.rotation = Quaternion.Euler(
                 hingePoint.rotation.eulerAngles.x,
@@ -78,20 +87,16 @@ public class CabinetRotation : MonoBehaviour
 
     void CheckTaskCompletion(float currentRotation)
     {
-        // Normalize rotation relative to initial rotation
-        float normalizedRotation = Mathf.Repeat(currentRotation - initialRotation, 360f);
 
-        // Convert targetRotation to Unity's angle range [0, 360]
-        float adjustedTargetRotation = Mathf.Repeat(targetRotation, 360f);
 
-        if (!isTaskComplete && Mathf.Abs(normalizedRotation - adjustedTargetRotation) < 5f) // Allow small tolerance
+        if (!isTaskComplete && Mathf.Abs(currentRotation) < 3f) // Allow small tolerance
         {
             // Mark the task as complete
             isTaskComplete = true;
             gameManager.MarkTaskAsComplete("Cabinet");
             Debug.Log("Cabinet task marked as complete!");
         }
-        else if (isTaskComplete && Mathf.Abs(normalizedRotation - adjustedTargetRotation) >= 5f)
+        else if (isTaskComplete && Mathf.Abs(currentRotation) >= 3f)
         {
             // Mark the task as incomplete
             isTaskComplete = false;
