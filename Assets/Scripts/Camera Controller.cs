@@ -1,11 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro.Examples;
 using Unity.VisualScripting;
 using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
-    public GameObject[] rooms;
     public GameObject[] cameraArray;
     public static int activeCamIndex = 0;
     private GameObject currentRoom;  // Current active room
@@ -15,6 +15,8 @@ public class CameraController : MonoBehaviour
     public GameObject westCam;
     public GameObject southCam;
     public GameObject eastCam;
+    public string targetCameraName;  // The name of the target camera in the next room
+
 
     public static CameraController instance;
 
@@ -37,10 +39,6 @@ public class CameraController : MonoBehaviour
         cameraArray = new GameObject[] { northCam, westCam, southCam, eastCam };
         UpdateCamera(activeCamIndex);
 
-        if (rooms.Length > 0)
-        {
-            SetCurrentRoom(rooms[0]);
-        }
 
     }
 
@@ -117,20 +115,19 @@ public class CameraController : MonoBehaviour
         UpdateCamera(activeCamIndex);
     }
 
-    public void SetCurrentRoom(GameObject room)
+    public void SetCurrentRoom(GameObject room, string targetCameraName)
     {
+        Debug.Log("SetCurrentRoom called with room: " + room.name + " and targetCameraName: " + targetCameraName);
 
         if (currentRoom != null)
         {
             currentRoom.SetActive(false); // Deactivate the current room
-            SetRoomAudioState(currentRoom, false); // Disable audio for the previous room
-
+            Debug.Log("Deactivating current room: " + currentRoom.name);
         }
 
         currentRoom = room;
         currentRoom.SetActive(true); // Activate the new room
-        SetRoomAudioState(currentRoom, true); // Enable audio for the new room
-
+        Debug.Log("Activating new room: " + room.name);
 
         // Get all Camera components from the room
         Camera[] cameras = currentRoom.GetComponentsInChildren<Camera>(true);
@@ -140,34 +137,66 @@ public class CameraController : MonoBehaviour
         for (int i = 0; i < cameras.Length; i++)
         {
             cameraArray[i] = cameras[i].gameObject;
+            Debug.Log("Camera added to array: " + cameraArray[i].name);
         }
 
-        UpdateCamera(activeCamIndex);
-    }
+        // Sort the camera array based on camera names or any desired property
+        cameraArray = SortCameras(cameraArray);
 
-    // Enable or disable audio for all AudioSources in a room
-    private void SetRoomAudioState(GameObject room, bool state)
-    {
-        AudioSource[] audioSources = room.GetComponentsInChildren<AudioSource>();
-        foreach (AudioSource audioSource in audioSources)
+        // Ensure activeCamIndex is within bounds
+        if (activeCamIndex >= cameraArray.Length)
         {
-            audioSource.enabled = state;
-            if (state)
+            activeCamIndex = 0; // Reset to first camera if out of bounds
+            Debug.Log("activeCamIndex was out of bounds, resetting to 0.");
+        }
+
+        // Debugging: Log the names of all cameras in the array after sorting
+        Debug.Log("Camera array contains the following cameras (sorted):");
+        foreach (var camera in cameraArray)
+        {
+            Debug.Log(" - " + camera.name);
+        }
+
+        // Find the target camera by name
+        GameObject targetCamera = null;
+        foreach (GameObject camera in cameraArray)
+        {
+            if (camera.name == targetCameraName)
             {
-                if (!audioSource.isPlaying)
-                {
-                    audioSource.Play();
-                }
-            }
-            else
-            {
-                if (audioSource.isPlaying)
-                {
-                    audioSource.Stop();
-                }
+                targetCamera = camera;
+                break;
             }
         }
+
+        if (targetCamera != null)
+        {
+            Debug.Log("Found target camera: " + targetCamera.name);
+            int targetIndex = System.Array.IndexOf(cameraArray, targetCamera);
+            UpdateCamera(targetIndex);
+        }
+        else
+        {
+            Debug.LogWarning("Target camera not found! Using activeCamIndex: " + activeCamIndex);
+            UpdateCamera(activeCamIndex); // If not found, default to activeCamIndex
+        }
     }
+
+    // Helper method to sort cameras based on names
+    private GameObject[] SortCameras(GameObject[] cameras)
+    {
+        // Sort cameras based on their name (assuming they follow a naming convention like "North", "South", etc.)
+        System.Array.Sort(cameras, (a, b) => a.name.CompareTo(b.name));
+
+        // Log sorted array for debugging
+        Debug.Log("Cameras sorted by name:");
+        foreach (var camera in cameras)
+        {
+            Debug.Log(" - " + camera.name);
+        }
+
+        return cameras;
+    }
+
 
     // Activate the puzzle clicked
     public void SnapCamToPuzzle(Camera activeCam)

@@ -19,7 +19,7 @@ public class SinkRotation : MonoBehaviour
     public float minRotation = 0f;
     public float maxRotation = 30.7f;
 
-    private bool isTaskComplete = false; // Track if the task is completed
+    public bool isTaskComplete = false; // Track if the task is completed
 
     [SerializeField] private RoomManager roomManager; // Reference to the RoomManager
     [SerializeField] private GameManager gameManager; // Reference to the GameManager

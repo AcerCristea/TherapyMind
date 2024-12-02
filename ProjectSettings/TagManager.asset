@@ -6,6 +6,11 @@ TagManager:
   tags:
   - Memory
   - book
+  - Puzzle
+  - OcdRoom
+  - PlayOnEnter
+  - Sink
+  - Stove
   layers:
   - Default
   - TransparentFX

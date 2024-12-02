@@ -11,7 +11,7 @@ public class StoveRotation : MonoBehaviour
     // Target angle for task completion
     public float targetRotation = -90f;
 
-    private bool isTaskComplete = false;  // Track if the burner is turned off (task complete)
+    public bool isTaskComplete = false;  // Track if the burner is turned off (task complete)
 
     [SerializeField] private RoomManager roomManager;  // Reference to the RoomManager
     [SerializeField] private GameManager gameManager;  // Reference to the GameManager
@@ -40,11 +40,13 @@ public class StoveRotation : MonoBehaviour
         {
             HandleRotation();
 
+
             // Exit puzzle and return to the main camera
             if (Input.GetKeyDown(KeyCode.Escape))
             {
                 roomManager.ReturnToWall();
             }
+
         }
     }
 
@@ -95,12 +97,14 @@ public class StoveRotation : MonoBehaviour
                 flameEffect.SetActive(false);
             }
 
+            isTaskComplete = true;
+            gameManager.MarkTaskAsComplete("Burner");
+
             if (stoveAudio.isPlaying)
             {
                 stoveAudio.Stop();
             }
-            isTaskComplete = true;
-            gameManager.MarkTaskAsComplete("Burner");
+
             Debug.Log("Burner turned off and task marked as complete!");
         }
         else if (isTaskComplete && Mathf.Abs(normalizedRotation - adjustedTargetRotation) >= 5f)
@@ -110,13 +114,15 @@ public class StoveRotation : MonoBehaviour
             {
                 flameEffect.SetActive(true);
             }
-            if (!stoveAudio.isPlaying)
-            {
 
-                stoveAudio.Play();
-            }
             isTaskComplete = false;
             gameManager.MarkTaskAsIncomplete("Burner");
+
+            if (!stoveAudio.isPlaying)
+            {
+                stoveAudio.Play();
+            }
+
             Debug.Log("Burner moved away from off position. Task marked as incomplete.");
         }
     }

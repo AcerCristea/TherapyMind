@@ -12,6 +12,8 @@ public class Door : MonoBehaviour
     private Quaternion initialRotation;
     private Quaternion targetRotation;
     private Coroutine currentAnimation;
+    public AudioSource burner;
+    public AudioSource tap;
 
 
 
@@ -19,6 +21,7 @@ public class Door : MonoBehaviour
     {
         initialRotation = hingePoint.rotation; // Store the initial rotation
         targetRotation = Quaternion.Euler(transform.eulerAngles + new Vector3(0, openAngle, 0)); // Calculate the target rotation
+
     }
 
     private void OnMouseEnter()
@@ -58,39 +61,48 @@ public class Door : MonoBehaviour
 
         // Use FindAnyObjectByType to get the CameraController
         CameraController cameraController = FindAnyObjectByType<CameraController>();
+        GameManager gameManager = Object.FindAnyObjectByType<GameManager>();
+
         if (cameraController != null)
         {
             Debug.Log("CameraController found, transitioning room");
 
+            gameManager.StopTimer();
+
+            Debug.Log("Passing targetCameraName to CameraController: " + targetCameraName);
+
+
             // Set the current room to the new room
-            cameraController.SetCurrentRoom(targetRoom);
+            cameraController.SetCurrentRoom(targetRoom, targetCameraName);
 
-            // Find the target camera in the new room
-            GameObject targetCamera = null;
-            foreach (GameObject camera in cameraController.cameraArray)
-            {
-                if (camera.name == targetCameraName)
+                Debug.Log("TargetRoomName: " + targetRoom.name);
+
+                if (targetRoom.name == "OcdRoom")
                 {
-                    targetCamera = camera;
-                    break;
+                    gameManager.ResetAndStartTimer();
+
+                    Debug.Log("RESULTSSS: " + gameManager.isBurnerTaskComplete);
+                    Debug.Log("RESULTSSS: " + gameManager.isFaucetTaskComplete);
+                    if (!gameManager.isBurnerTaskComplete)
+                    {
+                        burner.Play();
+                    }
+
+                    if (!gameManager.isFaucetTaskComplete)
+                    {
+                        tap.Play();
+                    }
+
                 }
-            }
+                if (targetRoom.name != "OcdRoom")
+                {
+                        burner.Stop();
+                        tap.Stop();
+                }
 
-            if (targetCamera != null)
-            {
-                Debug.Log($"Switching to target camera: {targetCameraName}");
-
-                // Get the index of the target camera and update the active camera
-                int targetCameraIndex = System.Array.IndexOf(cameraController.cameraArray, targetCamera);
-                cameraController.UpdateCamera(targetCameraIndex);
             }
             else
             {
-                Debug.LogError("Target camera not found in the next room!");
-            }
-        }
-        else
-        {
             Debug.LogError("CameraController not found!");
         }
     }

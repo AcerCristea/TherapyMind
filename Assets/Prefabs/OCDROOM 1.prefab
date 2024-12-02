@@ -196,7 +196,7 @@ GameObject:
   - component: {fileID: 6694896638678892173}
   - component: {fileID: 128250936113025649}
   m_Layer: 0
-  m_Name: WestCamera
+  m_Name: BSad
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -557,7 +557,7 @@ GameObject:
   - component: {fileID: 6718460626945611678}
   - component: {fileID: 5035492055324268956}
   m_Layer: 0
-  m_Name: SouthCamera
+  m_Name: CSad
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -762,6 +762,8 @@ MonoBehaviour:
   hingePoint: {fileID: 896638381651816510}
   openAngle: 20
   animationDuration: 0.5
+  burner: {fileID: 0}
+  tap: {fileID: 0}
 --- !u!1 &1013328273548389836
 GameObject:
   m_ObjectHideFlags: 0
@@ -1450,7 +1452,7 @@ GameObject:
   - component: {fileID: 3514616517925065128}
   - component: {fileID: 3317980712960094369}
   m_Layer: 0
-  m_Name: NorthCamera
+  m_Name: ASad
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1542,7 +1544,7 @@ GameObject:
   - component: {fileID: 3207721007826883575}
   - component: {fileID: 2838491802285602019}
   m_Layer: 0
-  m_Name: EastCamera
+  m_Name: DSad
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

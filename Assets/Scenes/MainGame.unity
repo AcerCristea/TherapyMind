@@ -164,9 +164,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d81bce42162fa40d7926f63024ce0586, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rooms:
-  - {fileID: 752185963}
-  - {fileID: 183755017}
   cameraArray:
   - {fileID: 0}
   - {fileID: 0}
@@ -176,6 +173,7 @@ MonoBehaviour:
   westCam: {fileID: 2364295402218447760}
   southCam: {fileID: 2364295402218447759}
   eastCam: {fileID: 2364295402218447758}
+  targetCameraName: 
 --- !u!114 &263399526
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -207,6 +205,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &326528996 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6417306230564014669, guid: a3ca1562382de1b4398e49a2188bd79d, type: 3}
+  m_PrefabInstance: {fileID: 1529547715637025847}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &335631762
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -264,10 +267,106 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 30a526d868d14244781b2b397a49f806, type: 3}
+--- !u!1 &676587331 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5138337632821592925, guid: a3ca1562382de1b4398e49a2188bd79d, type: 3}
+  m_PrefabInstance: {fileID: 1529547715637025847}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &676587334
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 676587331}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d0bddd041e986f448adbc5783253261, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  roomName: OcdRoom
 --- !u!1 &752185963 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2899223948314009014, guid: ec60a31b824af984c922a847f19bc28d, type: 3}
   m_PrefabInstance: {fileID: 2364295402218447757}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &769888970
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 769888972}
+  - component: {fileID: 769888971}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &769888971
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 769888970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c17d082e9e16711458a11024fbc80cb8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tasks:
+  - taskName: Faucet
+    taskObject: {fileID: 965276476831674057}
+    isCompleted: 0
+    originalPosition: {x: 0, y: 0, z: 0}
+    originalRotation: {x: 30.7, y: 0, z: 0, w: 0}
+  - taskName: Burner
+    taskObject: {fileID: 1195353317}
+    isCompleted: 0
+    originalPosition: {x: 0, y: 0, z: 0}
+    originalRotation: {x: 0, y: 0, z: 0, w: 0}
+  - taskName: Cabinet
+    taskObject: {fileID: 3619390759944266089}
+    isCompleted: 0
+    originalPosition: {x: 0, y: 0, z: 0}
+    originalRotation: {x: 0, y: 70, z: 0, w: 0}
+  timeLimit: 50
+  flameEffect: {fileID: 181897721}
+  water: {fileID: 145520998}
+  waterSink: {fileID: 326528996}
+  runningWaterAudio: {fileID: 1435281019}
+  stoveAudio: {fileID: 1091564106}
+  isBurnerTaskComplete: 0
+  isFaucetTaskComplete: 0
+--- !u!4 &769888972
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 769888970}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -8.931, y: 1.9395921, z: 2.99}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &1091564106 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 8251780561358488374, guid: 55f207b0aef1c4745b2ac52df990bfec, type: 3}
+  m_PrefabInstance: {fileID: 5988641813891462933}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1195353317 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2601869736550908688, guid: 55f207b0aef1c4745b2ac52df990bfec, type: 3}
+  m_PrefabInstance: {fileID: 5988641813891462933}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1384193002
 PrefabInstance:
@@ -279,15 +378,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 314225111661415962, guid: 60cc5d4aea42a884f8311396c1b87e65, type: 3}
       propertyPath: m_Name
-      value: WestCameraSad
+      value: BSad
       objectReference: {fileID: 0}
     - target: {fileID: 1093381768054595886, guid: 60cc5d4aea42a884f8311396c1b87e65, type: 3}
       propertyPath: m_Name
-      value: NorthCameraSad
+      value: ASad
       objectReference: {fileID: 0}
     - target: {fileID: 1723960008393619569, guid: 60cc5d4aea42a884f8311396c1b87e65, type: 3}
       propertyPath: m_Name
-      value: EastCameraSad
+      value: DSad
       objectReference: {fileID: 0}
     - target: {fileID: 4798775931413126871, guid: 60cc5d4aea42a884f8311396c1b87e65, type: 3}
       propertyPath: m_Name
@@ -295,7 +394,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4931758049384458607, guid: 60cc5d4aea42a884f8311396c1b87e65, type: 3}
       propertyPath: m_Name
-      value: SouthCameraSad
+      value: CSad
       objectReference: {fileID: 0}
     - target: {fileID: 5856817326434151871, guid: 60cc5d4aea42a884f8311396c1b87e65, type: 3}
       propertyPath: m_LocalPosition.x
@@ -337,6 +436,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8681447621826866734, guid: 60cc5d4aea42a884f8311396c1b87e65, type: 3}
+      propertyPath: tap
+      value: 
+      objectReference: {fileID: 1435281019}
+    - target: {fileID: 8681447621826866734, guid: 60cc5d4aea42a884f8311396c1b87e65, type: 3}
+      propertyPath: burner
+      value: 
+      objectReference: {fileID: 1091564106}
     - target: {fileID: 8681447621826866734, guid: 60cc5d4aea42a884f8311396c1b87e65, type: 3}
       propertyPath: targetRoom
       value: 
@@ -403,11 +510,29 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 30b34eb6a97475d40a5e357fbaa264e8, type: 3}
---- !u!1 &1435281017 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4715454305579614221, guid: a3ca1562382de1b4398e49a2188bd79d, type: 3}
+--- !u!82 &1435281019 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 4170875547869113007, guid: a3ca1562382de1b4398e49a2188bd79d, type: 3}
   m_PrefabInstance: {fileID: 1529547715637025847}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1888927969 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 357426665394783522, guid: 55f207b0aef1c4745b2ac52df990bfec, type: 3}
+  m_PrefabInstance: {fileID: 5988641813891462933}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1888927972
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1888927969}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d0bddd041e986f448adbc5783253261, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  roomName: OcdRoom
 --- !u!1 &965276476831674057 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 539150734798924124, guid: a3ca1562382de1b4398e49a2188bd79d, type: 3}
@@ -421,6 +546,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 395891234711538235, guid: a3ca1562382de1b4398e49a2188bd79d, type: 3}
+      propertyPath: m_Name
+      value: audio_SinkOff
+      objectReference: {fileID: 0}
+    - target: {fileID: 539150734798924124, guid: a3ca1562382de1b4398e49a2188bd79d, type: 3}
+      propertyPath: m_TagString
+      value: Sink
+      objectReference: {fileID: 0}
     - target: {fileID: 1835635823425861042, guid: a3ca1562382de1b4398e49a2188bd79d, type: 3}
       propertyPath: m_LocalPosition.x
       value: -7.55
@@ -463,7 +596,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4170875547869113007, guid: a3ca1562382de1b4398e49a2188bd79d, type: 3}
       propertyPath: m_PlayOnAwake
-      value: 1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4715454305579614221, guid: a3ca1562382de1b4398e49a2188bd79d, type: 3}
+      propertyPath: m_Name
+      value: audioSinkWater
       objectReference: {fileID: 0}
     - target: {fileID: 5138337632821592925, guid: a3ca1562382de1b4398e49a2188bd79d, type: 3}
       propertyPath: m_Name
@@ -476,11 +613,14 @@ PrefabInstance:
     - target: {fileID: 8638325999147125424, guid: a3ca1562382de1b4398e49a2188bd79d, type: 3}
       propertyPath: waterSink
       value: 
-      objectReference: {fileID: 1435281017}
+      objectReference: {fileID: 326528996}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5138337632821592925, guid: a3ca1562382de1b4398e49a2188bd79d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 676587334}
   m_SourcePrefab: {fileID: 100100000, guid: a3ca1562382de1b4398e49a2188bd79d, type: 3}
 --- !u!1001 &2364295402218447757
 PrefabInstance:
@@ -490,6 +630,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 503926908678379557, guid: ec60a31b824af984c922a847f19bc28d, type: 3}
+      propertyPath: m_TagString
+      value: OcdRoom
+      objectReference: {fileID: 0}
+    - target: {fileID: 885571974972178784, guid: ec60a31b824af984c922a847f19bc28d, type: 3}
+      propertyPath: m_TagString
+      value: OcdRoom
+      objectReference: {fileID: 0}
     - target: {fileID: 2759816419754837158, guid: ec60a31b824af984c922a847f19bc28d, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.8252077
@@ -532,7 +680,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2899223948314009014, guid: ec60a31b824af984c922a847f19bc28d, type: 3}
       propertyPath: m_Name
-      value: OCDROOM
+      value: OcdRoom
+      objectReference: {fileID: 0}
+    - target: {fileID: 2899223948314009014, guid: ec60a31b824af984c922a847f19bc28d, type: 3}
+      propertyPath: m_TagString
+      value: OcdRoom
+      objectReference: {fileID: 0}
+    - target: {fileID: 6000744552288516290, guid: ec60a31b824af984c922a847f19bc28d, type: 3}
+      propertyPath: m_TagString
+      value: OcdRoom
+      objectReference: {fileID: 0}
+    - target: {fileID: 6406028853482872120, guid: ec60a31b824af984c922a847f19bc28d, type: 3}
+      propertyPath: m_TagString
+      value: OcdRoom
       objectReference: {fileID: 0}
     - target: {fileID: 7688336503014774400, guid: ec60a31b824af984c922a847f19bc28d, type: 3}
       propertyPath: tasks.Array.data[0].taskObject
@@ -547,12 +707,20 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 3619390759944266089}
     - target: {fileID: 8584729878501302334, guid: ec60a31b824af984c922a847f19bc28d, type: 3}
+      propertyPath: tap
+      value: 
+      objectReference: {fileID: 1435281019}
+    - target: {fileID: 8584729878501302334, guid: ec60a31b824af984c922a847f19bc28d, type: 3}
+      propertyPath: burner
+      value: 
+      objectReference: {fileID: 1091564106}
+    - target: {fileID: 8584729878501302334, guid: ec60a31b824af984c922a847f19bc28d, type: 3}
       propertyPath: targetRoom
       value: 
       objectReference: {fileID: 183755017}
     - target: {fileID: 8584729878501302334, guid: ec60a31b824af984c922a847f19bc28d, type: 3}
       propertyPath: targetCameraName
-      value: NorthCameraSad
+      value: CSad
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -698,6 +866,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2601869736550908688, guid: 55f207b0aef1c4745b2ac52df990bfec, type: 3}
+      propertyPath: m_TagString
+      value: Stove
+      objectReference: {fileID: 0}
     - target: {fileID: 8251780561358488374, guid: 55f207b0aef1c4745b2ac52df990bfec, type: 3}
       propertyPath: m_PlayOnAwake
       value: 0
@@ -709,7 +881,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 357426665394783522, guid: 55f207b0aef1c4745b2ac52df990bfec, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1888927972}
   m_SourcePrefab: {fileID: 100100000, guid: 55f207b0aef1c4745b2ac52df990bfec, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
@@ -723,3 +898,4 @@ SceneRoots:
   - {fileID: 1401465216}
   - {fileID: 335631762}
   - {fileID: 263399527}
+  - {fileID: 769888972}
