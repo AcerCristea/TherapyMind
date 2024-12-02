@@ -15,8 +15,6 @@ public class CameraController : MonoBehaviour
     public GameObject westCam;
     public GameObject southCam;
     public GameObject eastCam;
-    public string targetCameraName;  // The name of the target camera in the next room
-
 
     public static CameraController instance;
 
