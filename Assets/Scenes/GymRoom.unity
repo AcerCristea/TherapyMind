@@ -258,8 +258,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6a28b8e97f8546e093369ce2311e34b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  puzzleCam: {fileID: 475604538}
   target: {fileID: 973411584}
+  parentPuzzle: {fileID: 1243514599}
+  roomManager: {fileID: 0}
   distance: 3
 --- !u!65 &24702802
 BoxCollider:
@@ -496,6 +497,7 @@ MonoBehaviour:
   middleGreen: {fileID: 1405704632}
   rightGreen: {fileID: 1322375879}
   theDoor: {fileID: 1517088246}
+  valvePuzzle: {fileID: 1559402319}
 --- !u!1 &124112584
 GameObject:
   m_ObjectHideFlags: 0
@@ -1038,7 +1040,7 @@ GameObject:
   m_Component:
   - component: {fileID: 305231502}
   m_Layer: 0
-  m_Name: LeftSpinner
+  m_Name: Left Valve
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1380,7 +1382,7 @@ GameObject:
   - component: {fileID: 389729546}
   - component: {fileID: 389729545}
   m_Layer: 0
-  m_Name: SpinnerCamera
+  m_Name: Valve Cam
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1490,6 +1492,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2143232742}
+  - {fileID: 737634381}
   - {fileID: 1145529785}
   - {fileID: 1809859094}
   - {fileID: 1583755698}
@@ -1544,8 +1547,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6a28b8e97f8546e093369ce2311e34b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  puzzleCam: {fileID: 475604538}
   target: {fileID: 1007109211}
+  parentPuzzle: {fileID: 1243514599}
+  roomManager: {fileID: 0}
   distance: 3
 --- !u!65 &441951168
 BoxCollider:
@@ -1919,8 +1923,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6a28b8e97f8546e093369ce2311e34b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  puzzleCam: {fileID: 475604538}
   target: {fileID: 1696927627}
+  parentPuzzle: {fileID: 1243514599}
+  roomManager: {fileID: 0}
   distance: 3
 --- !u!65 &500485233
 BoxCollider:
@@ -2073,8 +2078,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6a28b8e97f8546e093369ce2311e34b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  puzzleCam: {fileID: 475604538}
   target: {fileID: 2007427508}
+  parentPuzzle: {fileID: 1243514599}
+  roomManager: {fileID: 0}
   distance: 3
 --- !u!65 &537451330
 BoxCollider:
@@ -2431,7 +2437,7 @@ GameObject:
   m_Component:
   - component: {fileID: 691209908}
   m_Layer: 0
-  m_Name: RightSpinner
+  m_Name: Right Valve
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2467,7 +2473,7 @@ GameObject:
   - component: {fileID: 737634379}
   - component: {fileID: 737634378}
   m_Layer: 0
-  m_Name: Roof
+  m_Name: Ceiling
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2554,12 +2560,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 737634377}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 8, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.150697, y: 4.2626953, z: 6.150777}
   m_LocalScale: {x: 20, y: 0.5, z: 20}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 436438659}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &770051193
 GameObject:
@@ -2712,7 +2718,7 @@ GameObject:
   - component: {fileID: 795031487}
   - component: {fileID: 795031486}
   m_Layer: 0
-  m_Name: Handle
+  m_Name: Pointer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2819,7 +2825,7 @@ GameObject:
   - component: {fileID: 815705052}
   - component: {fileID: 815705051}
   m_Layer: 0
-  m_Name: Handle
+  m_Name: Pointer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2922,7 +2928,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 836056161}
-  - component: {fileID: 836056160}
+  - component: {fileID: 836056162}
   m_Layer: 0
   m_Name: RoomManager
   m_TagString: Untagged
@@ -2930,22 +2936,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &836056160
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 836056158}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7b1adfefdc283674e85415add0849227, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  activeCamera: {fileID: 0}
-  prevCamera: {fileID: 0}
-  activePuzzle: {fileID: 0}
-  puzzleList: []
 --- !u!4 &836056161
 Transform:
   m_ObjectHideFlags: 0
@@ -2961,6 +2951,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &836056162
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 836056158}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7bc61e76ffa9bd468157d3b25c26178, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activeCamera: {fileID: 0}
+  prevCamera: {fileID: 0}
+  activePuzzle: {fileID: 0}
 --- !u!1 &874012292
 GameObject:
   m_ObjectHideFlags: 0
@@ -3338,8 +3343,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6a28b8e97f8546e093369ce2311e34b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  puzzleCam: {fileID: 475604538}
   target: {fileID: 331321094}
+  parentPuzzle: {fileID: 1243514599}
+  roomManager: {fileID: 0}
   distance: 3
 --- !u!65 &1072654396
 BoxCollider:
@@ -3630,7 +3636,7 @@ GameObject:
   - component: {fileID: 1145529783}
   - component: {fileID: 1145529782}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3940,7 +3946,7 @@ GameObject:
   - component: {fileID: 1280561731}
   - component: {fileID: 1280561735}
   m_Layer: 0
-  m_Name: RightSpin
+  m_Name: Valve
   m_TagString: Puzzle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4047,7 +4053,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10208eb1a845d9d4d939276c6449c285, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objToSpin: {fileID: 1280561730}
   rotateSpeed: 100
   right: {x: 0, y: 0, z: 1}
   left: {x: 0, y: 0, z: -1}
@@ -4240,8 +4245,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6a28b8e97f8546e093369ce2311e34b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  puzzleCam: {fileID: 475604538}
   target: {fileID: 874012292}
+  parentPuzzle: {fileID: 1243514599}
+  roomManager: {fileID: 0}
   distance: 3
 --- !u!65 &1330494099
 BoxCollider:
@@ -4329,7 +4335,7 @@ GameObject:
   - component: {fileID: 1347661316}
   - component: {fileID: 1347661315}
   m_Layer: 0
-  m_Name: Handle
+  m_Name: Pointer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4713,7 +4719,7 @@ GameObject:
   - component: {fileID: 1387627631}
   - component: {fileID: 1387627635}
   m_Layer: 0
-  m_Name: LeftSpin
+  m_Name: Valve
   m_TagString: Puzzle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4820,7 +4826,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10208eb1a845d9d4d939276c6449c285, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objToSpin: {fileID: 1387627630}
   rotateSpeed: 100
   right: {x: 0, y: 0, z: 1}
   left: {x: 0, y: 0, z: -1}
@@ -4870,7 +4875,7 @@ GameObject:
   - component: {fileID: 1404242862}
   - component: {fileID: 1404242861}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: Valve UI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5311,7 +5316,7 @@ GameObject:
   - component: {fileID: 1459196402}
   m_Layer: 0
   m_Name: Punchbag
-  m_TagString: punchBag
+  m_TagString: Puzzle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5418,9 +5423,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e238fff003e514df1bf33649ba9d0bc4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Obj: {fileID: 1459196397}
-  camera1: {fileID: 131603251}
   punchBagHealth: 100
+  roomManager: {fileID: 0}
 --- !u!1 &1459763181
 GameObject:
   m_ObjectHideFlags: 0
@@ -6048,8 +6052,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6a28b8e97f8546e093369ce2311e34b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  puzzleCam: {fileID: 475604538}
   target: {fileID: 783870361}
+  parentPuzzle: {fileID: 1243514599}
+  roomManager: {fileID: 0}
   distance: 3
 --- !u!65 &1544760810
 BoxCollider:
@@ -6165,7 +6170,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1559402320}
   m_Layer: 0
-  m_Name: Spinners
+  m_Name: Valves
   m_TagString: Puzzle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6346,8 +6351,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6a28b8e97f8546e093369ce2311e34b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  puzzleCam: {fileID: 475604538}
   target: {fileID: 1403988834}
+  parentPuzzle: {fileID: 1243514599}
+  roomManager: {fileID: 0}
   distance: 3
 --- !u!65 &1589493361
 BoxCollider:
@@ -6879,8 +6885,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6a28b8e97f8546e093369ce2311e34b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  puzzleCam: {fileID: 475604538}
   target: {fileID: 1546845338}
+  parentPuzzle: {fileID: 1243514599}
+  roomManager: {fileID: 0}
   distance: 3
 --- !u!65 &1675906122
 BoxCollider:
@@ -7033,8 +7040,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6a28b8e97f8546e093369ce2311e34b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  puzzleCam: {fileID: 475604538}
   target: {fileID: 507199435}
+  parentPuzzle: {fileID: 1243514599}
+  roomManager: {fileID: 0}
   distance: 3
 --- !u!65 &1697754734
 BoxCollider:
@@ -7896,7 +7904,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2029885259}
   m_Layer: 0
-  m_Name: MiddleSpinner
+  m_Name: Middle Valve
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7933,7 +7941,7 @@ GameObject:
   - component: {fileID: 2104504786}
   - component: {fileID: 2104504790}
   m_Layer: 0
-  m_Name: MiddleSpin
+  m_Name: Valve
   m_TagString: Puzzle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8040,7 +8048,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10208eb1a845d9d4d939276c6449c285, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objToSpin: {fileID: 2104504784}
   rotateSpeed: 100
   right: {x: 0, y: 0, z: 1}
   left: {x: 0, y: 0, z: -1}
@@ -8057,7 +8064,7 @@ GameObject:
   - component: {fileID: 2143232742}
   - component: {fileID: 2143232743}
   m_Layer: 0
-  m_Name: camcontr
+  m_Name: Camera Controller
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8087,7 +8094,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2143232741}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d81bce42162fa40d7926f63024ce0586, type: 3}
+  m_Script: {fileID: 11500000, guid: 5633647d91296d64399d6922b506fc7b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   cameraArray: []
@@ -8102,7 +8109,6 @@ SceneRoots:
   - {fileID: 836056161}
   - {fileID: 1027197984}
   - {fileID: 436438659}
-  - {fileID: 737634381}
   - {fileID: 1092168895}
   - {fileID: 487392246}
   - {fileID: 105035305}
