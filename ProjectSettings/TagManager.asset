@@ -11,6 +11,8 @@ TagManager:
   - PlayOnEnter
   - Sink
   - Stove
+  - punchBag
+  - Target
   layers:
   - Default
   - TransparentFX
