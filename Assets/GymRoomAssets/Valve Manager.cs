@@ -24,15 +24,17 @@ public class ValveManager : MonoBehaviour
     public GameObject valvePuzzle;
 
     public static ValveManager instance;
+    [SerializeField] private AngerRoomManager roomManager;
 
     void Awake()
     {
         instance = this;
+        roomManager = FindFirstObjectByType<AngerRoomManager>();
     }
 
     void Update()
     {
-        if (AngerRoomManager.instance.activePuzzle == valvePuzzle)
+        if (roomManager.activePuzzle == valvePuzzle)
         {
             // Win condition
             if(checkEachWheel())
@@ -43,7 +45,7 @@ public class ValveManager : MonoBehaviour
             // ESC to exit puzzle
             if (Input.GetKeyDown(KeyCode.Escape))
             {
-                AngerRoomManager.instance.ReturnToWall();
+                roomManager.ReturnToWall();
             }
         }
     }

@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class PunchingBagHighlight : MonoBehaviour
+public class PunchingBagManager : MonoBehaviour
 {
+    public static PunchingBagManager instance; 
+
     private Renderer renderer1;
     private Color initialColor;
 
@@ -13,6 +15,7 @@ public class PunchingBagHighlight : MonoBehaviour
 
     void Start()
     {
+        instance = this;
         renderer1 = GetComponent<Renderer>();
         initialColor = GetComponent<Renderer>().material.GetColor("_Color");
 

@@ -498,6 +498,7 @@ MonoBehaviour:
   rightGreen: {fileID: 1322375879}
   theDoor: {fileID: 1517088246}
   valvePuzzle: {fileID: 1559402319}
+  roomManager: {fileID: 0}
 --- !u!1 &124112584
 GameObject:
   m_ObjectHideFlags: 0
@@ -5912,7 +5913,7 @@ GameObject:
   - component: {fileID: 1532727296}
   m_Layer: 0
   m_Name: BackOfMirror
-  m_TagString: Untagged
+  m_TagString: Puzzle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
