@@ -16,9 +16,20 @@ public class ShardController : MonoBehaviour
 
     void Start()
     {
+
         theCollider = GetComponent<Collider>();
         // Find the RoomManager in the scene
         roomManager = FindFirstObjectByType<AngerRoomManager>();
+
+        if (Vector3.Distance(transform.position, target.transform.position) < 0.5)
+        {
+            snappy = true;
+        }
+        if (snappy)
+        {
+            SnapToTarget();
+            MegaShardController.correctCounter++;
+        }
     }
 
     void Update()
@@ -39,7 +50,7 @@ public class ShardController : MonoBehaviour
         {
             MoveFromCam(roomManager.activeCamera);
         }
-        
+
     }
 
     void OnMouseUp()
@@ -51,6 +62,7 @@ public class ShardController : MonoBehaviour
         if (snappy)
         {
             SnapToTarget();
+            MegaShardController.correctCounter++;
         }
     }
     // TODO:
