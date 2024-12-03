@@ -5,10 +5,11 @@ using UnityEngine;
 
 public class PunchingBagManager : MonoBehaviour
 {
-    public static PunchingBagManager instance; 
+    public static PunchingBagManager instance;
 
     private Renderer renderer1;
     private Color initialColor;
+    private Collider punchBagCollider;
 
     [SerializeField] private float punchBagHealth = 100f;
     [SerializeField] private AngerRoomManager roomManager; // Reference to a copy of RoomManager
@@ -18,6 +19,8 @@ public class PunchingBagManager : MonoBehaviour
         instance = this;
         renderer1 = GetComponent<Renderer>();
         initialColor = GetComponent<Renderer>().material.GetColor("_Color");
+
+        punchBagCollider = GetComponent<Collider>();
 
         // Find the RoomManager in the scene
         roomManager = FindFirstObjectByType<AngerRoomManager>();
@@ -59,7 +62,9 @@ public class PunchingBagManager : MonoBehaviour
             // bag breaks
             if (punchBagHealth <= 0)
             {
-                this.gameObject.SetActive(false);
+                renderer1.material.color = Color.black;
+                punchBagCollider.enabled = false;
+                //this.gameObject.SetActive(false);
                 Debug.Log("PUNCH BAG DONE, checked in PunchingBagHighlight");
             }
         }
