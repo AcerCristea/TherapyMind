@@ -3,57 +3,78 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class PunchingBagHighlight : MonoBehaviour
+public class PunchingBagManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    public GameObject Obj;
+    public static PunchingBagManager instance;
+
     private Renderer renderer1;
     private Color initialColor;
-
-    public Camera camera1;
+    private Collider punchBagCollider;
 
     [SerializeField] private float punchBagHealth = 100f;
+    [SerializeField] private AngerRoomManager roomManager; // Reference to a copy of RoomManager
 
     void Start()
     {
+        instance = this;
         renderer1 = GetComponent<Renderer>();
         initialColor = GetComponent<Renderer>().material.GetColor("_Color");
+
+        punchBagCollider = GetComponent<Collider>();
+
+        // Find the RoomManager in the scene
+        roomManager = FindFirstObjectByType<AngerRoomManager>();
     }
 
-    // Update is called once per frame
     void Update()
     {
-        if(Input.GetMouseButtonDown(0)){
-            Ray ray = camera1.ScreenPointToRay(Input.mousePosition);
+        if (roomManager.activePuzzle == this.transform.parent.gameObject)
+        {
+            // click to punch bag
+            if (Input.GetMouseButtonDown(0))
+            {
+                Ray ray = roomManager.activeCamera.ScreenPointToRay(Input.mousePosition);
 
-            if(Physics.Raycast(ray, out RaycastHit hitInfo)){
-                if(hitInfo.collider.gameObject.tag == "punchBag"){
-                    
-                    punchBagHealth -= 10f;
-                    Debug.Log("Health: " + punchBagHealth);
-                    
+                if (Physics.Raycast(ray, out RaycastHit hitInfo))
+                {
+                    if (hitInfo.collider.gameObject.tag == "Puzzle")
+                    {
+
+                        punchBagHealth -= 10f;
+                        Debug.Log("Health: " + punchBagHealth);
+
+                    }
                 }
             }
-        }
+            // escape to quit
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                roomManager.ReturnToWall();
+            }
 
-        punchBagHealth += 0.2f;
-
-        if(punchBagHealth > 100f){
-            punchBagHealth = 100f;
-            //Debug.Log("Punching Bag Fully Healed");
+            // bag constantly heals
+            punchBagHealth += 0.1f;
+            // cap health
+            if (punchBagHealth > 100f)
+            {
+                punchBagHealth = 100f;
+            }
+            // bag breaks
+            if (punchBagHealth <= 0)
+            {
+                renderer1.material.color = Color.black;
+                punchBagCollider.enabled = false;
+                //this.gameObject.SetActive(false);
+                Debug.Log("PUNCH BAG DONE, checked in PunchingBagHighlight");
+            }
         }
-        if(punchBagHealth <= 0){
-            Obj.SetActive(false);
-        }
-
-        
     }
 
+    // highlight on mouse hovering
     private void OnMouseEnter()
     {
         renderer1.material.color = Color.red + initialColor;
     }
-
     private void OnMouseExit()
     {
         renderer1.material.color = initialColor;
