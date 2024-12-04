@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class ShardController : MonoBehaviour
 {
+    public GameObject shard;
     public GameObject target;
     public GameObject parentPuzzle;
 
     private Collider theCollider;
-    [SerializeField] private AngerRoomManager roomManager;
+    [SerializeField] private RoomManager roomManager;
     [SerializeField] private float distance = 3f;
     private float maxDistance = 10.5f;
     private float minDistance = 1f;
@@ -19,9 +20,9 @@ public class ShardController : MonoBehaviour
 
         theCollider = GetComponent<Collider>();
         // Find the RoomManager in the scene
-        roomManager = FindFirstObjectByType<AngerRoomManager>();
+        roomManager = FindFirstObjectByType<RoomManager>();
 
-        if (Vector3.Distance(transform.position, target.transform.position) < 0.5)
+        if (Vector3.Distance(shard.transform.position, target.transform.position) < 0.5)
         {
             snappy = true;
         }
@@ -55,7 +56,7 @@ public class ShardController : MonoBehaviour
 
     void OnMouseUp()
     {
-        if (Vector3.Distance(transform.position, target.transform.position) < 0.5)
+        if (Vector3.Distance(shard.transform.position, target.transform.position) < 0.5)
         {
             snappy = true;
         }
@@ -94,7 +95,7 @@ public class ShardController : MonoBehaviour
 
     private void SnapToTarget()
     {
-        transform.position = target.transform.position;
+        shard.transform.position = target.transform.position;
         theCollider.enabled = false;
     }
 }

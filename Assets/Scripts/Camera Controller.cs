@@ -8,7 +8,7 @@ public class CameraController : MonoBehaviour
 {
     public GameObject[] cameraArray;
     public static int activeCamIndex = 0;
-    private GameObject currentRoom;  // Current active room
+    [SerializeField] private GameObject currentRoom;  // Current active room
     private AudioListener currentAudioListener;
 
     public GameObject northCam;
@@ -36,6 +36,7 @@ public class CameraController : MonoBehaviour
         // Assuming the first room is set up as active in the scene
         cameraArray = new GameObject[] { northCam, westCam, southCam, eastCam };
         UpdateCamera(activeCamIndex);
+
 
 
     }
@@ -215,6 +216,8 @@ public class CameraController : MonoBehaviour
                 // turns off all wall cams
                 UpdateCamera(-1);
                 GameObject puzzle = hitObject.transform.root.gameObject;  // Access the root (parent) sink object
+
+                Debug.Log("HERE IS THE PUZZLE: " + puzzle);
 
                 RoomManager.instance.prevCamera = cameraArray[activeCamIndex].GetComponent<Camera>();
                 RoomManager.instance.ActivatePuzzle(puzzle);

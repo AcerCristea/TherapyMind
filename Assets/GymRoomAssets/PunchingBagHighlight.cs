@@ -12,7 +12,7 @@ public class PunchingBagManager : MonoBehaviour
     private Collider punchBagCollider;
 
     [SerializeField] private float punchBagHealth = 100f;
-    [SerializeField] private AngerRoomManager roomManager; // Reference to a copy of RoomManager
+    [SerializeField] private RoomManager roomManager; // Reference to a copy of RoomManager
 
     void Start()
     {
@@ -23,7 +23,7 @@ public class PunchingBagManager : MonoBehaviour
         punchBagCollider = GetComponent<Collider>();
 
         // Find the RoomManager in the scene
-        roomManager = FindFirstObjectByType<AngerRoomManager>();
+        roomManager = FindFirstObjectByType<RoomManager>();
     }
 
     void Update()
