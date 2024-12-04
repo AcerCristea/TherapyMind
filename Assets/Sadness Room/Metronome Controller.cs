@@ -11,14 +11,15 @@ public class MetronomeController : MonoBehaviour
     void Start()
     {
         beat = GetComponent<AudioSource>();
-        beat.mute = true;
+        beat.mute = false;
     }
 
     void Update()
     {
         if (PianoManager.instance.metroIsPlaying)
         {
-            beat.mute = false;
+            Debug.Log("playing metronome");
+            beat.mute = true;
         }
         else 
         {
