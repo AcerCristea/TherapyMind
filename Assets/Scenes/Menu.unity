@@ -4339,8 +4339,6 @@ Animation:
   serializedVersion: 4
   m_Animation: {fileID: 7400000, guid: 8829fd5057be37b4abfccda28eda8d97, type: 2}
   m_Animations:
-  - {fileID: 7400000, guid: 712751b8de0bfaf43909f3fe068e2e31, type: 2}
-  - {fileID: 7400000, guid: 442bc3e1974e6934691b46083d85630b, type: 2}
   - {fileID: 7400000, guid: 8829fd5057be37b4abfccda28eda8d97, type: 2}
   m_WrapMode: 0
   m_PlayAutomatically: 1
@@ -5591,8 +5589,6 @@ Animation:
   serializedVersion: 4
   m_Animation: {fileID: 7400000, guid: 85c1a6f3536a1e84b8b75f2b0df75021, type: 2}
   m_Animations:
-  - {fileID: 7400000, guid: 712751b8de0bfaf43909f3fe068e2e31, type: 2}
-  - {fileID: 7400000, guid: 71a30a2e40499634fb364b894000f8f6, type: 2}
   - {fileID: 7400000, guid: 85c1a6f3536a1e84b8b75f2b0df75021, type: 2}
   m_WrapMode: 0
   m_PlayAutomatically: 1
@@ -6585,7 +6581,6 @@ Animation:
   serializedVersion: 4
   m_Animation: {fileID: 7400000, guid: 71a30a2e40499634fb364b894000f8f6, type: 2}
   m_Animations:
-  - {fileID: 7400000, guid: 712751b8de0bfaf43909f3fe068e2e31, type: 2}
   - {fileID: 7400000, guid: 71a30a2e40499634fb364b894000f8f6, type: 2}
   m_WrapMode: 0
   m_PlayAutomatically: 1
@@ -7346,7 +7341,6 @@ Animation:
   serializedVersion: 4
   m_Animation: {fileID: 7400000, guid: 442bc3e1974e6934691b46083d85630b, type: 2}
   m_Animations:
-  - {fileID: 7400000, guid: 712751b8de0bfaf43909f3fe068e2e31, type: 2}
   - {fileID: 7400000, guid: 442bc3e1974e6934691b46083d85630b, type: 2}
   m_WrapMode: 0
   m_PlayAutomatically: 1
