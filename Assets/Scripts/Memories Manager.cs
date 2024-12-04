@@ -28,6 +28,7 @@ public class MemoriesManager : MonoBehaviour
     public GameObject to_swap; // the 2nd obj the player wants to swap
     public List<GameObject> memories; // backend representation of the item order
     public List<GameObject> correctOrder; // representation of the correct order of items
+    private bool puzzleCompleted = false;
     #endregion
 
     #region Initialize Stuff
@@ -84,8 +85,13 @@ public class MemoriesManager : MonoBehaviour
                 selected = null;
             }
             // check if puzzle is complete
-            if (CompareList(memories, correctOrder))
+
+            if (CompareList(memories, correctOrder) && (puzzleCompleted == false))
             {
+
+                GameManager.instance.DecreaseInsanity(20f); // Adjust the value as needed
+                GameManager.instance.memoryPuzzleComplete = true; // Adjust the value as needed
+                puzzleCompleted = true;
                 Debug.Log("You did it! Yippee!");
             }
         }

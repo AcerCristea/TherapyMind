@@ -73,6 +73,9 @@ public class PianoManager : MonoBehaviour
 
     IEnumerator StartMusic()
     {
+        GameManager.instance.DecreaseInsanity(20f); // Adjust the value as needed
+        GameManager.instance.pianoPuzzleComplete = true; // Mark the puzzle as complete
+
         Debug.Log("CONGRATS");
         yield return new WaitForSeconds(3);
         GetComponent<AudioSource>().Play();
