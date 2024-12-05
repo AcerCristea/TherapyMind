@@ -29,6 +29,7 @@ public class MemoriesManager : MonoBehaviour
     public List<GameObject> memories; // backend representation of the item order
     public List<GameObject> correctOrder; // representation of the correct order of items
     private bool puzzleCompleted = false;
+    [SerializeField] private GameManager gameManager;
     #endregion
 
     #region Initialize Stuff
@@ -47,6 +48,8 @@ public class MemoriesManager : MonoBehaviour
             memories.Add(GetComponent<Transform>().GetChild(i).gameObject);
         }
         cursor_ = memories[0];
+
+        gameManager = FindFirstObjectByType<GameManager>();
     }
     #endregion
 

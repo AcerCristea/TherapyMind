@@ -9,8 +9,11 @@ public class MegaShardController : MonoBehaviour
 
     void Update()
     {
-        if (correctCounter >= 13 && !said)
+        if (correctCounter >= 13 && !said && !GameManager.instance.mirrorPuzzleComplete) // Adjust the value as needed
         {
+            GameManager.instance.DecreaseInsanity(20f); // Adjust the value as needed
+            GameManager.instance.mirrorPuzzleComplete = true; // Adjust the value as needed
+
             Debug.Log("mirror completed");
             said = true;
         }

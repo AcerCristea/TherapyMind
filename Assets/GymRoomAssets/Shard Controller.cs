@@ -22,7 +22,7 @@ public class ShardController : MonoBehaviour
     private bool snappy = false;
 
 
-    private Vector3 intialPos;
+    private Vector3 initialPos;
 
 
     void Start()
