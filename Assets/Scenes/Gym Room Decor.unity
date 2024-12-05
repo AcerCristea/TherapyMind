@@ -1972,6 +1972,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7c69e40725f2d1a4687ecf3e80b2dfac, type: 3}
+--- !u!1 &702850437 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5929295085690356283, guid: 4aee0b3743e414e358de59cd164b42c6, type: 3}
+  m_PrefabInstance: {fileID: 1022896197}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &721949075
 GameObject:
   m_ObjectHideFlags: 0
@@ -3795,6 +3800,10 @@ PrefabInstance:
       propertyPath: theDoor
       value: 
       objectReference: {fileID: 321767095}
+    - target: {fileID: 7356159647654321372, guid: 4aee0b3743e414e358de59cd164b42c6, type: 3}
+      propertyPath: valvePuzzle
+      value: 
+      objectReference: {fileID: 702850437}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 1775936141812016741, guid: 4aee0b3743e414e358de59cd164b42c6, type: 3}

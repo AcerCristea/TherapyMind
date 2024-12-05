@@ -62,14 +62,15 @@ public class ValveManager : MonoBehaviour
         }
 
         middleDistance = Vector3.Distance(middleMarker.transform.position, middleGreen.transform.position);
-        Debug.Log("middle Distance: " + middleDistance);
-        if (middleDistance < 0.34 && middleDistance > 0.33)
+        //Debug.Log("middle Distance: " + middleDistance);
+        if (middleDistance < 0.68)
         {
             middleCheck = true;
         }
 
         rightDistance = Vector3.Distance(rightMarker.transform.position, rightGreen.transform.position);
-        if (rightDistance < 0.293 && rightDistance > 0.289)
+        Debug.Log("right Diatncae: " + rightDistance);
+        if (rightDistance < 0.59)
         {
             rightCheck = true;
         }
