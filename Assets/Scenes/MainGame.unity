@@ -15115,7 +15115,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &714011899
 RectTransform:
   m_ObjectHideFlags: 0
@@ -15339,9 +15339,9 @@ MonoBehaviour:
   isBurnerTaskComplete: 0
   isFaucetTaskComplete: 0
   insanityMeter: 0
-  maxInsanity: 100
+  maxInsanity: 1000
   insanityRate: 1
-  health: 100
+  health: 1000
   healthReductionRate: 5
   pianoPuzzleComplete: 0
   memoryPuzzleComplete: 0
@@ -15357,7 +15357,6 @@ MonoBehaviour:
   startPP: 0
   ppObj: {fileID: 1475826036}
   ppVolume: {fileID: 0}
-  Complete: {fileID: 2130368820}
 --- !u!4 &769888972
 Transform:
   m_ObjectHideFlags: 0
