@@ -10,6 +10,7 @@ public class HealthBarDetector : MonoBehaviour
     public GameObject languageMenu;
     public GameObject optionsMenu;
     public GameObject resolutionMenu;
+    public GameObject gameOver;
     public GameObject HealthBar;
     public void Update()
     {
@@ -30,6 +31,10 @@ public class HealthBarDetector : MonoBehaviour
             HealthBar.SetActive(false);
         }
         else if (resolutionMenu.activeSelf == true)
+        {
+            HealthBar.SetActive(false);
+        }
+        else if (gameOver.activeSelf == true)
         {
             HealthBar.SetActive(false);
         }

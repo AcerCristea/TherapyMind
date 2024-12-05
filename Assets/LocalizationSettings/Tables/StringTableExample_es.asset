@@ -74,6 +74,10 @@ MonoBehaviour:
     m_Localized: Terapia mental
     m_Metadata:
       m_Items: []
+  - m_Id: 481794528841728
+    m_Localized: "Regresar al men\xFA principal"
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []
