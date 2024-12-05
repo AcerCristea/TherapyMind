@@ -16754,7 +16754,7 @@ GameObject:
   - component: {fileID: 2140058013}
   - component: {fileID: 2140058012}
   m_Layer: 0
-  m_Name: Cylinder
+  m_Name: Gym Pipe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
