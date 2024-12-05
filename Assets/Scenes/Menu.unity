@@ -3329,9 +3329,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5bdea0bac81d6a344833e5f6d636085a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  transition: {fileID: 0}
-  transitionTime: 1
-  canvas: {fileID: 0}
 --- !u!1 &1289821049
 GameObject:
   m_ObjectHideFlags: 0
@@ -9660,7 +9657,6 @@ SceneRoots:
   m_Roots:
   - {fileID: 1798787929}
   - {fileID: 1472920576}
-  - {fileID: 286581137}
   - {fileID: 1988393061}
   - {fileID: 1289821052}
   - {fileID: 109736838}
@@ -9668,6 +9664,7 @@ SceneRoots:
   - {fileID: 1334194301}
   - {fileID: 30972138}
   - {fileID: 2038256000}
+  - {fileID: 286581137}
   - {fileID: 1674131466}
   - {fileID: 1546825149}
   - {fileID: 1209729920}
