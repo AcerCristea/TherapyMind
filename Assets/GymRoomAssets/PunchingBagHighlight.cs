@@ -15,6 +15,7 @@ public class PunchingBagManager : MonoBehaviour
 
     [SerializeField] private float punchBagHealth = 100f;
     [SerializeField] private RoomManager roomManager; // Reference to a copy of RoomManager
+    [SerializeField] private GameManager gameManager;
 
     void Start()
     {
@@ -26,6 +27,7 @@ public class PunchingBagManager : MonoBehaviour
 
         // Find the RoomManager in the scene
         roomManager = FindFirstObjectByType<RoomManager>();
+        gameManager = FindFirstObjectByType<GameManager>();
 
         punchColor = new Color(0.8f, 0f, 0f, 1f);
         highlightColor = new Color(1f, .58f, .58f, 1f);
@@ -34,7 +36,7 @@ public class PunchingBagManager : MonoBehaviour
 
     void Update()
     {
-        if (roomManager.activePuzzle == this.transform.parent.gameObject)
+        if (roomManager.activePuzzle == this.transform.parent.gameObject) // Adjust the value as needed
         {
             // click to punch bag
             if (Input.GetMouseButtonDown(0))
@@ -66,12 +68,14 @@ public class PunchingBagManager : MonoBehaviour
                 punchBagHealth = 100f;
             }
             // bag breaks
-            if (punchBagHealth <= 0)
+            if (punchBagHealth <= 0 && !GameManager.instance.PBPuzzleComplete)
             {
                 changeColor(Color.black);
                 punchBagCollider.enabled = false;
                 //this.gameObject.SetActive(false);
                 Debug.Log("PUNCH BAG DONE, checked in PunchingBagHighlight");
+                GameManager.instance.DecreaseInsanity(20f); // Adjust the value as needed
+                GameManager.instance.PBPuzzleComplete = true; // Adjust the value as needed
             }
         }
     }
