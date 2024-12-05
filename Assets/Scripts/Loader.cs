@@ -19,10 +19,10 @@ public class Loader : MonoBehaviour
             canvas.SetActive(true);
         }
     }
-    public void PressButton()
+
+    public void LoadScene()
     {
-        canvas.SetActive(false);
-        LoadNextLevel();
+        SceneManager.LoadScene("SampleScene");
     }
 
     public void LoadNextLevel()

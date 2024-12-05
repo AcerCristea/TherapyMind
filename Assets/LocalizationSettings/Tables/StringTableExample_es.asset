@@ -1,0 +1,75 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: StringTableExample_es
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: es
+  m_SharedData: {fileID: 11400000, guid: d564dc2c5d4264d42b97dcd0ee449a50, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 99807596544
+    m_Localized: Spanish
+    m_Metadata:
+      m_Items: []
+  - m_Id: 641959137280
+    m_Localized: Jugar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13706180104192
+    m_Localized: Continuar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 41897162641408
+    m_Localized: Opciones
+    m_Metadata:
+      m_Items: []
+  - m_Id: 41901172396032
+    m_Localized: "Cr\xE9ditos"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 41909380648960
+    m_Localized: Abandonar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45250844233728
+    m_Localized: Volumen maestro
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45340992409600
+    m_Localized: "Resoluci\xF3n"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45892509831168
+    m_Localized: "Atr\xE1s"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 46283314106368
+    m_Localized: Pantalla completa
+    m_Metadata:
+      m_Items: []
+  - m_Id: 52150168129536
+    m_Localized: Reanudar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 52299472769024
+    m_Localized: Reiniciar sala
+    m_Metadata:
+      m_Items: []
+  - m_Id: 52619498164224
+    m_Localized: "Men\xFA Principal"
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []
