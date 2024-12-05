@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class TrackController : MonoBehaviour
 {
-    public float speed = 0.75f;
+    public float speed = 0.4f;
 
     void Update()
     {
@@ -29,6 +29,7 @@ public class TrackController : MonoBehaviour
 
     public void ResetTrack()
     {
+        Debug.Log("track has been reset to " + PianoManager.instance.trackStartPosition);
         // reset track
         this.transform.position = PianoManager.instance.trackStartPosition;
         foreach(Transform note in this.transform)
