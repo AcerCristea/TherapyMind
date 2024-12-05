@@ -31,6 +31,11 @@ public class GameManager : MonoBehaviour
     public bool memoryPuzzleComplete = false;
     //public bool cabinetPuzzleComplete = false;
 
+    public AudioSource heartbeatAudio; // Heartbeat AudioSource
+    public float minHeartbeatVolume = 0.1f;
+    public float maxHeartbeatVolume = 1f;
+    public float minHeartbeatPitch = 0.5f;
+    public float maxHeartbeatPitch = 2f;
 
 
     void Awake()
@@ -55,12 +60,20 @@ public class GameManager : MonoBehaviour
         }
         timer = timeLimit;
 
+        if (heartbeatAudio != null)
+        {
+            heartbeatAudio.loop = true;
+            heartbeatAudio.Play();
+        }
+
     }
 
     void Update()
     {
 
         IncreaseInsanity(Time.deltaTime * insanityRate);
+        UpdateHeartbeat();
+
 
         CheckGameCompletion();
 
@@ -89,6 +102,23 @@ public class GameManager : MonoBehaviour
         }
 
     }
+
+    void UpdateHeartbeat()
+    {
+        if (heartbeatAudio != null)
+        {
+            // Calculate volume and pitch based on insanity
+            float normalizedInsanity = insanityMeter / maxInsanity;
+            heartbeatAudio.volume = Mathf.Lerp(minHeartbeatVolume, maxHeartbeatVolume, normalizedInsanity);
+            heartbeatAudio.pitch = Mathf.Lerp(minHeartbeatPitch, maxHeartbeatPitch, normalizedInsanity);
+
+            Debug.Log($"Insanity: {insanityMeter}/{maxInsanity}");
+            Debug.Log($"Heartbeat Volume: {heartbeatAudio.volume}");
+            Debug.Log($"Heartbeat Pitch: {heartbeatAudio.pitch}");
+
+        }
+    }
+
 
     void IncreaseInsanity(float amount)
     {
