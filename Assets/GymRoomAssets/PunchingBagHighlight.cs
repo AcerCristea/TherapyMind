@@ -59,7 +59,7 @@ public class PunchingBagManager : MonoBehaviour
             }
 
             // bag constantly heals
-            punchBagHealth += 0.1f;
+            punchBagHealth += 0.01f;
             // cap health
             if (punchBagHealth > 100f)
             {
