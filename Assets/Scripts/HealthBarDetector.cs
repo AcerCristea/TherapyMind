@@ -34,10 +34,6 @@ public class HealthBarDetector : MonoBehaviour
         {
             HealthBar.SetActive(false);
         }
-        else if (gameOver.activeSelf == true)
-        {
-            HealthBar.SetActive(false);
-        }
         else
         {
             HealthBar.SetActive(true);

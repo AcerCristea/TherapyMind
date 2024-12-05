@@ -9,7 +9,6 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
 
-    public static bool winning;
     public static GameManager instance;  // Add this static reference
     public List<Task> tasks = new List<Task>();
     public float timeLimit = 30f;
@@ -147,7 +146,6 @@ public class GameManager : MonoBehaviour
         {
             Debug.Log("Game Over! Player has lost all health.");
             // Add game over logic here
-            winning = false;
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
         
@@ -319,8 +317,7 @@ public class GameManager : MonoBehaviour
         if (AreAllTasksCompleted() && memoryPuzzleComplete && pianoPuzzleComplete && valvePuzzleComplete && PBPuzzleComplete && mirrorPuzzleComplete)
         {
             Debug.Log("Game Completed! Congratulations!");
-            winning = true; 
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
             //Add logic for game completion, such as showing a victory screen
         }
     }

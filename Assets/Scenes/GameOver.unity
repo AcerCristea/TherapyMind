@@ -292,7 +292,7 @@ GameObject:
   - component: {fileID: 178372506}
   - component: {fileID: 178372505}
   m_Layer: 5
-  m_Name: SpanishDialogue
+  m_Name: SpaDialogue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -590,12 +590,12 @@ GameObject:
   - component: {fileID: 320937871}
   - component: {fileID: 320937870}
   m_Layer: 5
-  m_Name: EnglishDialogue
+  m_Name: EnDialogue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &320937869
 RectTransform:
   m_ObjectHideFlags: 0
@@ -765,12 +765,12 @@ GameObject:
   - component: {fileID: 343627643}
   - component: {fileID: 343627642}
   m_Layer: 5
-  m_Name: English
+  m_Name: En
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &343627641
 RectTransform:
   m_ObjectHideFlags: 0
@@ -922,7 +922,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &505352402
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2409,7 +2409,7 @@ GameObject:
   - component: {fileID: 1160370254}
   - component: {fileID: 1160370253}
   m_Layer: 5
-  m_Name: Spanish
+  m_Name: Spa
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2921,7 +2921,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1533236245}
+      - m_Target: {fileID: 1654821193}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
@@ -3910,10 +3910,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab3b5c1a8cf79334fbeb352d6ae46d55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  english: {fileID: 776063175}
-  englishButton: {fileID: 1875114710}
-  spanish: {fileID: 1410262754}
-  spanishButton: {fileID: 550321450}
+  english: {fileID: 343627640}
+  englishButton: {fileID: 320937868}
+  spanish: {fileID: 1160370251}
+  spanishButton: {fileID: 178372503}
 --- !u!1 &1533236245
 GameObject:
   m_ObjectHideFlags: 0
@@ -5220,7 +5220,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1533236245}
+      - m_Target: {fileID: 1654821193}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
@@ -5523,7 +5523,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &2099260540
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5538,6 +5538,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   winScreen: {fileID: 1654821193}
   loseScreen: {fileID: 1533236245}
+  winning: 1
 --- !u!4 &2099260541
 Transform:
   m_ObjectHideFlags: 0

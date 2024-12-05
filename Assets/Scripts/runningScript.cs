@@ -9,6 +9,8 @@ public class runningScript : MonoBehaviour
     public GameObject winScreen;
     public GameObject loseScreen;
 
+    public bool winning = true;
+
     void Start()
     {
         
@@ -17,15 +19,15 @@ public class runningScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(GameManager.winning == true)
+        if(winning == true)
         {
             Debug.Log("You Won");
             loseScreen.SetActive(false);
             winScreen.SetActive(true);
-        } else
+        } 
+        else if (winning == false)
         {
             Debug.Log("You Lost");
-
             loseScreen.SetActive(true);
             winScreen.SetActive(false);
 
