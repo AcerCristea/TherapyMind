@@ -311,7 +311,34 @@ MonoBehaviour:
   audioPlay: {fileID: 1112434825}
   textComponent: {fileID: 21155119}
   lines:
-  - Hoy me han asignado cinco pacientes. Cinco mentes llenas de caos, esperando claridad.
+  - "La terapia ha evolucionado mucho m\xE1s all\xE1 de las palabras y los cuadernos."
+  - Con el protocolo MindSync, terapeutas como yo nos sumergimos directamente en
+    la mente de nuestros pacientes.
+  - "Ya no s\xF3lo escuchamos sus luchas... nos adentramos en ellas."
+  - 'La tarea es clara: un paciente, una mente y el peso de sus emociones sobre mis
+    hombros.'
+  - Su ira, su tristeza, sus adicciones, todo se arremolina en su interior y amenaza
+    con apoderarse de ellos.
+  - "Pero la mente es un lugar fr\xE1gil y peligroso que no recibe visitantes con
+    agrado."
+  - Las paredes se mueven, los recuerdos se difuminan, las emociones adquieren vida
+    propia.
+  - "Cuanto m\xE1s profundo vayas, m\xE1s dif\xEDcil ser\xE1 saber d\xF3nde terminan
+    ellos y d\xF3nde empiezas t\xFA."
+  - He visto lo que les pasa a los terapeutas que se quedan demasiado tiempo. Se
+    pierden en el ruido, quedan atrapados en el laberinto de los pensamientos de
+    otra persona.
+  - "Las emociones pueden atraparte. El caos puede abrumarte. La locura no solo les
+    hace da\xF1o a ellos, tambi\xE9n puede consumirme a m\xED."
+  - "He escuchado historias, rumores, de terapeutas que no lograron salir. Sus cuerpos
+    regresaron, pero sus mentes\u2026 nunca."
+  - "\xC9se es el riesgo que corremos. Para ayudar a otros a encontrar la paz, tenemos
+    que enfrentar sus tormentas."
+  - "Tengo que ser r\xE1pido. Encontrar los patrones. Arreglar las anomal\xEDas.
+    Y escapar antes de que sea demasiado tarde."
+  - A medida que la locura crece, el punto de no retorno se acerca y escapar se vuelve
+    imposible.
+  - No hay tiempo para dudar. Empecemos.
   textSpeed: 0.1
 --- !u!114 &21155119
 MonoBehaviour:
