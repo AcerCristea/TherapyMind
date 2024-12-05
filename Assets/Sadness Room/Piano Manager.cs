@@ -71,6 +71,23 @@ public class PianoManager : MonoBehaviour
         }
     }
 
+    void OnMouseUp()
+    {
+        Debug.Log("let go of mouse");
+        // let go of key
+        Ray ray = RoomManager.instance.activeCamera.ScreenPointToRay(Input.mousePosition);
+        RaycastHit hit;
+        if (Physics.Raycast(ray, out hit))
+        {
+            KeyController hitKeyController = hit.collider.gameObject.GetComponent<KeyController>();
+            if (hitKeyController != null)
+            {
+                hitKeyController.played = false;
+            }
+        }
+
+    }
+
     IEnumerator StartMusic()
     {
         Debug.Log("CONGRATS");
