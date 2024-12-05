@@ -7,16 +7,21 @@ public class ShardController : MonoBehaviour
     public GameObject target;
     public GameObject parentPuzzle;
 
+    [Header("spacer")]
+    public GameObject backDrop;
+    public GameObject itsTheCamera;
+
     private Collider theCollider;
     [SerializeField] private RoomManager roomManager;
     [SerializeField] private float distance = 3f;
-    private float maxDistance = 10.5f;
+    private float maxDistance = 1f;
     private float minDistance = 1f;
     private bool snappy = false;
 
+    private Vector3 initialPos;
+
     void Start()
     {
-        transform.eulerAngles = new Vector3(0, 0, 0);
         theCollider = GetComponent<Collider>();
         // Find the RoomManager in the scene
         roomManager = FindFirstObjectByType<RoomManager>();
@@ -25,6 +30,10 @@ public class ShardController : MonoBehaviour
             SnapToTarget();
             MegaShardController.correctCounter++;
         }
+        maxDistance = Vector3.Distance(itsTheCamera.transform.position, backDrop.transform.position);
+
+        initialPos = transform.position;
+
     }
 
     void Update()
@@ -54,6 +63,10 @@ public class ShardController : MonoBehaviour
         {
             SnapToTarget();
             MegaShardController.correctCounter++;
+        }
+        else
+        {
+            returnBack();
         }
     }
     // TODO:
@@ -101,5 +114,10 @@ public class ShardController : MonoBehaviour
         {
             distance = minDistance;
         }
+    }
+
+    private void returnBack()
+    {
+        transform.position = initialPos;
     }
 }

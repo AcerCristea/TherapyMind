@@ -33,4 +33,9 @@ public class ValveController : MonoBehaviour
     {
         leftBool = left;
     }
+
+    public void debugStatement()
+    {
+        Debug.Log("I'm in the button");
+    }
 }
