@@ -56,6 +56,7 @@ public class PianoManager : MonoBehaviour
             if (hitKeyController != null)
             {
                 hitKeyController.PlayNote();
+                
                 // chekc if the note is the right one otherwise reset
                 if (hitKeyController.gameObject != correctNote)
                 {
@@ -65,27 +66,11 @@ public class PianoManager : MonoBehaviour
                 // THIS IS WHERE COMPLETION IS CHECKED
                 if (track.GetComponent<TrackController>().isEmpty())
                 {
+                    // GameManager.instance.piano_PuzzleComplete = true;
                     StartCoroutine(StartMusic());
                 }
             }
         }
-    }
-
-    void OnMouseUp()
-    {
-        Debug.Log("let go of mouse");
-        // let go of key
-        Ray ray = RoomManager.instance.activeCamera.ScreenPointToRay(Input.mousePosition);
-        RaycastHit hit;
-        if (Physics.Raycast(ray, out hit))
-        {
-            KeyController hitKeyController = hit.collider.gameObject.GetComponent<KeyController>();
-            if (hitKeyController != null)
-            {
-                hitKeyController.played = false;
-            }
-        }
-
     }
 
     IEnumerator StartMusic()

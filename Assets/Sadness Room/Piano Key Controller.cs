@@ -5,26 +5,31 @@ using UnityEngine;
 
 public class KeyController : MonoBehaviour
 {
+    Renderer thisRenderer;
     AudioSource audioSource;
+    Color initialColor;
     public bool played;
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
+        thisRenderer = GetComponent<Renderer>();
+        initialColor = GetComponent<Renderer>().material.GetColor("_Color");
         played = false;
     }
 
     // play any note clicked
     public void PlayNote()
     {
-        played = true;
+        played = (PianoManager.instance.correctNote == this.gameObject) ? true : false;
         audioSource.Play();
     }
 
-    // player plays the correct note on time
+    // // player plays the correct note on time
     private void OnTriggerStay(Collider collider_)
     {
         if (collider_.gameObject.CompareTag("Target"))
         {
+            
             PianoManager.instance.correctNote = this.gameObject;
             // disable the track-note if its played
             if (played)
@@ -35,6 +40,7 @@ public class KeyController : MonoBehaviour
             }
         }
     }
+
 
     // if the player misses a note, it isn't counted and the player has to restart
     private void OnTriggerExit(Collider collider_)
@@ -60,5 +66,15 @@ public class KeyController : MonoBehaviour
         collider_.gameObject.SetActive(false);
         yield return new WaitForSeconds(0.1f);
         played = false;
+    }
+
+    // highlight on mouse hovering
+    private void OnMouseEnter()
+    {
+        thisRenderer.material.color = Color.red + initialColor;
+    }
+    private void OnMouseExit()
+    {
+        thisRenderer.material.color = initialColor;
     }
 }
