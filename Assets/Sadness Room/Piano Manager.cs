@@ -56,6 +56,7 @@ public class PianoManager : MonoBehaviour
             if (hitKeyController != null)
             {
                 hitKeyController.PlayNote();
+                
                 // chekc if the note is the right one otherwise reset
                 if (hitKeyController.gameObject != correctNote)
                 {
@@ -65,6 +66,7 @@ public class PianoManager : MonoBehaviour
                 // THIS IS WHERE COMPLETION IS CHECKED
                 if (track.GetComponent<TrackController>().isEmpty())
                 {
+                    // GameManager.instance.piano_PuzzleComplete = true;
                     StartCoroutine(StartMusic());
                 }
             }
