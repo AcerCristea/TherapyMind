@@ -31,6 +31,13 @@ public class GameManager : MonoBehaviour
     public bool memoryPuzzleComplete = false;
     //public bool cabinetPuzzleComplete = false;
 
+    public AudioSource heartbeatAudio; // Heartbeat AudioSource
+    public float minHeartbeatVolume = 0.1f;
+    public float maxHeartbeatVolume = 1f;
+    public float minHeartbeatPitch = 0.5f;
+    public float maxHeartbeatPitch = 2f;
+
+    public GameObject MenuDialogue;
 
 
     void Awake()
@@ -59,36 +66,52 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-
-        IncreaseInsanity(Time.deltaTime * insanityRate);
-
-        CheckGameCompletion();
-
-        // Reduce health if insanity is maxed (universal)
-        if (insanityMeter >= maxInsanity)
+        if (!MenuDialogue.activeSelf) // Checks if MenuDialogue is NOT active
         {
-            ReduceHealth(Time.deltaTime * healthReductionRate);
-        }
 
+            UpdateHeartbeat();
 
-        if (isTimerActive && !levelCompleted)
-        {
-            // Decrease the timer only if it is active
-            timer -= Time.deltaTime;
+            IncreaseInsanity(Time.deltaTime * insanityRate);
 
-            // Check if all tasks are complete
-            if (AreAllTasksCompleted())
+            CheckGameCompletion();
+
+            // Reduce health if insanity is maxed (universal)
+            if (insanityMeter >= maxInsanity)
             {
-                CompleteLevel();
+                ReduceHealth(Time.deltaTime * healthReductionRate);
             }
-            else if (timer <= 0f)
+
+
+            if (isTimerActive && !levelCompleted)
             {
-                // Reset objects and restart
-                ResetTasks();
+                // Decrease the timer only if it is active
+                timer -= Time.deltaTime;
+
+                // Check if all tasks are complete
+                if (AreAllTasksCompleted())
+                {
+                    CompleteLevel();
+                }
+                else if (timer <= 0f)
+                {
+                    // Reset objects and restart
+                    ResetTasks();
+                }
             }
         }
 
     }
+    void UpdateHeartbeat()
+    {
+        if (heartbeatAudio != null)
+        {
+            // Calculate volume and pitch based on insanity
+            float normalizedInsanity = insanityMeter / maxInsanity;
+            heartbeatAudio.volume = Mathf.Lerp(minHeartbeatVolume, maxHeartbeatVolume, normalizedInsanity);
+            heartbeatAudio.pitch = Mathf.Lerp(minHeartbeatPitch, maxHeartbeatPitch, normalizedInsanity);
+        }
+    }
+
 
     void IncreaseInsanity(float amount)
     {
