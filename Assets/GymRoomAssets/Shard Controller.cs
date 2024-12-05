@@ -8,7 +8,7 @@ public class ShardController : MonoBehaviour
     public GameObject parentPuzzle;
 
     private Collider theCollider;
-    [SerializeField] private AngerRoomManager roomManager;
+    [SerializeField] private RoomManager roomManager;
     [SerializeField] private float distance = 3f;
     private float maxDistance = 10.5f;
     private float minDistance = 1f;
@@ -16,16 +16,11 @@ public class ShardController : MonoBehaviour
 
     void Start()
     {
-
+        transform.eulerAngles = new Vector3(0, 0, 0);
         theCollider = GetComponent<Collider>();
         // Find the RoomManager in the scene
-        roomManager = FindFirstObjectByType<AngerRoomManager>();
-
-        if (Vector3.Distance(transform.position, target.transform.position) < 0.5)
-        {
-            snappy = true;
-        }
-        if (snappy)
+        roomManager = FindFirstObjectByType<RoomManager>();
+        if (checkSnap())
         {
             SnapToTarget();
             MegaShardController.correctCounter++;
@@ -55,11 +50,7 @@ public class ShardController : MonoBehaviour
 
     void OnMouseUp()
     {
-        if (Vector3.Distance(transform.position, target.transform.position) < 0.5)
-        {
-            snappy = true;
-        }
-        if (snappy)
+        if (checkSnap())
         {
             SnapToTarget();
             MegaShardController.correctCounter++;
@@ -70,7 +61,33 @@ public class ShardController : MonoBehaviour
     // 
     private void MoveFromCam(Camera activeCam)
     {
-        // move shard based on mouse scroll
+        distanceKeeper();
+        // move shard based on mouse input
+        Vector3 mousePosition = new Vector3(Input.mousePosition.x, Input.mousePosition.y, distance);
+        Vector3 objPosition = activeCam.ScreenToWorldPoint(mousePosition);
+        transform.eulerAngles = new Vector3(0, 0, 0);
+        transform.position = objPosition;
+
+    }
+
+    private void SnapToTarget()
+    {
+        transform.position = target.transform.position;
+        theCollider.enabled = false;
+        Debug.Log("Just snapped to mirror");
+    }
+
+    private bool checkSnap()
+    {
+        if (Vector3.Distance(transform.position, target.transform.position) < 0.5)
+        {
+            snappy = true;
+        }
+        return snappy;
+    }
+
+    private void distanceKeeper()
+    {
         if (distance <= maxDistance && distance >= minDistance)
         {
             distance += Input.mouseScrollDelta.y;
@@ -84,17 +101,5 @@ public class ShardController : MonoBehaviour
         {
             distance = minDistance;
         }
-        // move shard based on mouse input
-        Vector3 mousePosition = new Vector3(Input.mousePosition.x, Input.mousePosition.y, distance);
-        Vector3 objPosition = activeCam.ScreenToWorldPoint(mousePosition);
-        transform.eulerAngles = new Vector3(0, 0, 0);
-        transform.position = objPosition;
-
-    }
-
-    private void SnapToTarget()
-    {
-        transform.position = target.transform.position;
-        theCollider.enabled = false;
     }
 }

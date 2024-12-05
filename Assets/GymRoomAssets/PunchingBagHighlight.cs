@@ -10,9 +10,11 @@ public class PunchingBagManager : MonoBehaviour
     private Renderer renderer1;
     private Color initialColor;
     private Collider punchBagCollider;
+    private Color punchColor;
+    private Color highlightColor;
 
     [SerializeField] private float punchBagHealth = 100f;
-    [SerializeField] private AngerRoomManager roomManager; // Reference to a copy of RoomManager
+    [SerializeField] private RoomManager roomManager; // Reference to a copy of RoomManager
 
     void Start()
     {
@@ -23,7 +25,11 @@ public class PunchingBagManager : MonoBehaviour
         punchBagCollider = GetComponent<Collider>();
 
         // Find the RoomManager in the scene
-        roomManager = FindFirstObjectByType<AngerRoomManager>();
+        roomManager = FindFirstObjectByType<RoomManager>();
+
+        punchColor = new Color(0.8f, 0f, 0f, 1f);
+        highlightColor = new Color(1f, .58f, .58f, 1f);
+
     }
 
     void Update()
@@ -39,7 +45,7 @@ public class PunchingBagManager : MonoBehaviour
                 {
                     if (hitInfo.collider.gameObject.tag == "Puzzle")
                     {
-
+                        changeColor(punchColor);
                         punchBagHealth -= 10f;
                         Debug.Log("Health: " + punchBagHealth);
 
@@ -53,7 +59,7 @@ public class PunchingBagManager : MonoBehaviour
             }
 
             // bag constantly heals
-            punchBagHealth += 0.1f;
+            punchBagHealth += 0.01f;
             // cap health
             if (punchBagHealth > 100f)
             {
@@ -62,7 +68,7 @@ public class PunchingBagManager : MonoBehaviour
             // bag breaks
             if (punchBagHealth <= 0)
             {
-                renderer1.material.color = Color.black;
+                changeColor(Color.black);
                 punchBagCollider.enabled = false;
                 //this.gameObject.SetActive(false);
                 Debug.Log("PUNCH BAG DONE, checked in PunchingBagHighlight");
@@ -70,13 +76,24 @@ public class PunchingBagManager : MonoBehaviour
         }
     }
 
+    private void OnMouseUp()
+    {
+        changeColor(highlightColor);
+    }
+
     // highlight on mouse hovering
     private void OnMouseEnter()
     {
-        renderer1.material.color = Color.red + initialColor;
+        changeColor(highlightColor);
     }
     private void OnMouseExit()
     {
-        renderer1.material.color = initialColor;
+        changeColor(initialColor);
     }
+
+    private void changeColor(Color theColor)
+    {
+        renderer1.material.color = theColor;
+    }
+
 }
