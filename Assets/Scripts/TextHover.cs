@@ -8,25 +8,55 @@ public class ButtonTextChangeHandler : MonoBehaviour, IPointerEnterHandler, IPoi
 {
     public TextMeshProUGUI buttonText;
     public string hoverText = "Hovering!";
-    private string originalText;
+
+    public string hoverTextSpanish = "Hovering!";
+    public string originalText;
+
+    public string originalTextSpanish;
 
     void Start()
     {
-        originalText = buttonText.text;
+        if (Language.isEnglish)
+        {
+            buttonText.text = originalText;
+        }
+        if (Language.isSpanish)
+        {
+            buttonText.text = originalTextSpanish;
+        }
     }
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        buttonText.text = hoverText;
-        buttonText.fontSize += 6;
-        buttonText.color = Color.red;
+        if (Language.isEnglish)
+        {
+            buttonText.text = hoverText;
+            buttonText.fontSize += 6;
+            buttonText.color = Color.red;
+        }
+        if (Language.isSpanish)
+        {
+            buttonText.text = hoverTextSpanish;
+            buttonText.fontSize += 6;
+            buttonText.color = Color.red;
+
+        }
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        buttonText.text = originalText;
-        buttonText.fontSize -= 6;
-        buttonText.color = Color.white;
+        if (Language.isEnglish)
+        {
+            buttonText.text = originalText;
+            buttonText.fontSize -= 6;
+            buttonText.color = Color.white;
+        }
+        if (Language.isSpanish)
+        {
+            buttonText.text = originalTextSpanish;
+            buttonText.fontSize -= 6;
+            buttonText.color = Color.white;
+        }
     }
 
 }
