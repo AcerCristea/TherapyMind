@@ -5,37 +5,15 @@ using UnityEngine.SceneManagement;
 
 public class Loader : MonoBehaviour
 {
-    public Animator transition;
-
-    public float transitionTime = 1f;
-
-    public GameObject canvas;
-
-
-    void Update()
-    {
-        if(Input.GetMouseButtonDown(0))
-        {
-            canvas.SetActive(true);
-        }
-    }
 
     public void LoadScene()
     {
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
-    public void LoadNextLevel()
+    public void LoadMenu()
     {
-        StartCoroutine(LoadGame(SceneManager.GetActiveScene().buildIndex + 1));
+        SceneManager.LoadScene("Menu");
     }
 
-    IEnumerator LoadGame(int levelIndex)
-    {
-        transition.SetTrigger("Start");
-
-        yield return new WaitForSeconds(transitionTime);
-
-        SceneManager.LoadScene(levelIndex);
-    }
 }

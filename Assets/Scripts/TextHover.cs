@@ -48,13 +48,13 @@ public class ButtonTextChangeHandler : MonoBehaviour, IPointerEnterHandler, IPoi
         if (Language.isEnglish)
         {
             buttonText.text = originalText;
-            buttonText.fontSize -= 6;
+            buttonText.fontSize = 30;
             buttonText.color = Color.white;
         }
         if (Language.isSpanish)
         {
             buttonText.text = originalTextSpanish;
-            buttonText.fontSize -= 6;
+            buttonText.fontSize = 30;
             buttonText.color = Color.white;
         }
     }

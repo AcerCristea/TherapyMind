@@ -70,6 +70,14 @@ MonoBehaviour:
     m_Localized: Main Menu
     m_Metadata:
       m_Items: []
+  - m_Id: 474397282340864
+    m_Localized: Therapy Mind
+    m_Metadata:
+      m_Items: []
+  - m_Id: 481794528841728
+    m_Localized: Return to Main Menu
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

@@ -7,18 +7,23 @@ public class ShardController : MonoBehaviour
     public GameObject target;
     public GameObject parentPuzzle;
 
+
     [Header("spacer")]
+
     public GameObject backDrop;
     public GameObject itsTheCamera;
 
     private Collider theCollider;
     [SerializeField] private RoomManager roomManager;
     [SerializeField] private float distance = 3f;
-    private float maxDistance = 1f;
+
+    private float maxDistance = 3f;
     private float minDistance = 1f;
     private bool snappy = false;
 
-    private Vector3 initialPos;
+
+    private Vector3 intialPos;
+
 
     void Start()
     {
@@ -31,6 +36,7 @@ public class ShardController : MonoBehaviour
             MegaShardController.correctCounter++;
         }
         maxDistance = Vector3.Distance(itsTheCamera.transform.position, backDrop.transform.position);
+
 
         initialPos = transform.position;
 

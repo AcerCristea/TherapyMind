@@ -1,5 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering.PostProcessing;
+using UnityEngine.TestTools;
 using static TasksOCD;
 
 public class GameManager : MonoBehaviour
@@ -31,6 +33,18 @@ public class GameManager : MonoBehaviour
     public bool memoryPuzzleComplete = false;
     //public bool cabinetPuzzleComplete = false;
 
+    public AudioSource heartbeatAudio; // Heartbeat AudioSource
+    public float minHeartbeatVolume = 0.1f;
+    public float maxHeartbeatVolume = 1f;
+    public float minHeartbeatPitch = 0.5f;
+    public float maxHeartbeatPitch = 2f;
+
+    public GameObject MenuDialogue;
+
+    [Header("Post Processing")]
+    public bool startPP = false;
+    public GameObject ppObj;
+    public PostProcessVolume ppVolume;
 
 
     void Awake()
@@ -54,45 +68,69 @@ public class GameManager : MonoBehaviour
             task.originalRotation = task.taskObject.transform.rotation;
         }
         timer = timeLimit;
-
+        // post processing
+        ppVolume = ppObj.GetComponent<PostProcessVolume>();
     }
 
     void Update()
     {
-
-        IncreaseInsanity(Time.deltaTime * insanityRate);
-
-        CheckGameCompletion();
-
-        // Reduce health if insanity is maxed (universal)
-        if (insanityMeter >= maxInsanity)
+        if (!MenuDialogue.activeSelf) // Checks if MenuDialogue is NOT active
         {
-            ReduceHealth(Time.deltaTime * healthReductionRate);
-        }
 
+            UpdateHeartbeat();
 
-        if (isTimerActive && !levelCompleted)
-        {
-            // Decrease the timer only if it is active
-            timer -= Time.deltaTime;
+            IncreaseInsanity(Time.deltaTime * insanityRate);
 
-            // Check if all tasks are complete
-            if (AreAllTasksCompleted())
+            CheckGameCompletion();
+
+            // Reduce health if insanity is maxed (universal)
+            if (insanityMeter >= maxInsanity)
             {
-                CompleteLevel();
+                ReduceHealth(Time.deltaTime * healthReductionRate);
             }
-            else if (timer <= 0f)
+            // start increasing vfx after insanity reaches a threshold
+            startPP = (insanityMeter >= maxInsanity*0.66f) ? true : false;
+
+
+            if (isTimerActive && !levelCompleted)
             {
-                // Reset objects and restart
-                ResetTasks();
+                // Decrease the timer only if it is active
+                timer -= Time.deltaTime;
+
+                // Check if all tasks are complete
+                if (AreAllTasksCompleted())
+                {
+                    CompleteLevel();
+                }
+                else if (timer <= 0f)
+                {
+                    // Reset objects and restart
+                    ResetTasks();
+                }
             }
         }
 
     }
+    void UpdateHeartbeat()
+    {
+        if (heartbeatAudio != null)
+        {
+            // Calculate volume and pitch based on insanity
+            float normalizedInsanity = insanityMeter / maxInsanity;
+            heartbeatAudio.volume = Mathf.Lerp(minHeartbeatVolume, maxHeartbeatVolume, normalizedInsanity);
+            heartbeatAudio.pitch = Mathf.Lerp(minHeartbeatPitch, maxHeartbeatPitch, normalizedInsanity);
+        }
+    }
+
 
     void IncreaseInsanity(float amount)
     {
         insanityMeter = Mathf.Clamp(insanityMeter + amount, 0, maxInsanity);
+        if (startPP && ppVolume.weight < 1)
+        {
+            ppVolume.weight += 0.05f * Time.deltaTime;
+        }
+
         // Debug.Log($"Insanity: {insanityMeter}/{maxInsanity}");
     }
 
@@ -105,11 +143,16 @@ public class GameManager : MonoBehaviour
             Debug.Log("Game Over! Player has lost all health.");
             // Add game over logic here
         }
+        
     }
 
     public void DecreaseInsanity(float amount)
     {
         insanityMeter = Mathf.Clamp(insanityMeter - amount, 0, maxInsanity);
+        if (startPP && ppVolume.weight > 0)
+        {
+            ppVolume.weight += 0.05f * Time.deltaTime;
+        }
         Debug.Log($"Insanity decreased: {insanityMeter}/{maxInsanity}");
     }
 

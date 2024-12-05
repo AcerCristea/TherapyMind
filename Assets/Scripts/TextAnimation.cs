@@ -1,14 +1,13 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
 public class TextAnimation : MonoBehaviour
 {
-
-    public AudioSource audioPlay;
+    public AudioSource audioSource;
     public TextMeshProUGUI textComponent;
     public string[] lines;
+    public AudioClip[] audioClips;
     public float textSpeed;
 
     private int index;
@@ -21,9 +20,9 @@ public class TextAnimation : MonoBehaviour
 
     void Update()
     {
-        if(Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0))
         {
-            if(textComponent.text == lines[index])
+            if (textComponent.text == lines[index])
             {
                 NextLine();
             }
@@ -38,6 +37,7 @@ public class TextAnimation : MonoBehaviour
     void StartDialogue()
     {
         index = 0;
+        PlayAudioClip(index);
         StartCoroutine(TypeLine());
     }
 
@@ -45,7 +45,6 @@ public class TextAnimation : MonoBehaviour
     {
         foreach (char c in lines[index].ToCharArray())
         {
-            audioPlay.Play(0);
             textComponent.text += c;
             yield return new WaitForSeconds(textSpeed);
         }
@@ -53,11 +52,25 @@ public class TextAnimation : MonoBehaviour
 
     void NextLine()
     {
-        if(index < lines.Length - 1)
+        if (index < lines.Length - 1)
         {
             index++;
             textComponent.text = string.Empty;
+            PlayAudioClip(index);
             StartCoroutine(TypeLine());
+        }
+        else
+        {
+            audioSource.Stop();
+        }
+    }
+
+    void PlayAudioClip(int lineIndex)
+    {
+        if (audioClips != null && lineIndex < audioClips.Length)
+        {
+            audioSource.clip = audioClips[lineIndex];
+            audioSource.Play();
         }
     }
 }

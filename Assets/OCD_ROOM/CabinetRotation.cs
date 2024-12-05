@@ -25,10 +25,11 @@ public class CabinetRotation : MonoBehaviour
         roomManager = FindFirstObjectByType<RoomManager>();
 
         // Record the initial Y-axis rotation of the hinge point
-        if (hingePoint != null)
-        {
-            initialRotation = hingePoint.rotation.eulerAngles.y;
-        }
+    if (hingePoint != null)
+    {
+        initialRotation = hingePoint.localRotation.eulerAngles.y;
+        currentRotation = initialRotation; // Sync currentRotation with the hinge's initial rotation
+    }
         else
         {
             Debug.LogError("Hinge Point is not assigned!");
@@ -51,39 +52,40 @@ public class CabinetRotation : MonoBehaviour
 
     }
 
-    void HandleRotation()
+private float currentRotation = 0f; // Track the rotation angle manually
+
+void HandleRotation()
+{
+    // Get input from arrow keys
+    float rotationInput = 0f;
+
+    if (Input.GetKey(KeyCode.RightArrow))
     {
-        // Get input from arrow keys
-        float rotationInput = 0f;
-
-        if (Input.GetKey(KeyCode.RightArrow))
-        {
-            rotationInput = -1f; // Rotate clockwise
-        }
-        else if (Input.GetKey(KeyCode.LeftArrow))
-        {
-            rotationInput = 1f; // Rotate counterclockwise
-        }
-
-        // Rotate the door
-        if (hingePoint != null && rotationInput != 0f)
-        {
-            float newRotationY = hingePoint.rotation.eulerAngles.y + (rotationInput * rotationSpeed * Time.deltaTime);
-
-            newRotationY = Mathf.Clamp(newRotationY, 0f, 90f);
-
-
-            // Apply the rotation
-            hingePoint.rotation = Quaternion.Euler(
-                hingePoint.rotation.eulerAngles.x,
-                newRotationY,
-                hingePoint.rotation.eulerAngles.z
-            );
-
-            // Check for task completion
-            CheckTaskCompletion(newRotationY);
-        }
+        rotationInput = -1f; // Rotate clockwise
     }
+    else if (Input.GetKey(KeyCode.LeftArrow))
+    {
+        rotationInput = 1f; // Rotate counterclockwise
+    }
+
+    // Calculate the new rotation
+    if (rotationInput != 0f)
+    {
+        currentRotation += rotationInput * rotationSpeed * Time.deltaTime;
+
+        // Clamp the rotation between 0 and 90 degrees
+        currentRotation = Mathf.Clamp(currentRotation, 0f, 90f);
+
+        // Apply the rotation to the hinge point
+        if (hingePoint != null)
+        {
+            hingePoint.localRotation = Quaternion.Euler(0f, currentRotation, 0f);
+        }
+
+        // Check for task completion
+        CheckTaskCompletion(currentRotation);
+    }
+}
 
     void CheckTaskCompletion(float currentRotation)
     {
