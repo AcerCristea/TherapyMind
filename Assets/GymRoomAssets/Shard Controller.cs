@@ -74,6 +74,7 @@ public class ShardController : MonoBehaviour
     {
         transform.position = target.transform.position;
         theCollider.enabled = false;
+        Debug.Log("Just snapped to mirror");
     }
 
     private bool checkSnap()
