@@ -75,34 +75,34 @@ public class Door : MonoBehaviour
             // Set the current room to the new room
             cameraController.SetCurrentRoom(targetRoom, targetCameraName);
 
-                Debug.Log("TargetRoomName: " + targetRoom.name);
+            Debug.Log("TargetRoomName: " + targetRoom.name);
 
-                if (targetRoom.name == "OcdRoom")
+            if (targetRoom.name == "OcdRoom")
+            {
+                gameManager.ResetAndStartTimer();
+
+                Debug.Log("RESULTSSS: " + gameManager.isBurnerTaskComplete);
+                Debug.Log("RESULTSSS: " + gameManager.isFaucetTaskComplete);
+                if (!gameManager.isBurnerTaskComplete)
                 {
-                    gameManager.ResetAndStartTimer();
-
-                    Debug.Log("RESULTSSS: " + gameManager.isBurnerTaskComplete);
-                    Debug.Log("RESULTSSS: " + gameManager.isFaucetTaskComplete);
-                    if (!gameManager.isBurnerTaskComplete)
-                    {
-                        burner.Play();
-                    }
-
-                    if (!gameManager.isFaucetTaskComplete)
-                    {
-                        tap.Play();
-                    }
-
+                    burner.Play();
                 }
-                if (targetRoom.name != "OcdRoom")
+
+                if (!gameManager.isFaucetTaskComplete)
                 {
-                        burner.Stop();
-                        tap.Stop();
+                    tap.Play();
                 }
 
             }
-            else
+            if (targetRoom.name != "OcdRoom")
             {
+                burner.Stop();
+                tap.Stop();
+            }
+
+        }
+        else
+        {
             Debug.LogError("CameraController not found!");
         }
     }

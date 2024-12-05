@@ -19,6 +19,20 @@ public class GameManager : MonoBehaviour
     public bool isBurnerTaskComplete = false; // Shared bool for burner task completion
     public bool isFaucetTaskComplete = false; // Shared bool for burner task completion
 
+    public float insanityMeter = 0f;
+    public float maxInsanity = 100f;
+    public float insanityRate = 1f; // How fast insanity increases per second
+    public float health = 100f; // Player's health
+    public float healthReductionRate = 5f; // How fast health decreases when insanity is maxed
+
+    //public bool sinkPuzzleComplete = false;
+    //public bool stovePuzzleComplete = false;
+    public bool pianoPuzzleComplete = false;
+    public bool memoryPuzzleComplete = false;
+    //public bool cabinetPuzzleComplete = false;
+
+
+
     void Awake()
     {
         if (instance == null)
@@ -45,6 +59,18 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
+
+        IncreaseInsanity(Time.deltaTime * insanityRate);
+
+        CheckGameCompletion();
+
+        // Reduce health if insanity is maxed (universal)
+        if (insanityMeter >= maxInsanity)
+        {
+            ReduceHealth(Time.deltaTime * healthReductionRate);
+        }
+
+
         if (isTimerActive && !levelCompleted)
         {
             // Decrease the timer only if it is active
@@ -63,6 +89,30 @@ public class GameManager : MonoBehaviour
         }
 
     }
+
+    void IncreaseInsanity(float amount)
+    {
+        insanityMeter = Mathf.Clamp(insanityMeter + amount, 0, maxInsanity);
+        // Debug.Log($"Insanity: {insanityMeter}/{maxInsanity}");
+    }
+
+    void ReduceHealth(float amount)
+    {
+        health = Mathf.Max(health - amount, 0);
+        Debug.Log($"Health: {health}");
+        if (health <= 0)
+        {
+            Debug.Log("Game Over! Player has lost all health.");
+            // Add game over logic here
+        }
+    }
+
+    public void DecreaseInsanity(float amount)
+    {
+        insanityMeter = Mathf.Clamp(insanityMeter - amount, 0, maxInsanity);
+        Debug.Log($"Insanity decreased: {insanityMeter}/{maxInsanity}");
+    }
+
 
     bool AreAllTasksCompleted()
     {
@@ -103,9 +153,11 @@ public class GameManager : MonoBehaviour
 
     public void MarkTaskAsComplete(string taskName)
     {
+
+        DecreaseInsanity(20f);
+
         foreach (var task in tasks)
         {
-
 
             if (task.taskName == "Burner")
             {
@@ -119,18 +171,22 @@ public class GameManager : MonoBehaviour
 
             }
 
+
+
             if (task.taskName == taskName)
             {
                 task.isCompleted = true;
                 Debug.Log($"Task {taskName} completed!");
                 return;
             }
-
         }
     }
 
     public void MarkTaskAsIncomplete(string taskName)
     {
+        IncreaseInsanity(20f);
+
+
         foreach (var task in tasks)
         {
 
@@ -145,7 +201,6 @@ public class GameManager : MonoBehaviour
                 Debug.Log("CHEECKKK: " + isFaucetTaskComplete);
 
             }
-
 
             if (task.taskName == taskName)
             {
@@ -170,5 +225,19 @@ public class GameManager : MonoBehaviour
         timer = timeLimit;
         levelCompleted = false;
     }
-}
 
+    void CheckGameCompletion()
+    {
+        //Debug.Log("Check: " + cabinetPuzzleComplete);
+        //Debug.Log("Check: " + sinkPuzzleComplete);
+        //Debug.Log("Check: " + stovePuzzleComplete);
+        //Debug.Log("Check: " + memoryPuzzleComplete);
+        //Debug.Log("Check: " + pianoPuzzleComplete);
+
+        if (AreAllTasksCompleted() && memoryPuzzleComplete)
+        {
+            Debug.Log("Game Completed! Congratulations!");
+            // Add logic for game completion, such as showing a victory screen
+        }
+    }
+}
