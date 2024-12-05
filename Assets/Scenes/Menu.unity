@@ -2913,7 +2913,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
+    rgba: 4294967295
   m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -4306,7 +4306,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281150882
+    rgba: 4294967295
   m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -4509,8 +4509,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -535.0155, y: -305.0594}
+  m_AnchoredPosition: {x: -5.7506714, y: -24.0377}
+  m_SizeDelta: {x: -83.4973, y: -219.2634}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1548946980
 MonoBehaviour:
@@ -4532,12 +4532,26 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Main Menu Music from #Uppbeat (free for Creators!):
+  m_text: '
+
+    Main Menu Music from #Uppbeat (free for Creators!):
 
     https://uppbeat.io/t/yasumu/blue-waters
 
     Language
     Button from https://www.flaticon.com/free-icon/internet_2889312
+
+    Dialogue
+    Text from https://www.youtube.com/watch?v=8oTYabhj248&ab_channel=BMo
+
+
+    Programmers
+    -Kevin Tan, Acer Cristea, Calvin Hunter
+
+    Art -Jennifer Le
+
+    UI -Manco
+    Tan
 
 '
   m_isRightToLeft: 0
