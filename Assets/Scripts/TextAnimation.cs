@@ -7,7 +7,7 @@ public class TextAnimation : MonoBehaviour
     public AudioSource audioSource;
     public TextMeshProUGUI textComponent;
     public string[] lines;
-    public AudioClip[] audioClips; // Array for storing audio clips
+    public AudioClip[] audioClips;
     public float textSpeed;
 
     private int index;
@@ -37,7 +37,7 @@ public class TextAnimation : MonoBehaviour
     void StartDialogue()
     {
         index = 0;
-        PlayAudioClip(index); // Play the first audio
+        PlayAudioClip(index);
         StartCoroutine(TypeLine());
     }
 
@@ -56,12 +56,12 @@ public class TextAnimation : MonoBehaviour
         {
             index++;
             textComponent.text = string.Empty;
-            PlayAudioClip(index); // Play the corresponding audio for the new line
+            PlayAudioClip(index);
             StartCoroutine(TypeLine());
         }
         else
         {
-            audioSource.Stop(); // Stop playing audio when the dialogue ends
+            audioSource.Stop();
         }
     }
 
