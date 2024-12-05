@@ -34,6 +34,7 @@ public class ValveManager : MonoBehaviour
 
     void Update()
     {
+
         if (roomManager.activePuzzle == valvePuzzle)
         {
             // Win condition
@@ -53,19 +54,23 @@ public class ValveManager : MonoBehaviour
     public bool checkEachWheel()
     {
         leftDistance = Vector3.Distance(leftMarker.transform.position, leftGreen.transform.position);
-        if (leftDistance < 0.38 && leftDistance > 0.365)
+        //Debug.Log("Left Distance: " + leftDistance);
+        if (leftDistance < 0.76 && leftDistance > 0.73)
         {
+            Debug.Log("Left Done:");
             leftCheck = true;
         }
 
         middleDistance = Vector3.Distance(middleMarker.transform.position, middleGreen.transform.position);
-        if (middleDistance < 0.34 && middleDistance > 0.33)
+        //Debug.Log("middle Distance: " + middleDistance);
+        if (middleDistance < 0.68)
         {
             middleCheck = true;
         }
 
         rightDistance = Vector3.Distance(rightMarker.transform.position, rightGreen.transform.position);
-        if (rightDistance < 0.293 && rightDistance > 0.289)
+        Debug.Log("right Diatncae: " + rightDistance);
+        if (rightDistance < 0.59)
         {
             rightCheck = true;
         }

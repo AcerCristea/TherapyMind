@@ -9,7 +9,7 @@ public class MegaShardController : MonoBehaviour
 
     void Update()
     {
-        if (correctCounter >= 10 && !said)
+        if (correctCounter >= 13 && !said)
         {
             Debug.Log("mirror completed");
             said = true;
