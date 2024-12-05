@@ -1348,10 +1348,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 811b33df630613842994c14a3e513234, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioPlay: {fileID: 1334194300}
+  audioSource: {fileID: 1334194300}
   textComponent: {fileID: 1768445104}
   lines:
   - Terapia mental
+  audioClips: []
   textSpeed: 0.5
 --- !u!114 &222026603
 MonoBehaviour:
@@ -5599,10 +5600,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 811b33df630613842994c14a3e513234, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioPlay: {fileID: 1334194300}
+  audioSource: {fileID: 1334194300}
   textComponent: {fileID: 695676707}
   lines:
   - Therapy Mind
+  audioClips: []
   textSpeed: 0.5
 --- !u!114 &1854090750
 MonoBehaviour:
