@@ -8,7 +8,7 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-
+    [Header("OCD Room Tasks")]
     public static GameManager instance;  // Add this static reference
     public List<Task> tasks = new List<Task>();
     public float timeLimit = 30f;
@@ -21,22 +21,26 @@ public class GameManager : MonoBehaviour
     public AudioSource stoveAudio;
     private bool isTimerActive = true;  // Flag to control whether the timer is active
 
-    public bool isBurnerTaskComplete = false; // Shared bool for burner task completion
-    public bool isFaucetTaskComplete = false; // Shared bool for burner task completion
-
+    
+    [Header("Insanity")]
     public float insanityMeter = 0f;
     public float maxInsanity = 100f;
-    // public float insanityRate = 1f; // How fast insanity increases per second
     public float insanityRate = 3f;
+
+    [Header("Health")]
     public float health = 100f; // Player's health
     public float healthReductionRate = 5f; // How fast health decreases when insanity is maxed
 
+    [Header("Completion booleans")]
+    public bool isBurnerTaskComplete = false; // Shared bool for burner task completion
+    public bool isFaucetTaskComplete = false; // Shared bool for burner task completion
     public bool pianoPuzzleComplete = false;
     public bool memoryPuzzleComplete = false;
     public bool mirrorPuzzleComplete = false;
     public bool valvePuzzleComplete = false;
     public bool PBPuzzleComplete = false;
 
+    [Header("Heartbeat Audio")]
     public AudioSource heartbeatAudio; // Heartbeat AudioSource
     public float minHeartbeatVolume = 0.1f;
     public float maxHeartbeatVolume = 1f;
@@ -73,7 +77,7 @@ public class GameManager : MonoBehaviour
             task.originalRotation = task.taskObject.transform.rotation;
         }
         timer = timeLimit;
-        // post processing
+        // grab post processing volume
         ppVolume = ppObj.GetComponent<PostProcessVolume>();
     }
 
@@ -96,7 +100,6 @@ public class GameManager : MonoBehaviour
             // start increasing vfx after insanity reaches a threshold
             startPP = (insanityMeter >= maxInsanity*0.66f) ? true : false;
 
-
             if (isTimerActive && !levelCompleted)
             {
                 // Decrease the timer only if it is active
@@ -116,6 +119,7 @@ public class GameManager : MonoBehaviour
         }
 
     }
+
     void UpdateHeartbeat()
     {
         if (heartbeatAudio != null)
@@ -127,7 +131,6 @@ public class GameManager : MonoBehaviour
         }
     }
 
-
     void IncreaseInsanity(float amount)
     {
         insanityMeter = Mathf.Clamp(insanityMeter + amount, 0, maxInsanity);
@@ -135,8 +138,6 @@ public class GameManager : MonoBehaviour
         {
             ppVolume.weight += 0.05f * Time.deltaTime;
         }
-
-        // Debug.Log($"Insanity: {insanityMeter}/{maxInsanity}");
     }
 
     void ReduceHealth(float amount)
@@ -145,7 +146,6 @@ public class GameManager : MonoBehaviour
         Debug.Log($"Health: {health}");
         if (health <= 0)
         {
-            Debug.Log("Game Over! Player has lost all health.");
             // Add game over logic here
             SceneManager.LoadScene("GameOver");
         }
@@ -159,7 +159,6 @@ public class GameManager : MonoBehaviour
         {
             ppVolume.weight -= 0.15f;
         }
-        Debug.Log($"Insanity decreased: {insanityMeter}/{maxInsanity}");
     }
 
 
@@ -176,13 +175,10 @@ public class GameManager : MonoBehaviour
     void CompleteLevel()
     {
         levelCompleted = true;
-        Debug.Log("Level Completed!");
-        // Add level completion logic here
     }
 
     void ResetTasks()
     {
-        Debug.Log("Time's up! Resetting tasks...");
         foreach (var task in tasks)
         {
             task.taskObject.transform.position = task.originalPosition;
@@ -211,24 +207,15 @@ public class GameManager : MonoBehaviour
             if (task.taskName == "Burner")
             {
                 isBurnerTaskComplete = true; // Shared bool for burner task completion
-                Debug.Log("CHEECKKK: " + isBurnerTaskComplete);
-                //Complete.Play();
             }
             if (task.taskName == "Faucet")
             {
                 isFaucetTaskComplete = true; // Shared bool for burner task completion
-                Debug.Log("CHEECKKK: " + isFaucetTaskComplete);
-                //Complete.Play();
-
             }
-
-
 
             if (task.taskName == taskName)
             {
                 task.isCompleted = true;
-                Debug.Log($"Task {taskName} completed!");
-                //Complete.Play();
                 return;
             }
         }
@@ -245,19 +232,15 @@ public class GameManager : MonoBehaviour
             if (task.taskName == "Burner")
             {
                 isBurnerTaskComplete = false; // Shared bool for burner task completion
-                Debug.Log("CHEECKKK: " + isBurnerTaskComplete);
             }
             if (task.taskName == "Faucet")
             {
                 isFaucetTaskComplete = false; // Shared bool for burner task completion
-                Debug.Log("CHEECKKK: " + isFaucetTaskComplete);
-
             }
 
             if (task.taskName == taskName)
             {
                 task.isCompleted = false;
-                Debug.Log($"Task {taskName} completed!");
                 return;
             }
         }
@@ -280,46 +263,9 @@ public class GameManager : MonoBehaviour
 
     void CheckGameCompletion()
     {
-
-        //    if (memoryPuzzleComplete)
-        //    {
-        //        Complete.Play();
-        //    }
-
-        //    if (pianoPuzzleComplete)
-        //    {
-        //        Complete.Play();
-        //    }
-
-        //    if (valvePuzzleComplete)
-        //    {
-        //        Complete.Play();
-        //    }
-        //    if (PBPuzzleComplete)
-        //    {
-        //        Complete.Play();
-        //    }
-
-        //    if (mirrorPuzzleComplete)
-        //    {
-        //        Complete.Play();
-        //    }
-
-        //if (isBurnerTaskComplete)
-        //{
-        //    Complete.Play();
-        //}
-
-        //if (isFaucetTaskComplete)
-        //{
-        //    Complete.Play();
-        //}
-
         if (AreAllTasksCompleted() && memoryPuzzleComplete && pianoPuzzleComplete && valvePuzzleComplete && PBPuzzleComplete && mirrorPuzzleComplete)
         {
-            Debug.Log("Game Completed! Congratulations!");
             SceneManager.LoadScene("WinnerScene");
-            //Add logic for game completion, such as showing a victory screen
         }
     }
 }
