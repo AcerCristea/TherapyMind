@@ -12,6 +12,26 @@
     <type fullname="UnityEngine.Localization.Tables.SharedTableData/SharedTableEntry" preserve="nothing" serialized="true" />
     <type fullname="UnityEngine.Localization.Tables.TableEntryData" preserve="nothing" serialized="true" />
   </assembly>
+<<<<<<< Updated upstream
+=======
+  <assembly fullname="Unity.Postprocessing.Runtime, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <type fullname="UnityEngine.Rendering.PostProcessing.ChromaticAberration" preserve="all" />
+    <type fullname="UnityEngine.Rendering.PostProcessing.ColorGrading" preserve="all" />
+    <type fullname="UnityEngine.Rendering.PostProcessing.PostProcessProfile" preserve="all" />
+    <type fullname="UnityEngine.Rendering.PostProcessing.Vignette" preserve="all" />
+    <type fullname="UnityEngine.Rendering.PostProcessing.BoolParameter" preserve="nothing" serialized="true" />
+    <type fullname="UnityEngine.Rendering.PostProcessing.ColorParameter" preserve="nothing" serialized="true" />
+    <type fullname="UnityEngine.Rendering.PostProcessing.FloatParameter" preserve="nothing" serialized="true" />
+    <type fullname="UnityEngine.Rendering.PostProcessing.GradingModeParameter" preserve="nothing" serialized="true" />
+    <type fullname="UnityEngine.Rendering.PostProcessing.Spline" preserve="nothing" serialized="true" />
+    <type fullname="UnityEngine.Rendering.PostProcessing.SplineParameter" preserve="nothing" serialized="true" />
+    <type fullname="UnityEngine.Rendering.PostProcessing.TextureParameter" preserve="nothing" serialized="true" />
+    <type fullname="UnityEngine.Rendering.PostProcessing.TonemapperParameter" preserve="nothing" serialized="true" />
+    <type fullname="UnityEngine.Rendering.PostProcessing.Vector2Parameter" preserve="nothing" serialized="true" />
+    <type fullname="UnityEngine.Rendering.PostProcessing.Vector4Parameter" preserve="nothing" serialized="true" />
+    <type fullname="UnityEngine.Rendering.PostProcessing.VignetteModeParameter" preserve="nothing" serialized="true" />
+  </assembly>
+>>>>>>> Stashed changes
   <assembly fullname="Unity.ResourceManager, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null" preserve="all">
     <type fullname="UnityEngine.ResourceManagement.ResourceProviders.AssetBundleProvider" preserve="all" />
     <type fullname="UnityEngine.ResourceManagement.ResourceProviders.BundledAssetProvider" preserve="all" />

@@ -2412,7 +2412,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'New Text
+  m_text: 'MindSync
 
 '
   m_isRightToLeft: 0
@@ -5636,7 +5636,7 @@ MonoBehaviour:
   audioSource: {fileID: 1334194300}
   textComponent: {fileID: 695676707}
   lines:
-  - Therapy Mind
+  - MindSync
   audioClips: []
   textSpeed: 0.5
 --- !u!114 &1854090750

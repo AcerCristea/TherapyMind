@@ -1,4 +1,8 @@
 using System;
+<<<<<<< Updated upstream
+=======
+// using UnityEditor.EditorTools;
+>>>>>>> Stashed changes
 using UnityEngine;
 
 public class CabinetRotation : MonoBehaviour
@@ -53,10 +57,26 @@ public class CabinetRotation : MonoBehaviour
 
     private float currentRotation = 0f; // Track the rotation angle manually
 
+<<<<<<< Updated upstream
     void HandleRotation()
     {
         // Get input from arrow keys
         float rotationInput = 0f;
+=======
+void HandleRotation()
+{
+    // Get input from arrow keys
+    float rotationInput = 0f;
+
+    if (Input.GetKey(KeyCode.D))
+    {
+        rotationInput = -1f; // Rotate clockwise
+    }
+    else if (Input.GetKey(KeyCode.A))
+    {
+        rotationInput = 1f; // Rotate counterclockwise
+    }
+>>>>>>> Stashed changes
 
         if (Input.GetKey(KeyCode.RightArrow))
         {

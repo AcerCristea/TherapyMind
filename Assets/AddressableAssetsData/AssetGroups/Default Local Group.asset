@@ -16,7 +16,12 @@ MonoBehaviour:
   m_Data:
     m_SerializedData: []
   m_GUID: f5616b168841c8347a559c5fb2a2246e
-  m_SerializeEntries: []
+  m_SerializeEntries:
+  - m_GUID: cb878d6a914b68943b31f2f22282f923
+    m_Address: Assets/Insanity VFX.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 1b6b17368d504164293b1c8262fc1594, type: 2}
   m_SchemaSet:

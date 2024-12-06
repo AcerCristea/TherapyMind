@@ -26,7 +26,8 @@ public class GameManager : MonoBehaviour
 
     public float insanityMeter = 0f;
     public float maxInsanity = 100f;
-    public float insanityRate = 1f; // How fast insanity increases per second
+    // public float insanityRate = 1f; // How fast insanity increases per second
+    public float insanityRate = 3f;
     public float health = 100f; // Player's health
     public float healthReductionRate = 5f; // How fast health decreases when insanity is maxed
 

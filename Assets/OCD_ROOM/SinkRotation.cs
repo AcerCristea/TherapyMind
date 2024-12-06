@@ -54,11 +54,11 @@ public class SinkRotation : MonoBehaviour
         // Get input from arrow keys
         float rotationX = 0f;
 
-        if (Input.GetKey(KeyCode.RightArrow))
+        if (Input.GetKey(KeyCode.D))
         {
             rotationX = 1f;
         }
-        else if (Input.GetKey(KeyCode.LeftArrow))
+        else if (Input.GetKey(KeyCode.A))
         {
             rotationX = -1f;
         }
