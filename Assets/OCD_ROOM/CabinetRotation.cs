@@ -1,8 +1,4 @@
 using System;
-<<<<<<< Updated upstream
-=======
-// using UnityEditor.EditorTools;
->>>>>>> Stashed changes
 using UnityEngine;
 
 public class CabinetRotation : MonoBehaviour
@@ -57,53 +53,38 @@ public class CabinetRotation : MonoBehaviour
 
     private float currentRotation = 0f; // Track the rotation angle manually
 
-<<<<<<< Updated upstream
+
     void HandleRotation()
     {
         // Get input from arrow keys
         float rotationInput = 0f;
-=======
-void HandleRotation()
-{
-    // Get input from arrow keys
-    float rotationInput = 0f;
 
-    if (Input.GetKey(KeyCode.D))
-    {
-        rotationInput = -1f; // Rotate clockwise
-    }
-    else if (Input.GetKey(KeyCode.A))
-    {
-        rotationInput = 1f; // Rotate counterclockwise
-    }
->>>>>>> Stashed changes
-
-        if (Input.GetKey(KeyCode.RightArrow))
+        if (Input.GetKey(KeyCode.D))
         {
             rotationInput = -1f; // Rotate clockwise
         }
-        else if (Input.GetKey(KeyCode.LeftArrow))
+        else if (Input.GetKey(KeyCode.A))
         {
             rotationInput = 1f; // Rotate counterclockwise
         }
 
-        // Calculate the new rotation
-        if (rotationInput != 0f)
-        {
-            currentRotation += rotationInput * rotationSpeed * Time.deltaTime;
-
-            // Clamp the rotation between 0 and 90 degrees
-            currentRotation = Mathf.Clamp(currentRotation, 0f, 90f);
-
-            // Apply the rotation to the hinge point
-            if (hingePoint != null)
+            // Calculate the new rotation
+            if (rotationInput != 0f)
             {
-                hingePoint.localRotation = Quaternion.Euler(0f, currentRotation, 0f);
-            }
+                currentRotation += rotationInput * rotationSpeed * Time.deltaTime;
 
-            // Check for task completion
-            CheckTaskCompletion(currentRotation);
-        }
+                // Clamp the rotation between 0 and 90 degrees
+                currentRotation = Mathf.Clamp(currentRotation, 0f, 90f);
+
+                // Apply the rotation to the hinge point
+                if (hingePoint != null)
+                {
+                    hingePoint.localRotation = Quaternion.Euler(0f, currentRotation, 0f);
+                }
+
+                // Check for task completion
+                CheckTaskCompletion(currentRotation);
+            }
     }
 
     void CheckTaskCompletion(float currentRotation)

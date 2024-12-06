@@ -55,11 +55,11 @@ public class StoveRotation : MonoBehaviour
         // Get input from arrow keys
         float rotationY = 0f;
 
-        if (Input.GetKey(KeyCode.RightArrow))
+        if (Input.GetKey(KeyCode.D))
         {
             rotationY = 1f;
         }
-        else if (Input.GetKey(KeyCode.LeftArrow))
+        else if (Input.GetKey(KeyCode.A))
         {
             rotationY = -1f;
         }
