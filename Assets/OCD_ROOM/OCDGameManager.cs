@@ -147,7 +147,7 @@ public class GameManager : MonoBehaviour
         {
             Debug.Log("Game Over! Player has lost all health.");
             // Add game over logic here
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            SceneManager.LoadScene("GameOver");
         }
         
     }
@@ -318,7 +318,7 @@ public class GameManager : MonoBehaviour
         if (AreAllTasksCompleted() && memoryPuzzleComplete && pianoPuzzleComplete && valvePuzzleComplete && PBPuzzleComplete && mirrorPuzzleComplete)
         {
             Debug.Log("Game Completed! Congratulations!");
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
+            SceneManager.LoadScene("WinnerScene");
             //Add logic for game completion, such as showing a victory screen
         }
     }

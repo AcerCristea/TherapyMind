@@ -2160,6 +2160,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   currentRoom: {fileID: 916857831}
+  gameManager: {fileID: 0}
   northCam: {fileID: 1463935419}
   westCam: {fileID: 1033415465}
   southCam: {fileID: 1900027125}

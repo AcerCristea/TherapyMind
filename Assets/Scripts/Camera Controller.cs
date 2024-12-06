@@ -9,6 +9,7 @@ public class CameraController : MonoBehaviour
     public GameObject[] cameraArray;
     public static int activeCamIndex = 0;
     [SerializeField] private GameObject currentRoom;  // Current active room
+    [SerializeField] private GameManager gameManager;
     private AudioListener currentAudioListener;
 
     public GameObject northCam;
@@ -36,15 +37,12 @@ public class CameraController : MonoBehaviour
         // Assuming the first room is set up as active in the scene
         cameraArray = new GameObject[] { northCam, westCam, southCam, eastCam };
         UpdateCamera(activeCamIndex);
-
-
-
+        gameManager = FindFirstObjectByType<GameManager>();
     }
 
     void Update()
     {
-
-        if (!RoomManager.instance.activePuzzle)
+        if (!RoomManager.instance.activePuzzle && !gameManager.MenuDialogue.activeSelf)
         {
             if (Input.GetKeyDown(KeyCode.A))
             {
