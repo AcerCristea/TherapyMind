@@ -43,7 +43,7 @@ Light:
   serializedVersion: 11
   m_Type: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 3.5
+  m_Intensity: 5
   m_Range: 5
   m_SpotAngle: 25
   m_InnerSpotAngle: 2
@@ -155,6 +155,7 @@ MonoBehaviour:
   - {fileID: 4886600603036084018}
   - {fileID: 8110975402836640561}
   - {fileID: 6614347846923625061}
+  gameManager: {fileID: 0}
 --- !u!1 &5809679582903187008
 GameObject:
   m_ObjectHideFlags: 0
@@ -198,7 +199,7 @@ Light:
   serializedVersion: 11
   m_Type: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 3.5
+  m_Intensity: 5
   m_Range: 5
   m_SpotAngle: 25
   m_InnerSpotAngle: 2
